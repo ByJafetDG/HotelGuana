@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
 package Frames;
 
 /**
@@ -15,6 +11,9 @@ public class FrmHabitaciones extends javax.swing.JFrame {
      */
     public FrmHabitaciones() {
         initComponents();
+        setLocationRelativeTo(null);
+        /*Al ejecutar el programa se abrirá en pantalla completa*/
+        setExtendedState(MAXIMIZED_BOTH);
     }
 
     /**
@@ -26,17 +25,300 @@ public class FrmHabitaciones extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        panelPrincipal = new javax.swing.JPanel();
+        lblLogo = new javax.swing.JLabel();
+        lblMantenimiento = new javax.swing.JLabel();
+        lblOcupada = new javax.swing.JLabel();
+        lblLimpieza = new javax.swing.JLabel();
+        lblVariosDias = new javax.swing.JLabel();
+        lblReservada = new javax.swing.JLabel();
+        lblHabitaciones = new javax.swing.JLabel();
+        panelHabitaciones = new javax.swing.JPanel();
+        scrollHabitaciones = new javax.swing.JScrollPane();
+        panelScrollHab = new javax.swing.JPanel();
+        panelPrimeraFila = new javax.swing.JPanel();
+        lblN5 = new javax.swing.JLabel();
+        lblN4 = new javax.swing.JLabel();
+        lblN3 = new javax.swing.JLabel();
+        lblN2 = new javax.swing.JLabel();
+        lblN1 = new javax.swing.JLabel();
+        panelSegundaFila = new javax.swing.JPanel();
+        lblN10 = new javax.swing.JLabel();
+        lblN9 = new javax.swing.JLabel();
+        lblN8 = new javax.swing.JLabel();
+        lblN7 = new javax.swing.JLabel();
+        lblN6 = new javax.swing.JLabel();
+        panelSegundaFila1 = new javax.swing.JPanel();
+        lblN15 = new javax.swing.JLabel();
+        lblN14 = new javax.swing.JLabel();
+        lblN13 = new javax.swing.JLabel();
+        lblN12 = new javax.swing.JLabel();
+        lblN11 = new javax.swing.JLabel();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        panelPrincipal.setBackground(new java.awt.Color(255, 255, 255));
+
+        lblLogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/logo (Personalizado).png"))); // NOI18N
+
+        lblMantenimiento.setIcon(new javax.swing.ImageIcon(getClass().getResource("/mantenimiento_figma.png"))); // NOI18N
+
+        lblOcupada.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ocupada_figma.png"))); // NOI18N
+
+        lblLimpieza.setIcon(new javax.swing.ImageIcon(getClass().getResource("/limpieza_figma.png"))); // NOI18N
+
+        lblVariosDias.setIcon(new javax.swing.ImageIcon(getClass().getResource("/variosdias_figma.png"))); // NOI18N
+
+        lblReservada.setIcon(new javax.swing.ImageIcon(getClass().getResource("/reservada_figma.png"))); // NOI18N
+
+        lblHabitaciones.setFont(new java.awt.Font("Segoe UI", 3, 36)); // NOI18N
+        lblHabitaciones.setForeground(new java.awt.Color(0, 0, 0));
+        lblHabitaciones.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Habitaciones.png"))); // NOI18N
+
+        panelHabitaciones.setBackground(new java.awt.Color(255, 255, 255));
+
+        scrollHabitaciones.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+
+        panelScrollHab.setBackground(new java.awt.Color(255, 255, 255));
+
+        panelPrimeraFila.setBackground(new java.awt.Color(255, 255, 255));
+
+        lblN5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/n5_figma.png"))); // NOI18N
+        lblN5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        lblN4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/n4_figma.png"))); // NOI18N
+        lblN4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        lblN3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/n3_figma.png"))); // NOI18N
+        lblN3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        lblN2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/n2_figma.png"))); // NOI18N
+        lblN2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        lblN1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/n1_figma.png"))); // NOI18N
+        lblN1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        javax.swing.GroupLayout panelPrimeraFilaLayout = new javax.swing.GroupLayout(panelPrimeraFila);
+        panelPrimeraFila.setLayout(panelPrimeraFilaLayout);
+        panelPrimeraFilaLayout.setHorizontalGroup(
+            panelPrimeraFilaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelPrimeraFilaLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(lblN1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED, 20, Short.MAX_VALUE)
+                .addComponent(lblN2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 14, Short.MAX_VALUE)
+                .addComponent(lblN3)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED, 20, Short.MAX_VALUE)
+                .addComponent(lblN4)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 16, Short.MAX_VALUE)
+                .addComponent(lblN5)
+                .addGap(25, 25, 25))
+        );
+        panelPrimeraFilaLayout.setVerticalGroup(
+            panelPrimeraFilaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelPrimeraFilaLayout.createSequentialGroup()
+                .addGap(18, 18, 18)
+                .addGroup(panelPrimeraFilaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblN5)
+                    .addGroup(panelPrimeraFilaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(lblN4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(lblN3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(lblN2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(lblN1)))
+                .addContainerGap(39, Short.MAX_VALUE))
+        );
+
+        panelSegundaFila.setBackground(new java.awt.Color(255, 255, 255));
+
+        lblN10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/n10_figma.png"))); // NOI18N
+        lblN10.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        lblN9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/n9_figma.png"))); // NOI18N
+        lblN9.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        lblN8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/n8_figma.png"))); // NOI18N
+        lblN8.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        lblN7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/n7_figma.png"))); // NOI18N
+        lblN7.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        lblN6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/n6_figma.png"))); // NOI18N
+        lblN6.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        javax.swing.GroupLayout panelSegundaFilaLayout = new javax.swing.GroupLayout(panelSegundaFila);
+        panelSegundaFila.setLayout(panelSegundaFilaLayout);
+        panelSegundaFilaLayout.setHorizontalGroup(
+            panelSegundaFilaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelSegundaFilaLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(lblN6)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED, 20, Short.MAX_VALUE)
+                .addComponent(lblN7)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 14, Short.MAX_VALUE)
+                .addComponent(lblN8)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED, 20, Short.MAX_VALUE)
+                .addComponent(lblN9)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 16, Short.MAX_VALUE)
+                .addComponent(lblN10)
+                .addGap(25, 25, 25))
+        );
+        panelSegundaFilaLayout.setVerticalGroup(
+            panelSegundaFilaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelSegundaFilaLayout.createSequentialGroup()
+                .addGap(18, 18, 18)
+                .addGroup(panelSegundaFilaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblN10)
+                    .addGroup(panelSegundaFilaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(lblN9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(lblN8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(lblN7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(lblN6)))
+                .addContainerGap(30, Short.MAX_VALUE))
+        );
+
+        panelSegundaFila1.setBackground(new java.awt.Color(255, 255, 255));
+
+        lblN15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/n15_figma.png"))); // NOI18N
+        lblN15.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        lblN14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/n14_figma.png"))); // NOI18N
+        lblN14.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        lblN13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/n13_figma.png"))); // NOI18N
+        lblN13.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        lblN12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/n12_figma.png"))); // NOI18N
+        lblN12.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        lblN11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/n11_figma.png"))); // NOI18N
+        lblN11.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        javax.swing.GroupLayout panelSegundaFila1Layout = new javax.swing.GroupLayout(panelSegundaFila1);
+        panelSegundaFila1.setLayout(panelSegundaFila1Layout);
+        panelSegundaFila1Layout.setHorizontalGroup(
+            panelSegundaFila1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelSegundaFila1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(lblN11)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED, 17, Short.MAX_VALUE)
+                .addComponent(lblN12)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 11, Short.MAX_VALUE)
+                .addComponent(lblN13)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED, 17, Short.MAX_VALUE)
+                .addComponent(lblN14)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 13, Short.MAX_VALUE)
+                .addComponent(lblN15)
+                .addGap(25, 25, 25))
+        );
+        panelSegundaFila1Layout.setVerticalGroup(
+            panelSegundaFila1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelSegundaFila1Layout.createSequentialGroup()
+                .addGap(18, 18, 18)
+                .addGroup(panelSegundaFila1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblN15)
+                    .addGroup(panelSegundaFila1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(lblN14, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(lblN13, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(lblN12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(lblN11)))
+                .addContainerGap(17, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout panelScrollHabLayout = new javax.swing.GroupLayout(panelScrollHab);
+        panelScrollHab.setLayout(panelScrollHabLayout);
+        panelScrollHabLayout.setHorizontalGroup(
+            panelScrollHabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(panelPrimeraFila, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(panelSegundaFila, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(panelScrollHabLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(panelSegundaFila1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        panelScrollHabLayout.setVerticalGroup(
+            panelScrollHabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelScrollHabLayout.createSequentialGroup()
+                .addComponent(panelPrimeraFila, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(panelSegundaFila, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(panelSegundaFila1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(14, Short.MAX_VALUE))
+        );
+
+        scrollHabitaciones.setViewportView(panelScrollHab);
+
+        javax.swing.GroupLayout panelHabitacionesLayout = new javax.swing.GroupLayout(panelHabitaciones);
+        panelHabitaciones.setLayout(panelHabitacionesLayout);
+        panelHabitacionesLayout.setHorizontalGroup(
+            panelHabitacionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(scrollHabitaciones, javax.swing.GroupLayout.DEFAULT_SIZE, 1200, Short.MAX_VALUE)
+        );
+        panelHabitacionesLayout.setVerticalGroup(
+            panelHabitacionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelHabitacionesLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(scrollHabitaciones, javax.swing.GroupLayout.DEFAULT_SIZE, 549, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout panelPrincipalLayout = new javax.swing.GroupLayout(panelPrincipal);
+        panelPrincipal.setLayout(panelPrincipalLayout);
+        panelPrincipalLayout.setHorizontalGroup(
+            panelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelPrincipalLayout.createSequentialGroup()
+                .addGap(31, 31, 31)
+                .addComponent(lblLogo, javax.swing.GroupLayout.PREFERRED_SIZE, 318, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(40, 40, 40)
+                .addGroup(panelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblMantenimiento)
+                    .addComponent(lblOcupada))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(panelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblVariosDias)
+                    .addGroup(panelPrincipalLayout.createSequentialGroup()
+                        .addComponent(lblLimpieza)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(lblReservada)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(lblHabitaciones)
+                .addContainerGap(55, Short.MAX_VALUE))
+            .addComponent(panelHabitaciones, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        panelPrincipalLayout.setVerticalGroup(
+            panelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelPrincipalLayout.createSequentialGroup()
+                .addGap(17, 17, 17)
+                .addGroup(panelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(lblLogo, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(panelPrincipalLayout.createSequentialGroup()
+                        .addGap(8, 8, 8)
+                        .addGroup(panelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(panelPrincipalLayout.createSequentialGroup()
+                                .addGroup(panelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(panelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addComponent(lblMantenimiento)
+                                        .addComponent(lblLimpieza, javax.swing.GroupLayout.Alignment.LEADING))
+                                    .addComponent(lblReservada))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGroup(panelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(lblOcupada)
+                                    .addComponent(lblVariosDias)))
+                            .addGroup(panelPrincipalLayout.createSequentialGroup()
+                                .addComponent(lblHabitaciones, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 0, Short.MAX_VALUE)))))
+                .addComponent(panelHabitaciones, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addComponent(panelPrincipal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addComponent(panelPrincipal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -78,5 +360,34 @@ public class FrmHabitaciones extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel lblHabitaciones;
+    private javax.swing.JLabel lblLimpieza;
+    private javax.swing.JLabel lblLogo;
+    private javax.swing.JLabel lblMantenimiento;
+    private javax.swing.JLabel lblN1;
+    private javax.swing.JLabel lblN10;
+    private javax.swing.JLabel lblN11;
+    private javax.swing.JLabel lblN12;
+    private javax.swing.JLabel lblN13;
+    private javax.swing.JLabel lblN14;
+    private javax.swing.JLabel lblN15;
+    private javax.swing.JLabel lblN2;
+    private javax.swing.JLabel lblN3;
+    private javax.swing.JLabel lblN4;
+    private javax.swing.JLabel lblN5;
+    private javax.swing.JLabel lblN6;
+    private javax.swing.JLabel lblN7;
+    private javax.swing.JLabel lblN8;
+    private javax.swing.JLabel lblN9;
+    private javax.swing.JLabel lblOcupada;
+    private javax.swing.JLabel lblReservada;
+    private javax.swing.JLabel lblVariosDias;
+    private javax.swing.JPanel panelHabitaciones;
+    private javax.swing.JPanel panelPrimeraFila;
+    private javax.swing.JPanel panelPrincipal;
+    private javax.swing.JPanel panelScrollHab;
+    private javax.swing.JPanel panelSegundaFila;
+    private javax.swing.JPanel panelSegundaFila1;
+    private javax.swing.JScrollPane scrollHabitaciones;
     // End of variables declaration//GEN-END:variables
 }
