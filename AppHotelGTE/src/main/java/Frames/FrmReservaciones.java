@@ -27,7 +27,7 @@ public class FrmReservaciones extends javax.swing.JFrame {
 
         panelPrincipal = new javax.swing.JPanel();
         lblLogo = new javax.swing.JLabel();
-        jPanel2 = new javax.swing.JPanel();
+        panelForm = new javax.swing.JPanel();
         lblIdentificacion = new javax.swing.JLabel();
         txtIdentificacion = new javax.swing.JTextField();
         lblNombreCliente = new javax.swing.JLabel();
@@ -50,7 +50,7 @@ public class FrmReservaciones extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
         btnRealizar = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        lblReservaciones = new javax.swing.JLabel();
         panelTable = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
         tblReservas = new javax.swing.JTable();
@@ -66,7 +66,7 @@ public class FrmReservaciones extends javax.swing.JFrame {
 
         lblLogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/logo (Personalizado).png"))); // NOI18N
 
-        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
+        panelForm.setBackground(new java.awt.Color(255, 255, 255));
 
         lblIdentificacion.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
         lblIdentificacion.setForeground(new java.awt.Color(0, 0, 0));
@@ -145,18 +145,18 @@ public class FrmReservaciones extends javax.swing.JFrame {
         btnRealizar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Realizar_figma.png"))); // NOI18N
         btnRealizar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
+        javax.swing.GroupLayout panelFormLayout = new javax.swing.GroupLayout(panelForm);
+        panelForm.setLayout(panelFormLayout);
+        panelFormLayout.setHorizontalGroup(
+            panelFormLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelFormLayout.createSequentialGroup()
                 .addGap(43, 43, 43)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(panelFormLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(txtIdentificacion, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtxNombreCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
+                    .addGroup(panelFormLayout.createSequentialGroup()
                         .addGap(8, 8, 8)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(panelFormLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(lblIdentificacion)
                             .addComponent(lblNombreCliente)
                             .addComponent(lblDireccion)
@@ -168,63 +168,63 @@ public class FrmReservaciones extends javax.swing.JFrame {
                     .addComponent(txtCorreo, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtFechaReserva, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(46, 46, 46)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addGroup(panelFormLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(txtNombreEmpleado)
                     .addComponent(txtCheckOut)
                     .addComponent(txtCheckIn)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
+                    .addGroup(panelFormLayout.createSequentialGroup()
                         .addGap(8, 8, 8)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(panelFormLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(lblNombreEmpleado)
                             .addComponent(lblCheckOut)
                             .addComponent(lblCheckIn)))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
+                    .addGroup(panelFormLayout.createSequentialGroup()
                         .addGap(9, 9, 9)
                         .addComponent(lblNombreEmpleado1))
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
                     .addComponent(btnRealizar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(71, Short.MAX_VALUE))
         );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
+        panelFormLayout.setVerticalGroup(
+            panelFormLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelFormLayout.createSequentialGroup()
                 .addGap(14, 14, 14)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGroup(panelFormLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(panelFormLayout.createSequentialGroup()
                         .addComponent(lblIdentificacion)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(txtIdentificacion, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
+                    .addGroup(panelFormLayout.createSequentialGroup()
                         .addComponent(lblCheckIn)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(txtCheckIn, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGroup(panelFormLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panelFormLayout.createSequentialGroup()
                         .addComponent(lblNombreCliente)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(txtxNombreCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
+                    .addGroup(panelFormLayout.createSequentialGroup()
                         .addComponent(lblCheckOut)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(txtCheckOut, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGroup(panelFormLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panelFormLayout.createSequentialGroup()
                         .addComponent(lblDireccion)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(txtDireccion, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
+                    .addGroup(panelFormLayout.createSequentialGroup()
                         .addComponent(lblNombreEmpleado)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(txtNombreEmpleado, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(panelFormLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(lblTelefono)
                     .addComponent(lblNombreEmpleado1))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGroup(panelFormLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panelFormLayout.createSequentialGroup()
                         .addComponent(txtTelefono, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(lblCorreo)
@@ -235,14 +235,14 @@ public class FrmReservaciones extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(txtFechaReserva, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
+                    .addGroup(panelFormLayout.createSequentialGroup()
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(btnRealizar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addContainerGap())
         );
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Reservaciones.png"))); // NOI18N
+        lblReservaciones.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Reservaciones.png"))); // NOI18N
 
         panelTable.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -257,6 +257,8 @@ public class FrmReservaciones extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
+        tblReservas.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        tblReservas.getTableHeader().setReorderingAllowed(false);
         jScrollPane2.setViewportView(tblReservas);
 
         txtBusqueda.setBackground(new java.awt.Color(255, 255, 255));
@@ -303,12 +305,12 @@ public class FrmReservaciones extends javax.swing.JFrame {
                     .addComponent(lblLupa, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(lblX, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 447, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 10, Short.MAX_VALUE)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 466, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(panelTableLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btnActualizar)
                     .addComponent(btnEliminar))
-                .addContainerGap(20, Short.MAX_VALUE))
+                .addGap(12, 12, 12))
         );
 
         javax.swing.GroupLayout panelPrincipalLayout = new javax.swing.GroupLayout(panelPrincipal);
@@ -320,13 +322,12 @@ public class FrmReservaciones extends javax.swing.JFrame {
                     .addGroup(panelPrincipalLayout.createSequentialGroup()
                         .addGap(31, 31, 31)
                         .addComponent(lblLogo, javax.swing.GroupLayout.PREFERRED_SIZE, 318, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addComponent(panelForm, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGroup(panelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(panelPrincipalLayout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 116, Short.MAX_VALUE)
-                        .addComponent(jLabel2)
-                        .addContainerGap(12, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 155, Short.MAX_VALUE)
+                        .addComponent(lblReservaciones)
+                        .addContainerGap(51, Short.MAX_VALUE))
                     .addGroup(panelPrincipalLayout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(panelTable, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
@@ -339,9 +340,9 @@ public class FrmReservaciones extends javax.swing.JFrame {
                     .addGroup(panelPrincipalLayout.createSequentialGroup()
                         .addComponent(lblLogo, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(panelForm, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(panelPrincipalLayout.createSequentialGroup()
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(lblReservaciones, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(panelTable, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
@@ -399,8 +400,6 @@ public class FrmReservaciones extends javax.swing.JFrame {
     private javax.swing.JLabel btnActualizar;
     private javax.swing.JLabel btnEliminar;
     private javax.swing.JLabel btnRealizar;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTextArea jTextArea1;
@@ -415,8 +414,10 @@ public class FrmReservaciones extends javax.swing.JFrame {
     private javax.swing.JLabel lblNombreCliente;
     private javax.swing.JLabel lblNombreEmpleado;
     private javax.swing.JLabel lblNombreEmpleado1;
+    private javax.swing.JLabel lblReservaciones;
     private javax.swing.JLabel lblTelefono;
     private javax.swing.JLabel lblX;
+    private javax.swing.JPanel panelForm;
     private javax.swing.JPanel panelPrincipal;
     private javax.swing.JPanel panelTable;
     private javax.swing.JTable tblReservas;
