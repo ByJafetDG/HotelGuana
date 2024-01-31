@@ -1,5 +1,7 @@
 package Frames;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author JafetDG
@@ -14,6 +16,14 @@ public class FrmPrincipal extends javax.swing.JFrame {
         setLocationRelativeTo(null);
         /*Al ejecutar el programa se abrirá en pantalla completa*/
         setExtendedState(MAXIMIZED_BOTH);
+        
+        
+        /*Desactivar los botones del menú */
+        lblCerrarSesion.setVisible(false);
+        lblAdministracion.setVisible(false);
+        lblSalir.setVisible(false);
+        /*--------------------------------*/
+        
     }
 
     /**
@@ -35,6 +45,9 @@ public class FrmPrincipal extends javax.swing.JFrame {
         lblReservaciones = new javax.swing.JLabel();
         lblHuespedes = new javax.swing.JLabel();
         lblMenu = new javax.swing.JLabel();
+        lblCerrarSesion = new javax.swing.JLabel();
+        lblAdministracion = new javax.swing.JLabel();
+        lblSalir = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -49,16 +62,48 @@ public class FrmPrincipal extends javax.swing.JFrame {
         lblBienvenidos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Bienvenido_figma.png"))); // NOI18N
 
         lblRealizarIngreso.setIcon(new javax.swing.ImageIcon(getClass().getResource("/RealizarIngreso_figma.png"))); // NOI18N
+        lblRealizarIngreso.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         lblHabitaciones.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BtnHabitaciones_figma.png"))); // NOI18N
+        lblHabitaciones.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        lblHabitaciones.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblHabitacionesMouseClicked(evt);
+            }
+        });
 
         lblReservaciones.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BtnReservaciones_figma.png"))); // NOI18N
+        lblReservaciones.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        lblReservaciones.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblReservacionesMouseClicked(evt);
+            }
+        });
 
         lblHuespedes.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Huespedes_figma.png"))); // NOI18N
         lblHuespedes.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         lblMenu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/menu_figma.png"))); // NOI18N
         lblMenu.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        lblMenu.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblMenuMouseClicked(evt);
+            }
+        });
+
+        lblCerrarSesion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/cerrarSesion_figma.png"))); // NOI18N
+        lblCerrarSesion.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        lblAdministracion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/administracion_figma.png"))); // NOI18N
+        lblAdministracion.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        lblSalir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Salir_figma.png"))); // NOI18N
+        lblSalir.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        lblSalir.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblSalirMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout panelPrincipalLayout = new javax.swing.GroupLayout(panelPrincipal);
         panelPrincipal.setLayout(panelPrincipalLayout);
@@ -68,25 +113,29 @@ public class FrmPrincipal extends javax.swing.JFrame {
                 .addGap(31, 31, 31)
                 .addGroup(panelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(panelPrincipalLayout.createSequentialGroup()
-                        .addComponent(lblMenu, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(panelPrincipalLayout.createSequentialGroup()
                         .addComponent(lblLogo, javax.swing.GroupLayout.PREFERRED_SIZE, 318, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(35, 35, 35)
                         .addComponent(lblUser, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(lblAdminEmpleado, javax.swing.GroupLayout.PREFERRED_SIZE, 347, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 137, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(lblBienvenidos, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(103, Short.MAX_VALUE))))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelPrincipalLayout.createSequentialGroup()
-                .addContainerGap(531, Short.MAX_VALUE)
-                .addGroup(panelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblHuespedes, javax.swing.GroupLayout.PREFERRED_SIZE, 330, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblReservaciones, javax.swing.GroupLayout.PREFERRED_SIZE, 330, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblHabitaciones, javax.swing.GroupLayout.PREFERRED_SIZE, 330, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblRealizarIngreso, javax.swing.GroupLayout.PREFERRED_SIZE, 330, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(466, Short.MAX_VALUE))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(panelPrincipalLayout.createSequentialGroup()
+                        .addGroup(panelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lblMenu, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(panelPrincipalLayout.createSequentialGroup()
+                                .addGroup(panelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(lblCerrarSesion, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(lblAdministracion)
+                                    .addComponent(lblSalir))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 360, Short.MAX_VALUE)
+                                .addGroup(panelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addComponent(lblRealizarIngreso, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(lblHuespedes, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(lblReservaciones, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(lblHabitaciones, javax.swing.GroupLayout.Alignment.LEADING))))
+                        .addContainerGap(391, Short.MAX_VALUE))))
         );
         panelPrincipalLayout.setVerticalGroup(
             panelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -107,13 +156,21 @@ public class FrmPrincipal extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(lblMenu, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(lblRealizarIngreso, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(30, 30, 30)
-                .addComponent(lblHabitaciones, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(30, 30, 30)
-                .addComponent(lblReservaciones, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(30, 30, 30)
-                .addComponent(lblHuespedes, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(panelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panelPrincipalLayout.createSequentialGroup()
+                        .addComponent(lblRealizarIngreso)
+                        .addGap(30, 30, 30)
+                        .addComponent(lblHabitaciones, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(30, 30, 30)
+                        .addComponent(lblReservaciones, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(30, 30, 30)
+                        .addComponent(lblHuespedes, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(panelPrincipalLayout.createSequentialGroup()
+                        .addComponent(lblCerrarSesion, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(lblAdministracion, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(lblSalir, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(53, Short.MAX_VALUE))
         );
 
@@ -130,6 +187,43 @@ public class FrmPrincipal extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void lblMenuMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblMenuMouseClicked
+        if (lblCerrarSesion.isVisible() == false)
+        {
+            lblCerrarSesion.setVisible(true);
+            lblAdministracion.setVisible(true);
+            lblSalir.setVisible(true);
+        }
+        else {
+            lblCerrarSesion.setVisible(false);
+            lblAdministracion.setVisible(false);
+            lblSalir.setVisible(false);
+        }
+    }//GEN-LAST:event_lblMenuMouseClicked
+
+    private void lblHabitacionesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblHabitacionesMouseClicked
+        FrmHabitaciones hab = new FrmHabitaciones();
+        hab.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_lblHabitacionesMouseClicked
+
+    private void lblReservacionesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblReservacionesMouseClicked
+        FrmReservaciones res = new FrmReservaciones();
+        res.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_lblReservacionesMouseClicked
+
+    private void lblSalirMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblSalirMouseClicked
+        int dialog = JOptionPane.YES_NO_OPTION;
+        
+        int result = JOptionPane.showConfirmDialog(null, "¿Desea salir del sistema?","Exit",dialog);
+        
+        if (result == 0)
+        {
+            System.exit(0);
+        }
+    }//GEN-LAST:event_lblSalirMouseClicked
 
     /**
      * @param args the command line arguments
@@ -168,13 +262,16 @@ public class FrmPrincipal extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel lblAdminEmpleado;
+    private javax.swing.JLabel lblAdministracion;
     private javax.swing.JLabel lblBienvenidos;
+    private javax.swing.JLabel lblCerrarSesion;
     private javax.swing.JLabel lblHabitaciones;
     private javax.swing.JLabel lblHuespedes;
     private javax.swing.JLabel lblLogo;
     private javax.swing.JLabel lblMenu;
     private javax.swing.JLabel lblRealizarIngreso;
     private javax.swing.JLabel lblReservaciones;
+    private javax.swing.JLabel lblSalir;
     private javax.swing.JLabel lblUser;
     private javax.swing.JPanel panelPrincipal;
     // End of variables declaration//GEN-END:variables
