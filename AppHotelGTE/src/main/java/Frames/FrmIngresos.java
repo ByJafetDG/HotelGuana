@@ -4,12 +4,12 @@ package Frames;
  *
  * @author JafetDG
  */
-public class FrmReservaciones extends javax.swing.JFrame {
+public class FrmIngresos extends javax.swing.JFrame {
 
     /**
-     * Creates new form FrmReservaciones
+     * Creates new form FrmIngresos
      */
-    public FrmReservaciones() {
+    public FrmIngresos() {
         initComponents();
         setLocationRelativeTo(null);
         /*Al ejecutar el programa se abrirá en pantalla completa*/
@@ -32,33 +32,35 @@ public class FrmReservaciones extends javax.swing.JFrame {
         txtIdentificacion = new javax.swing.JTextField();
         lblNombreCliente = new javax.swing.JLabel();
         txtxNombreCliente = new javax.swing.JTextField();
+        lblApellido = new javax.swing.JLabel();
+        txtApellido = new javax.swing.JTextField();
         lblDireccion = new javax.swing.JLabel();
         txtDireccion = new javax.swing.JTextField();
         lblTelefono = new javax.swing.JLabel();
         txtTelefono = new javax.swing.JTextField();
         lblCorreo = new javax.swing.JLabel();
         txtCorreo = new javax.swing.JTextField();
-        lblFechaReserva = new javax.swing.JLabel();
-        txtFechaReserva = new javax.swing.JTextField();
         lblCheckIn = new javax.swing.JLabel();
         txtCheckIn = new javax.swing.JTextField();
         lblCheckOut = new javax.swing.JLabel();
         txtCheckOut = new javax.swing.JTextField();
-        txtNombreEmpleado = new javax.swing.JTextField();
-        lblNombreEmpleado = new javax.swing.JLabel();
+        txtPlaca = new javax.swing.JTextField();
+        lblPlaca = new javax.swing.JLabel();
         lblNombreEmpleado1 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
-        btnRealizar = new javax.swing.JLabel();
+        lblFechaIngreso = new javax.swing.JLabel();
+        txtFechaIngreso = new javax.swing.JTextField();
+        lblNumeroHabitacion = new javax.swing.JLabel();
+        txtNumeroHabitacion = new javax.swing.JTextField();
         lblReservaciones = new javax.swing.JLabel();
         panelTable = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
-        tblReservas = new javax.swing.JTable();
-        txtBusqueda = new javax.swing.JTextField();
-        btnActualizar = new javax.swing.JLabel();
-        btnEliminar = new javax.swing.JLabel();
-        lblLupa = new javax.swing.JLabel();
-        lblX = new javax.swing.JLabel();
+        tblIngresos = new javax.swing.JTable();
+        btnRealizar = new javax.swing.JLabel();
+        lblTotalVenta = new javax.swing.JLabel();
+        txtTotalVenta = new javax.swing.JTextField();
+        cmbTipoMoneda = new javax.swing.JComboBox<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -84,6 +86,14 @@ public class FrmReservaciones extends javax.swing.JFrame {
         txtxNombreCliente.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         txtxNombreCliente.setForeground(new java.awt.Color(0, 0, 0));
 
+        lblApellido.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
+        lblApellido.setForeground(new java.awt.Color(0, 0, 0));
+        lblApellido.setText("Apellido cliente");
+
+        txtApellido.setBackground(new java.awt.Color(255, 255, 255));
+        txtApellido.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        txtApellido.setForeground(new java.awt.Color(0, 0, 0));
+
         lblDireccion.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
         lblDireccion.setForeground(new java.awt.Color(0, 0, 0));
         lblDireccion.setText("Dirección");
@@ -108,14 +118,6 @@ public class FrmReservaciones extends javax.swing.JFrame {
         txtCorreo.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         txtCorreo.setForeground(new java.awt.Color(0, 0, 0));
 
-        lblFechaReserva.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
-        lblFechaReserva.setForeground(new java.awt.Color(0, 0, 0));
-        lblFechaReserva.setText("Fecha de reservación");
-
-        txtFechaReserva.setBackground(new java.awt.Color(255, 255, 255));
-        txtFechaReserva.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        txtFechaReserva.setForeground(new java.awt.Color(0, 0, 0));
-
         lblCheckIn.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
         lblCheckIn.setForeground(new java.awt.Color(0, 0, 0));
         lblCheckIn.setText("Check In");
@@ -132,13 +134,13 @@ public class FrmReservaciones extends javax.swing.JFrame {
         txtCheckOut.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         txtCheckOut.setForeground(new java.awt.Color(0, 0, 0));
 
-        txtNombreEmpleado.setBackground(new java.awt.Color(255, 255, 255));
-        txtNombreEmpleado.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        txtNombreEmpleado.setForeground(new java.awt.Color(0, 0, 0));
+        txtPlaca.setBackground(new java.awt.Color(255, 255, 255));
+        txtPlaca.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        txtPlaca.setForeground(new java.awt.Color(0, 0, 0));
 
-        lblNombreEmpleado.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
-        lblNombreEmpleado.setForeground(new java.awt.Color(0, 0, 0));
-        lblNombreEmpleado.setText("Nombre empleado");
+        lblPlaca.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
+        lblPlaca.setForeground(new java.awt.Color(0, 0, 0));
+        lblPlaca.setText("Placa");
 
         lblNombreEmpleado1.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
         lblNombreEmpleado1.setForeground(new java.awt.Color(0, 0, 0));
@@ -152,8 +154,21 @@ public class FrmReservaciones extends javax.swing.JFrame {
         jTextArea1.setRows(5);
         jScrollPane1.setViewportView(jTextArea1);
 
-        btnRealizar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Realizar_figma.png"))); // NOI18N
-        btnRealizar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        lblFechaIngreso.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
+        lblFechaIngreso.setForeground(new java.awt.Color(0, 0, 0));
+        lblFechaIngreso.setText("Fecha de ingreso");
+
+        txtFechaIngreso.setBackground(new java.awt.Color(255, 255, 255));
+        txtFechaIngreso.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        txtFechaIngreso.setForeground(new java.awt.Color(0, 0, 0));
+
+        lblNumeroHabitacion.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
+        lblNumeroHabitacion.setForeground(new java.awt.Color(0, 0, 0));
+        lblNumeroHabitacion.setText("Número de habitación");
+
+        txtNumeroHabitacion.setBackground(new java.awt.Color(255, 255, 255));
+        txtNumeroHabitacion.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        txtNumeroHabitacion.setForeground(new java.awt.Color(0, 0, 0));
 
         javax.swing.GroupLayout panelFormLayout = new javax.swing.GroupLayout(panelForm);
         panelForm.setLayout(panelFormLayout);
@@ -164,36 +179,52 @@ public class FrmReservaciones extends javax.swing.JFrame {
                 .addGroup(panelFormLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(txtIdentificacion, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtxNombreCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(panelFormLayout.createSequentialGroup()
-                        .addGap(8, 8, 8)
-                        .addGroup(panelFormLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lblIdentificacion)
-                            .addComponent(lblNombreCliente)
-                            .addComponent(lblDireccion)
-                            .addComponent(lblTelefono)
-                            .addComponent(lblCorreo)
-                            .addComponent(lblFechaReserva)))
+                    .addComponent(txtApellido, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtDireccion, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtTelefono, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtCorreo, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtFechaReserva, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(46, 46, 46)
-                .addGroup(panelFormLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(txtNombreEmpleado)
-                    .addComponent(txtCheckOut)
-                    .addComponent(txtCheckIn)
                     .addGroup(panelFormLayout.createSequentialGroup()
-                        .addGap(8, 8, 8)
+                        .addComponent(txtTelefono, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(46, 46, 46)
                         .addGroup(panelFormLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lblNombreEmpleado)
-                            .addComponent(lblCheckOut)
-                            .addComponent(lblCheckIn)))
+                            .addComponent(txtNumeroHabitacion, javax.swing.GroupLayout.DEFAULT_SIZE, 255, Short.MAX_VALUE)
+                            .addGroup(panelFormLayout.createSequentialGroup()
+                                .addGap(8, 8, 8)
+                                .addComponent(lblNumeroHabitacion)
+                                .addGap(0, 0, Short.MAX_VALUE))))
                     .addGroup(panelFormLayout.createSequentialGroup()
-                        .addGap(9, 9, 9)
-                        .addComponent(lblNombreEmpleado1))
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                    .addComponent(btnRealizar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(71, Short.MAX_VALUE))
+                        .addGroup(panelFormLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(panelFormLayout.createSequentialGroup()
+                                .addGap(8, 8, 8)
+                                .addGroup(panelFormLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(lblNombreCliente)
+                                    .addComponent(lblApellido)
+                                    .addComponent(lblDireccion)
+                                    .addComponent(lblTelefono)
+                                    .addComponent(lblCorreo)
+                                    .addComponent(lblIdentificacion)))
+                            .addComponent(txtCorreo, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(46, 46, 46)
+                        .addGroup(panelFormLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txtPlaca, javax.swing.GroupLayout.DEFAULT_SIZE, 255, Short.MAX_VALUE)
+                            .addComponent(txtCheckOut)
+                            .addComponent(txtCheckIn)
+                            .addGroup(panelFormLayout.createSequentialGroup()
+                                .addGroup(panelFormLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(panelFormLayout.createSequentialGroup()
+                                        .addGap(9, 9, 9)
+                                        .addComponent(lblNombreEmpleado1))
+                                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(txtFechaIngreso, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(panelFormLayout.createSequentialGroup()
+                                        .addGap(8, 8, 8)
+                                        .addComponent(lblFechaIngreso))
+                                    .addGroup(panelFormLayout.createSequentialGroup()
+                                        .addGap(8, 8, 8)
+                                        .addGroup(panelFormLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(lblPlaca)
+                                            .addComponent(lblCheckOut)
+                                            .addComponent(lblCheckIn))))
+                                .addGap(0, 0, Short.MAX_VALUE)))))
+                .addContainerGap())
         );
         panelFormLayout.setVerticalGroup(
             panelFormLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -205,122 +236,122 @@ public class FrmReservaciones extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(txtIdentificacion, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(panelFormLayout.createSequentialGroup()
-                        .addComponent(lblCheckIn)
+                        .addComponent(lblFechaIngreso)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txtCheckIn, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(txtFechaIngreso, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
-                .addGroup(panelFormLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(panelFormLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(panelFormLayout.createSequentialGroup()
                         .addComponent(lblNombreCliente)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txtxNombreCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(panelFormLayout.createSequentialGroup()
-                        .addComponent(lblCheckOut)
+                        .addComponent(txtxNombreCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(lblApellido)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txtCheckOut, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(18, 18, 18)
-                .addGroup(panelFormLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(panelFormLayout.createSequentialGroup()
+                        .addComponent(txtApellido, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
                         .addComponent(lblDireccion)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txtDireccion, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(panelFormLayout.createSequentialGroup()
-                        .addComponent(lblNombreEmpleado)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txtNombreEmpleado, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(18, 18, 18)
-                .addGroup(panelFormLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblTelefono)
-                    .addComponent(lblNombreEmpleado1))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(panelFormLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(panelFormLayout.createSequentialGroup()
-                        .addComponent(txtTelefono, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txtDireccion, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
+                        .addComponent(lblTelefono)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txtTelefono, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(panelFormLayout.createSequentialGroup()
+                        .addComponent(lblCheckIn)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txtCheckIn, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(lblCheckOut)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txtCheckOut, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(lblPlaca)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txtPlaca, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(lblNumeroHabitacion)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txtNumeroHabitacion, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(20, 20, 20)
+                .addGroup(panelFormLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panelFormLayout.createSequentialGroup()
                         .addComponent(lblCorreo)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(txtCorreo, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(20, 20, 20)
-                        .addComponent(lblFechaReserva)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txtFechaReserva, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE))
+                        .addGap(0, 51, Short.MAX_VALUE))
                     .addGroup(panelFormLayout.createSequentialGroup()
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(lblNombreEmpleado1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btnRealizar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
 
-        lblReservaciones.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Reservaciones.png"))); // NOI18N
+        lblReservaciones.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Ingresos_Figma.png"))); // NOI18N
 
         panelTable.setBackground(new java.awt.Color(255, 255, 255));
 
-        tblReservas.setModel(new javax.swing.table.DefaultTableModel(
+        tblIngresos.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null}
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+                "Tipo de habitación", "1 persona", "2 personas", "3 personas", "4 personas", "5 personas"
             }
         ));
-        tblReservas.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        tblReservas.getTableHeader().setReorderingAllowed(false);
-        jScrollPane2.setViewportView(tblReservas);
+        tblIngresos.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        tblIngresos.getTableHeader().setReorderingAllowed(false);
+        jScrollPane2.setViewportView(tblIngresos);
 
-        txtBusqueda.setBackground(new java.awt.Color(255, 255, 255));
-        txtBusqueda.setForeground(new java.awt.Color(0, 0, 0));
+        btnRealizar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Realizar_figma.png"))); // NOI18N
+        btnRealizar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
-        btnActualizar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Actualizar.png"))); // NOI18N
-        btnActualizar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        lblTotalVenta.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
+        lblTotalVenta.setForeground(new java.awt.Color(0, 0, 0));
+        lblTotalVenta.setText("Total de venta:");
 
-        btnEliminar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Eliminar.png"))); // NOI18N
-        btnEliminar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        txtTotalVenta.setBackground(new java.awt.Color(255, 255, 255));
+        txtTotalVenta.setForeground(new java.awt.Color(0, 0, 0));
 
-        lblLupa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/lupa.png"))); // NOI18N
-
-        lblX.setIcon(new javax.swing.ImageIcon(getClass().getResource("/equis.png"))); // NOI18N
+        cmbTipoMoneda.setBackground(new java.awt.Color(255, 255, 255));
+        cmbTipoMoneda.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
+        cmbTipoMoneda.setForeground(new java.awt.Color(0, 0, 0));
+        cmbTipoMoneda.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Tipo de moneda" }));
 
         javax.swing.GroupLayout panelTableLayout = new javax.swing.GroupLayout(panelTable);
         panelTable.setLayout(panelTableLayout);
         panelTableLayout.setHorizontalGroup(
             panelTableLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelTableLayout.createSequentialGroup()
-                .addGap(30, 30, 30)
-                .addComponent(lblLupa)
-                .addGap(3, 3, 3)
-                .addComponent(txtBusqueda, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(lblX)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(panelTableLayout.createSequentialGroup()
-                .addGroup(panelTableLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane2)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelTableLayout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnActualizar)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(btnEliminar)))
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 712, Short.MAX_VALUE)
                 .addContainerGap())
+            .addGroup(panelTableLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(lblTotalVenta)
+                .addGap(18, 18, 18)
+                .addGroup(panelTableLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(cmbTipoMoneda, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnRealizar)
+                    .addComponent(txtTotalVenta, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         panelTableLayout.setVerticalGroup(
             panelTableLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelTableLayout.createSequentialGroup()
-                .addGap(14, 14, 14)
+                .addContainerGap()
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
+                .addComponent(cmbTipoMoneda, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addGroup(panelTableLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(txtBusqueda)
-                    .addComponent(lblLupa, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(lblX, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 466, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(panelTableLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnActualizar)
-                    .addComponent(btnEliminar))
-                .addGap(12, 12, 12))
+                    .addComponent(lblTotalVenta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(txtTotalVenta, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(btnRealizar)
+                .addGap(23, 23, 23))
         );
 
         javax.swing.GroupLayout panelPrincipalLayout = new javax.swing.GroupLayout(panelPrincipal);
@@ -335,26 +366,25 @@ public class FrmReservaciones extends javax.swing.JFrame {
                     .addComponent(panelForm, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGroup(panelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(panelPrincipalLayout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 155, Short.MAX_VALUE)
-                        .addComponent(lblReservaciones)
-                        .addContainerGap(51, Short.MAX_VALUE))
-                    .addGroup(panelPrincipalLayout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(panelTable, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                        .addComponent(panelTable, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelPrincipalLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(lblReservaciones)
+                        .addGap(0, 0, Short.MAX_VALUE))))
         );
         panelPrincipalLayout.setVerticalGroup(
             panelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelPrincipalLayout.createSequentialGroup()
                 .addGap(17, 17, 17)
-                .addGroup(panelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(panelPrincipalLayout.createSequentialGroup()
-                        .addComponent(lblLogo, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(panelForm, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(panelPrincipalLayout.createSequentialGroup()
-                        .addComponent(lblReservaciones, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(panelTable, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                .addComponent(lblLogo, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 40, Short.MAX_VALUE)
+                .addComponent(panelForm, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelPrincipalLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(lblReservaciones, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(panelTable, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -388,58 +418,60 @@ public class FrmReservaciones extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(FrmReservaciones.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FrmIngresos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(FrmReservaciones.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FrmIngresos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(FrmReservaciones.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FrmIngresos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(FrmReservaciones.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FrmIngresos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new FrmReservaciones().setVisible(true);
+                new FrmIngresos().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel btnActualizar;
-    private javax.swing.JLabel btnEliminar;
     private javax.swing.JLabel btnRealizar;
+    private javax.swing.JComboBox<String> cmbTipoMoneda;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JLabel lblApellido;
     private javax.swing.JLabel lblCheckIn;
     private javax.swing.JLabel lblCheckOut;
     private javax.swing.JLabel lblCorreo;
     private javax.swing.JLabel lblDireccion;
-    private javax.swing.JLabel lblFechaReserva;
+    private javax.swing.JLabel lblFechaIngreso;
     private javax.swing.JLabel lblIdentificacion;
     private javax.swing.JLabel lblLogo;
-    private javax.swing.JLabel lblLupa;
     private javax.swing.JLabel lblNombreCliente;
-    private javax.swing.JLabel lblNombreEmpleado;
     private javax.swing.JLabel lblNombreEmpleado1;
+    private javax.swing.JLabel lblNumeroHabitacion;
+    private javax.swing.JLabel lblPlaca;
     private javax.swing.JLabel lblReservaciones;
     private javax.swing.JLabel lblTelefono;
-    private javax.swing.JLabel lblX;
+    private javax.swing.JLabel lblTotalVenta;
     private javax.swing.JPanel panelForm;
     private javax.swing.JPanel panelPrincipal;
     private javax.swing.JPanel panelTable;
-    private javax.swing.JTable tblReservas;
-    private javax.swing.JTextField txtBusqueda;
+    private javax.swing.JTable tblIngresos;
+    private javax.swing.JTextField txtApellido;
     private javax.swing.JTextField txtCheckIn;
     private javax.swing.JTextField txtCheckOut;
     private javax.swing.JTextField txtCorreo;
     private javax.swing.JTextField txtDireccion;
-    private javax.swing.JTextField txtFechaReserva;
+    private javax.swing.JTextField txtFechaIngreso;
     private javax.swing.JTextField txtIdentificacion;
-    private javax.swing.JTextField txtNombreEmpleado;
+    private javax.swing.JTextField txtNumeroHabitacion;
+    private javax.swing.JTextField txtPlaca;
     private javax.swing.JTextField txtTelefono;
+    private javax.swing.JTextField txtTotalVenta;
     private javax.swing.JTextField txtxNombreCliente;
     // End of variables declaration//GEN-END:variables
 }
