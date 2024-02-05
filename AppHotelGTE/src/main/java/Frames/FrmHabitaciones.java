@@ -48,7 +48,7 @@ public class FrmHabitaciones extends javax.swing.JFrame {
         lblN8 = new javax.swing.JLabel();
         lblN7 = new javax.swing.JLabel();
         lblN6 = new javax.swing.JLabel();
-        panelSegundaFila1 = new javax.swing.JPanel();
+        panelTerceraFila = new javax.swing.JPanel();
         lblN15 = new javax.swing.JLabel();
         lblN14 = new javax.swing.JLabel();
         lblN13 = new javax.swing.JLabel();
@@ -61,19 +61,19 @@ public class FrmHabitaciones extends javax.swing.JFrame {
 
         lblLogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/logo (Personalizado).png"))); // NOI18N
 
-        lblMantenimiento.setIcon(new javax.swing.ImageIcon(getClass().getResource("/mantenimiento_figma.png"))); // NOI18N
+        lblMantenimiento.setIcon(new javax.swing.ImageIcon(getClass().getResource("/estados/mantenimiento_figma.png"))); // NOI18N
 
-        lblOcupada.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ocupada_figma.png"))); // NOI18N
+        lblOcupada.setIcon(new javax.swing.ImageIcon(getClass().getResource("/estados/ocupada_figma.png"))); // NOI18N
 
-        lblLimpieza.setIcon(new javax.swing.ImageIcon(getClass().getResource("/limpieza_figma.png"))); // NOI18N
+        lblLimpieza.setIcon(new javax.swing.ImageIcon(getClass().getResource("/estados/limpieza_figma.png"))); // NOI18N
 
-        lblVariosDias.setIcon(new javax.swing.ImageIcon(getClass().getResource("/variosdias_figma.png"))); // NOI18N
+        lblVariosDias.setIcon(new javax.swing.ImageIcon(getClass().getResource("/estados/variosdias_figma.png"))); // NOI18N
 
-        lblReservada.setIcon(new javax.swing.ImageIcon(getClass().getResource("/reservada_figma.png"))); // NOI18N
+        lblReservada.setIcon(new javax.swing.ImageIcon(getClass().getResource("/estados/reservada_figma.png"))); // NOI18N
 
         lblHabitaciones.setFont(new java.awt.Font("Segoe UI", 3, 36)); // NOI18N
         lblHabitaciones.setForeground(new java.awt.Color(0, 0, 0));
-        lblHabitaciones.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Habitaciones.png"))); // NOI18N
+        lblHabitaciones.setIcon(new javax.swing.ImageIcon(getClass().getResource("/labels/Habitaciones.png"))); // NOI18N
 
         panelHabitaciones.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -83,19 +83,19 @@ public class FrmHabitaciones extends javax.swing.JFrame {
 
         panelPrimeraFila.setBackground(new java.awt.Color(255, 255, 255));
 
-        lblN5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/n5_figma.png"))); // NOI18N
+        lblN5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/habitaciones/n5_figma.png"))); // NOI18N
         lblN5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
-        lblN4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/n4_figma.png"))); // NOI18N
+        lblN4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/habitaciones/n4_figma.png"))); // NOI18N
         lblN4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
-        lblN3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/n3_figma.png"))); // NOI18N
+        lblN3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/habitaciones/n3_figma.png"))); // NOI18N
         lblN3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
-        lblN2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/n2_figma.png"))); // NOI18N
+        lblN2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/habitaciones/n2_figma.png"))); // NOI18N
         lblN2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
-        lblN1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/n1_figma.png"))); // NOI18N
+        lblN1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/habitaciones/n1_figma.png"))); // NOI18N
         lblN1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         javax.swing.GroupLayout panelPrimeraFilaLayout = new javax.swing.GroupLayout(panelPrimeraFila);
@@ -105,13 +105,13 @@ public class FrmHabitaciones extends javax.swing.JFrame {
             .addGroup(panelPrimeraFilaLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(lblN1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED, 20, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED, 23, Short.MAX_VALUE)
                 .addComponent(lblN2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 14, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 17, Short.MAX_VALUE)
                 .addComponent(lblN3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED, 20, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED, 23, Short.MAX_VALUE)
                 .addComponent(lblN4)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 16, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 19, Short.MAX_VALUE)
                 .addComponent(lblN5)
                 .addGap(25, 25, 25))
         );
@@ -126,24 +126,24 @@ public class FrmHabitaciones extends javax.swing.JFrame {
                         .addComponent(lblN3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(lblN2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(lblN1)))
-                .addContainerGap(39, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         panelSegundaFila.setBackground(new java.awt.Color(255, 255, 255));
 
-        lblN10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/n10_figma.png"))); // NOI18N
+        lblN10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/habitaciones/n10_figma.png"))); // NOI18N
         lblN10.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
-        lblN9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/n9_figma.png"))); // NOI18N
+        lblN9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/habitaciones/n9_figma.png"))); // NOI18N
         lblN9.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
-        lblN8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/n8_figma.png"))); // NOI18N
+        lblN8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/habitaciones/n8_figma.png"))); // NOI18N
         lblN8.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
-        lblN7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/n7_figma.png"))); // NOI18N
+        lblN7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/habitaciones/n7_figma.png"))); // NOI18N
         lblN7.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
-        lblN6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/n6_figma.png"))); // NOI18N
+        lblN6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/habitaciones/n6_figma.png"))); // NOI18N
         lblN6.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         javax.swing.GroupLayout panelSegundaFilaLayout = new javax.swing.GroupLayout(panelSegundaFila);
@@ -174,55 +174,55 @@ public class FrmHabitaciones extends javax.swing.JFrame {
                         .addComponent(lblN8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(lblN7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(lblN6)))
-                .addContainerGap(30, Short.MAX_VALUE))
+                .addContainerGap(15, Short.MAX_VALUE))
         );
 
-        panelSegundaFila1.setBackground(new java.awt.Color(255, 255, 255));
+        panelTerceraFila.setBackground(new java.awt.Color(255, 255, 255));
 
-        lblN15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/n15_figma.png"))); // NOI18N
+        lblN15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/habitaciones/n15_figma.png"))); // NOI18N
         lblN15.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
-        lblN14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/n14_figma.png"))); // NOI18N
+        lblN14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/habitaciones/n14_figma.png"))); // NOI18N
         lblN14.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
-        lblN13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/n13_figma.png"))); // NOI18N
+        lblN13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/habitaciones/n13_figma.png"))); // NOI18N
         lblN13.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
-        lblN12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/n12_figma.png"))); // NOI18N
+        lblN12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/habitaciones/n12_figma.png"))); // NOI18N
         lblN12.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
-        lblN11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/n11_figma.png"))); // NOI18N
+        lblN11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/habitaciones/n11_figma.png"))); // NOI18N
         lblN11.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
-        javax.swing.GroupLayout panelSegundaFila1Layout = new javax.swing.GroupLayout(panelSegundaFila1);
-        panelSegundaFila1.setLayout(panelSegundaFila1Layout);
-        panelSegundaFila1Layout.setHorizontalGroup(
-            panelSegundaFila1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelSegundaFila1Layout.createSequentialGroup()
+        javax.swing.GroupLayout panelTerceraFilaLayout = new javax.swing.GroupLayout(panelTerceraFila);
+        panelTerceraFila.setLayout(panelTerceraFilaLayout);
+        panelTerceraFilaLayout.setHorizontalGroup(
+            panelTerceraFilaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelTerceraFilaLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(lblN11)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED, 17, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED, 20, Short.MAX_VALUE)
                 .addComponent(lblN12)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 11, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 14, Short.MAX_VALUE)
                 .addComponent(lblN13)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED, 17, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED, 20, Short.MAX_VALUE)
                 .addComponent(lblN14)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 13, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 16, Short.MAX_VALUE)
                 .addComponent(lblN15)
                 .addGap(25, 25, 25))
         );
-        panelSegundaFila1Layout.setVerticalGroup(
-            panelSegundaFila1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelSegundaFila1Layout.createSequentialGroup()
+        panelTerceraFilaLayout.setVerticalGroup(
+            panelTerceraFilaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelTerceraFilaLayout.createSequentialGroup()
                 .addGap(18, 18, 18)
-                .addGroup(panelSegundaFila1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(panelTerceraFilaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(lblN15)
-                    .addGroup(panelSegundaFila1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(panelTerceraFilaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                         .addComponent(lblN14, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(lblN13, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(lblN12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(lblN11)))
-                .addContainerGap(17, Short.MAX_VALUE))
+                .addContainerGap(16, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout panelScrollHabLayout = new javax.swing.GroupLayout(panelScrollHab);
@@ -230,21 +230,22 @@ public class FrmHabitaciones extends javax.swing.JFrame {
         panelScrollHabLayout.setHorizontalGroup(
             panelScrollHabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(panelPrimeraFila, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(panelSegundaFila, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(panelScrollHabLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(panelSegundaFila1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(panelScrollHabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(panelSegundaFila, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(panelTerceraFila, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
         panelScrollHabLayout.setVerticalGroup(
             panelScrollHabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelScrollHabLayout.createSequentialGroup()
                 .addComponent(panelPrimeraFila, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(18, 18, 18)
                 .addComponent(panelSegundaFila, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(panelSegundaFila1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(14, Short.MAX_VALUE))
+                .addComponent(panelTerceraFila, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(59, Short.MAX_VALUE))
         );
 
         scrollHabitaciones.setViewportView(panelScrollHab);
@@ -259,7 +260,7 @@ public class FrmHabitaciones extends javax.swing.JFrame {
             panelHabitacionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelHabitacionesLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(scrollHabitaciones, javax.swing.GroupLayout.DEFAULT_SIZE, 549, Short.MAX_VALUE))
+                .addComponent(scrollHabitaciones))
         );
 
         javax.swing.GroupLayout panelPrincipalLayout = new javax.swing.GroupLayout(panelPrincipal);
@@ -282,7 +283,7 @@ public class FrmHabitaciones extends javax.swing.JFrame {
                         .addComponent(lblReservada)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(lblHabitaciones)
-                .addContainerGap(55, Short.MAX_VALUE))
+                .addContainerGap(66, Short.MAX_VALUE))
             .addComponent(panelHabitaciones, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         panelPrincipalLayout.setVerticalGroup(
@@ -387,7 +388,7 @@ public class FrmHabitaciones extends javax.swing.JFrame {
     private javax.swing.JPanel panelPrincipal;
     private javax.swing.JPanel panelScrollHab;
     private javax.swing.JPanel panelSegundaFila;
-    private javax.swing.JPanel panelSegundaFila1;
+    private javax.swing.JPanel panelTerceraFila;
     private javax.swing.JScrollPane scrollHabitaciones;
     // End of variables declaration//GEN-END:variables
 }

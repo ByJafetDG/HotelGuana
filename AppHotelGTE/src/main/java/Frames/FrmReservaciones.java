@@ -48,7 +48,7 @@ public class FrmReservaciones extends javax.swing.JFrame {
         lblNombreEmpleado = new javax.swing.JLabel();
         lblNombreEmpleado1 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
+        txtaObservacion = new javax.swing.JTextArea();
         btnRealizar = new javax.swing.JLabel();
         lblReservaciones = new javax.swing.JLabel();
         panelTable = new javax.swing.JPanel();
@@ -144,15 +144,15 @@ public class FrmReservaciones extends javax.swing.JFrame {
         lblNombreEmpleado1.setForeground(new java.awt.Color(0, 0, 0));
         lblNombreEmpleado1.setText("Observación");
 
-        jTextArea1.setBackground(new java.awt.Color(255, 255, 255));
-        jTextArea1.setColumns(20);
-        jTextArea1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jTextArea1.setForeground(new java.awt.Color(0, 0, 0));
-        jTextArea1.setLineWrap(true);
-        jTextArea1.setRows(5);
-        jScrollPane1.setViewportView(jTextArea1);
+        txtaObservacion.setBackground(new java.awt.Color(255, 255, 255));
+        txtaObservacion.setColumns(20);
+        txtaObservacion.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        txtaObservacion.setForeground(new java.awt.Color(0, 0, 0));
+        txtaObservacion.setLineWrap(true);
+        txtaObservacion.setRows(5);
+        jScrollPane1.setViewportView(txtaObservacion);
 
-        btnRealizar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Realizar_figma.png"))); // NOI18N
+        btnRealizar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/botones/btnRealizar.png"))); // NOI18N
         btnRealizar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         javax.swing.GroupLayout panelFormLayout = new javax.swing.GroupLayout(panelForm);
@@ -252,7 +252,7 @@ public class FrmReservaciones extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        lblReservaciones.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Reservaciones.png"))); // NOI18N
+        lblReservaciones.setIcon(new javax.swing.ImageIcon(getClass().getResource("/labels/Reservaciones.png"))); // NOI18N
 
         panelTable.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -274,15 +274,15 @@ public class FrmReservaciones extends javax.swing.JFrame {
         txtBusqueda.setBackground(new java.awt.Color(255, 255, 255));
         txtBusqueda.setForeground(new java.awt.Color(0, 0, 0));
 
-        btnActualizar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Actualizar.png"))); // NOI18N
+        btnActualizar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/botones/btnActualizar.png"))); // NOI18N
         btnActualizar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
-        btnEliminar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Eliminar.png"))); // NOI18N
+        btnEliminar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/botones/btnEliminar.png"))); // NOI18N
         btnEliminar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
-        lblLupa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/lupa.png"))); // NOI18N
+        lblLupa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/labels/lupa.png"))); // NOI18N
 
-        lblX.setIcon(new javax.swing.ImageIcon(getClass().getResource("/equis.png"))); // NOI18N
+        lblX.setIcon(new javax.swing.ImageIcon(getClass().getResource("/labels/equis.png"))); // NOI18N
 
         javax.swing.GroupLayout panelTableLayout = new javax.swing.GroupLayout(panelTable);
         panelTable.setLayout(panelTableLayout);
@@ -315,7 +315,7 @@ public class FrmReservaciones extends javax.swing.JFrame {
                     .addComponent(lblLupa, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(lblX, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 466, Short.MAX_VALUE)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 415, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(panelTableLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btnActualizar)
@@ -335,9 +335,9 @@ public class FrmReservaciones extends javax.swing.JFrame {
                     .addComponent(panelForm, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGroup(panelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(panelPrincipalLayout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 155, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 8, Short.MAX_VALUE)
                         .addComponent(lblReservaciones)
-                        .addContainerGap(51, Short.MAX_VALUE))
+                        .addContainerGap(13, Short.MAX_VALUE))
                     .addGroup(panelPrincipalLayout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(panelTable, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
@@ -412,7 +412,6 @@ public class FrmReservaciones extends javax.swing.JFrame {
     private javax.swing.JLabel btnRealizar;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTextArea jTextArea1;
     private javax.swing.JLabel lblCheckIn;
     private javax.swing.JLabel lblCheckOut;
     private javax.swing.JLabel lblCorreo;
@@ -440,6 +439,7 @@ public class FrmReservaciones extends javax.swing.JFrame {
     private javax.swing.JTextField txtIdentificacion;
     private javax.swing.JTextField txtNombreEmpleado;
     private javax.swing.JTextField txtTelefono;
+    private javax.swing.JTextArea txtaObservacion;
     private javax.swing.JTextField txtxNombreCliente;
     // End of variables declaration//GEN-END:variables
 }

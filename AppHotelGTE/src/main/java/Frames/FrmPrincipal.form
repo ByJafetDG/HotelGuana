@@ -58,23 +58,23 @@
                       </Group>
                       <Group type="102" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="lblMenu" min="-2" pref="59" max="-2" attributes="0"/>
+                              <Component id="btnMenu" min="-2" pref="59" max="-2" attributes="0"/>
                               <Group type="102" alignment="0" attributes="0">
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="lblCerrarSesion" min="-2" pref="188" max="-2" attributes="0"/>
-                                      <Component id="lblAdministracion" min="-2" max="-2" attributes="0"/>
-                                      <Component id="lblSalir" min="-2" max="-2" attributes="0"/>
+                                      <Component id="btnCerrarSesion" min="-2" pref="188" max="-2" attributes="0"/>
+                                      <Component id="btnAdministracion" min="-2" max="-2" attributes="0"/>
+                                      <Component id="btnSalir" min="-2" max="-2" attributes="0"/>
                                   </Group>
-                                  <EmptySpace pref="360" max="32767" attributes="0"/>
+                                  <EmptySpace max="32767" attributes="0"/>
                                   <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                      <Component id="lblRealizarIngreso" max="32767" attributes="0"/>
-                                      <Component id="lblHuespedes" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="lblReservaciones" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="lblHabitaciones" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="btnRealizarIngreso" max="32767" attributes="0"/>
+                                      <Component id="btnHuespedes" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="btnReservaciones" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="btnHabitaciones" alignment="0" min="-2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
-                          <EmptySpace pref="391" max="32767" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
@@ -103,27 +103,27 @@
                       </Group>
                   </Group>
                   <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
-                  <Component id="lblMenu" min="-2" pref="56" max="-2" attributes="0"/>
+                  <Component id="btnMenu" min="-2" pref="56" max="-2" attributes="0"/>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
-                          <Component id="lblRealizarIngreso" min="-2" max="-2" attributes="0"/>
+                          <Component id="btnRealizarIngreso" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
-                          <Component id="lblHabitaciones" min="-2" pref="90" max="-2" attributes="0"/>
+                          <Component id="btnHabitaciones" min="-2" pref="90" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
-                          <Component id="lblReservaciones" min="-2" pref="90" max="-2" attributes="0"/>
+                          <Component id="btnReservaciones" min="-2" pref="90" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
-                          <Component id="lblHuespedes" min="-2" pref="90" max="-2" attributes="0"/>
+                          <Component id="btnHuespedes" min="-2" pref="90" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
-                          <Component id="lblCerrarSesion" min="-2" pref="60" max="-2" attributes="0"/>
+                          <Component id="btnCerrarSesion" min="-2" pref="60" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="lblAdministracion" min="-2" pref="60" max="-2" attributes="0"/>
+                          <Component id="btnAdministracion" min="-2" pref="60" max="-2" attributes="0"/>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Component id="lblSalir" min="-2" pref="60" max="-2" attributes="0"/>
+                          <Component id="btnSalir" min="-2" pref="60" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <EmptySpace pref="53" max="32767" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -139,114 +139,114 @@
         <Component class="javax.swing.JLabel" name="lblUser">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/user_figma.png"/>
+              <Image iconType="3" name="/labels/user_figma.png"/>
             </Property>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="lblAdminEmpleado">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/adminEmpleado_figma.png"/>
+              <Image iconType="3" name="/labels/adminEmpleado_figma.png"/>
             </Property>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="lblBienvenidos">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Bienvenido_figma.png"/>
+              <Image iconType="3" name="/labels/Bienvenido_figma.png"/>
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="lblRealizarIngreso">
+        <Component class="javax.swing.JLabel" name="btnRealizarIngreso">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/RealizarIngreso_figma.png"/>
+              <Image iconType="3" name="/botones/btnRealizarIngreso.png"/>
             </Property>
             <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
               <Color id="Hand Cursor"/>
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="lblHabitaciones">
+        <Component class="javax.swing.JLabel" name="btnHabitaciones">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/BtnHabitaciones_figma.png"/>
+              <Image iconType="3" name="/botones/BtnHabitaciones.png"/>
             </Property>
             <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
               <Color id="Hand Cursor"/>
             </Property>
           </Properties>
           <Events>
-            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="lblHabitacionesMouseClicked"/>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btnHabitacionesMouseClicked"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JLabel" name="lblReservaciones">
+        <Component class="javax.swing.JLabel" name="btnReservaciones">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/BtnReservaciones_figma.png"/>
+              <Image iconType="3" name="/botones/BtnReservaciones.png"/>
             </Property>
             <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
               <Color id="Hand Cursor"/>
             </Property>
           </Properties>
           <Events>
-            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="lblReservacionesMouseClicked"/>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btnReservacionesMouseClicked"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JLabel" name="lblHuespedes">
+        <Component class="javax.swing.JLabel" name="btnHuespedes">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Huespedes_figma.png"/>
+              <Image iconType="3" name="/botones/btnHuespedes.png"/>
             </Property>
             <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
               <Color id="Hand Cursor"/>
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="lblMenu">
+        <Component class="javax.swing.JLabel" name="btnMenu">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/menu_figma.png"/>
+              <Image iconType="3" name="/labels/menu_figma.png"/>
             </Property>
             <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
               <Color id="Hand Cursor"/>
             </Property>
           </Properties>
           <Events>
-            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="lblMenuMouseClicked"/>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btnMenuMouseClicked"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JLabel" name="lblCerrarSesion">
+        <Component class="javax.swing.JLabel" name="btnCerrarSesion">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/cerrarSesion_figma.png"/>
+              <Image iconType="3" name="/botones/btnCerrarSesion.png"/>
             </Property>
             <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
               <Color id="Hand Cursor"/>
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="lblAdministracion">
+        <Component class="javax.swing.JLabel" name="btnAdministracion">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/administracion_figma.png"/>
+              <Image iconType="3" name="/botones/btnAdministracion.png"/>
             </Property>
             <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
               <Color id="Hand Cursor"/>
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="lblSalir">
+        <Component class="javax.swing.JLabel" name="btnSalir">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Salir_figma.png"/>
+              <Image iconType="3" name="/botones/btnSalir.png"/>
             </Property>
             <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
               <Color id="Hand Cursor"/>
             </Property>
           </Properties>
           <Events>
-            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="lblSalirMouseClicked"/>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btnSalirMouseClicked"/>
           </Events>
         </Component>
       </SubComponents>

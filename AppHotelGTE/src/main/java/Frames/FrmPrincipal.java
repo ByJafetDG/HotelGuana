@@ -19,9 +19,9 @@ public class FrmPrincipal extends javax.swing.JFrame {
         
         
         /*Desactivar los botones del menú */
-        lblCerrarSesion.setVisible(false);
-        lblAdministracion.setVisible(false);
-        lblSalir.setVisible(false);
+        btnCerrarSesion.setVisible(false);
+        btnAdministracion.setVisible(false);
+        btnSalir.setVisible(false);
         /*--------------------------------*/
         
     }
@@ -40,14 +40,14 @@ public class FrmPrincipal extends javax.swing.JFrame {
         lblUser = new javax.swing.JLabel();
         lblAdminEmpleado = new javax.swing.JLabel();
         lblBienvenidos = new javax.swing.JLabel();
-        lblRealizarIngreso = new javax.swing.JLabel();
-        lblHabitaciones = new javax.swing.JLabel();
-        lblReservaciones = new javax.swing.JLabel();
-        lblHuespedes = new javax.swing.JLabel();
-        lblMenu = new javax.swing.JLabel();
-        lblCerrarSesion = new javax.swing.JLabel();
-        lblAdministracion = new javax.swing.JLabel();
-        lblSalir = new javax.swing.JLabel();
+        btnRealizarIngreso = new javax.swing.JLabel();
+        btnHabitaciones = new javax.swing.JLabel();
+        btnReservaciones = new javax.swing.JLabel();
+        btnHuespedes = new javax.swing.JLabel();
+        btnMenu = new javax.swing.JLabel();
+        btnCerrarSesion = new javax.swing.JLabel();
+        btnAdministracion = new javax.swing.JLabel();
+        btnSalir = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -55,53 +55,53 @@ public class FrmPrincipal extends javax.swing.JFrame {
 
         lblLogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/logo (Personalizado).png"))); // NOI18N
 
-        lblUser.setIcon(new javax.swing.ImageIcon(getClass().getResource("/user_figma.png"))); // NOI18N
+        lblUser.setIcon(new javax.swing.ImageIcon(getClass().getResource("/labels/user_figma.png"))); // NOI18N
 
-        lblAdminEmpleado.setIcon(new javax.swing.ImageIcon(getClass().getResource("/adminEmpleado_figma.png"))); // NOI18N
+        lblAdminEmpleado.setIcon(new javax.swing.ImageIcon(getClass().getResource("/labels/adminEmpleado_figma.png"))); // NOI18N
 
-        lblBienvenidos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Bienvenido_figma.png"))); // NOI18N
+        lblBienvenidos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/labels/Bienvenido_figma.png"))); // NOI18N
 
-        lblRealizarIngreso.setIcon(new javax.swing.ImageIcon(getClass().getResource("/RealizarIngreso_figma.png"))); // NOI18N
-        lblRealizarIngreso.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnRealizarIngreso.setIcon(new javax.swing.ImageIcon(getClass().getResource("/botones/btnRealizarIngreso.png"))); // NOI18N
+        btnRealizarIngreso.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
-        lblHabitaciones.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BtnHabitaciones_figma.png"))); // NOI18N
-        lblHabitaciones.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        lblHabitaciones.addMouseListener(new java.awt.event.MouseAdapter() {
+        btnHabitaciones.setIcon(new javax.swing.ImageIcon(getClass().getResource("/botones/BtnHabitaciones.png"))); // NOI18N
+        btnHabitaciones.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnHabitaciones.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                lblHabitacionesMouseClicked(evt);
+                btnHabitacionesMouseClicked(evt);
             }
         });
 
-        lblReservaciones.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BtnReservaciones_figma.png"))); // NOI18N
-        lblReservaciones.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        lblReservaciones.addMouseListener(new java.awt.event.MouseAdapter() {
+        btnReservaciones.setIcon(new javax.swing.ImageIcon(getClass().getResource("/botones/BtnReservaciones.png"))); // NOI18N
+        btnReservaciones.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnReservaciones.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                lblReservacionesMouseClicked(evt);
+                btnReservacionesMouseClicked(evt);
             }
         });
 
-        lblHuespedes.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Huespedes_figma.png"))); // NOI18N
-        lblHuespedes.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnHuespedes.setIcon(new javax.swing.ImageIcon(getClass().getResource("/botones/btnHuespedes.png"))); // NOI18N
+        btnHuespedes.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
-        lblMenu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/menu_figma.png"))); // NOI18N
-        lblMenu.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        lblMenu.addMouseListener(new java.awt.event.MouseAdapter() {
+        btnMenu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/labels/menu_figma.png"))); // NOI18N
+        btnMenu.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnMenu.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                lblMenuMouseClicked(evt);
+                btnMenuMouseClicked(evt);
             }
         });
 
-        lblCerrarSesion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/cerrarSesion_figma.png"))); // NOI18N
-        lblCerrarSesion.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnCerrarSesion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/botones/btnCerrarSesion.png"))); // NOI18N
+        btnCerrarSesion.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
-        lblAdministracion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/administracion_figma.png"))); // NOI18N
-        lblAdministracion.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnAdministracion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/botones/btnAdministracion.png"))); // NOI18N
+        btnAdministracion.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
-        lblSalir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Salir_figma.png"))); // NOI18N
-        lblSalir.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        lblSalir.addMouseListener(new java.awt.event.MouseAdapter() {
+        btnSalir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/botones/btnSalir.png"))); // NOI18N
+        btnSalir.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnSalir.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                lblSalirMouseClicked(evt);
+                btnSalirMouseClicked(evt);
             }
         });
 
@@ -123,19 +123,19 @@ public class FrmPrincipal extends javax.swing.JFrame {
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(panelPrincipalLayout.createSequentialGroup()
                         .addGroup(panelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lblMenu, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnMenu, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(panelPrincipalLayout.createSequentialGroup()
                                 .addGroup(panelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(lblCerrarSesion, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(lblAdministracion)
-                                    .addComponent(lblSalir))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 360, Short.MAX_VALUE)
+                                    .addComponent(btnCerrarSesion, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(btnAdministracion)
+                                    .addComponent(btnSalir))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addGroup(panelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addComponent(lblRealizarIngreso, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(lblHuespedes, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(lblReservaciones, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(lblHabitaciones, javax.swing.GroupLayout.Alignment.LEADING))))
-                        .addContainerGap(391, Short.MAX_VALUE))))
+                                    .addComponent(btnRealizarIngreso, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(btnHuespedes, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(btnReservaciones, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(btnHabitaciones, javax.swing.GroupLayout.Alignment.LEADING))))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         panelPrincipalLayout.setVerticalGroup(
             panelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -154,24 +154,24 @@ public class FrmPrincipal extends javax.swing.JFrame {
                                 .addGap(9, 9, 9)
                                 .addComponent(lblBienvenidos, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                 .addGap(18, 18, 18)
-                .addComponent(lblMenu, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnMenu, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(panelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(panelPrincipalLayout.createSequentialGroup()
-                        .addComponent(lblRealizarIngreso)
+                        .addComponent(btnRealizarIngreso)
                         .addGap(30, 30, 30)
-                        .addComponent(lblHabitaciones, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnHabitaciones, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(30, 30, 30)
-                        .addComponent(lblReservaciones, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnReservaciones, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(30, 30, 30)
-                        .addComponent(lblHuespedes, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(btnHuespedes, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(panelPrincipalLayout.createSequentialGroup()
-                        .addComponent(lblCerrarSesion, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnCerrarSesion, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(lblAdministracion, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnAdministracion, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(lblSalir, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(53, Short.MAX_VALUE))
+                        .addComponent(btnSalir, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -188,33 +188,33 @@ public class FrmPrincipal extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void lblMenuMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblMenuMouseClicked
-        if (lblCerrarSesion.isVisible() == false)
+    private void btnMenuMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnMenuMouseClicked
+        if (btnCerrarSesion.isVisible() == false)
         {
-            lblCerrarSesion.setVisible(true);
-            lblAdministracion.setVisible(true);
-            lblSalir.setVisible(true);
+            btnCerrarSesion.setVisible(true);
+            btnAdministracion.setVisible(true);
+            btnSalir.setVisible(true);
         }
         else {
-            lblCerrarSesion.setVisible(false);
-            lblAdministracion.setVisible(false);
-            lblSalir.setVisible(false);
+            btnCerrarSesion.setVisible(false);
+            btnAdministracion.setVisible(false);
+            btnSalir.setVisible(false);
         }
-    }//GEN-LAST:event_lblMenuMouseClicked
+    }//GEN-LAST:event_btnMenuMouseClicked
 
-    private void lblHabitacionesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblHabitacionesMouseClicked
+    private void btnHabitacionesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnHabitacionesMouseClicked
         FrmHabitaciones hab = new FrmHabitaciones();
         hab.setVisible(true);
         dispose();
-    }//GEN-LAST:event_lblHabitacionesMouseClicked
+    }//GEN-LAST:event_btnHabitacionesMouseClicked
 
-    private void lblReservacionesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblReservacionesMouseClicked
+    private void btnReservacionesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnReservacionesMouseClicked
         FrmReservaciones res = new FrmReservaciones();
         res.setVisible(true);
         dispose();
-    }//GEN-LAST:event_lblReservacionesMouseClicked
+    }//GEN-LAST:event_btnReservacionesMouseClicked
 
-    private void lblSalirMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblSalirMouseClicked
+    private void btnSalirMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnSalirMouseClicked
         int dialog = JOptionPane.YES_NO_OPTION;
         
         int result = JOptionPane.showConfirmDialog(null, "¿Desea salir del sistema?","Exit",dialog);
@@ -223,7 +223,7 @@ public class FrmPrincipal extends javax.swing.JFrame {
         {
             System.exit(0);
         }
-    }//GEN-LAST:event_lblSalirMouseClicked
+    }//GEN-LAST:event_btnSalirMouseClicked
 
     /**
      * @param args the command line arguments
@@ -261,17 +261,17 @@ public class FrmPrincipal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel btnAdministracion;
+    private javax.swing.JLabel btnCerrarSesion;
+    private javax.swing.JLabel btnHabitaciones;
+    private javax.swing.JLabel btnHuespedes;
+    private javax.swing.JLabel btnMenu;
+    private javax.swing.JLabel btnRealizarIngreso;
+    private javax.swing.JLabel btnReservaciones;
+    private javax.swing.JLabel btnSalir;
     private javax.swing.JLabel lblAdminEmpleado;
-    private javax.swing.JLabel lblAdministracion;
     private javax.swing.JLabel lblBienvenidos;
-    private javax.swing.JLabel lblCerrarSesion;
-    private javax.swing.JLabel lblHabitaciones;
-    private javax.swing.JLabel lblHuespedes;
     private javax.swing.JLabel lblLogo;
-    private javax.swing.JLabel lblMenu;
-    private javax.swing.JLabel lblRealizarIngreso;
-    private javax.swing.JLabel lblReservaciones;
-    private javax.swing.JLabel lblSalir;
     private javax.swing.JLabel lblUser;
     private javax.swing.JPanel panelPrincipal;
     // End of variables declaration//GEN-END:variables

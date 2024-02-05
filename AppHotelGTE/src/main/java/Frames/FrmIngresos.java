@@ -46,14 +46,14 @@ public class FrmIngresos extends javax.swing.JFrame {
         txtCheckOut = new javax.swing.JTextField();
         txtPlaca = new javax.swing.JTextField();
         lblPlaca = new javax.swing.JLabel();
-        lblNombreEmpleado1 = new javax.swing.JLabel();
+        lblObservacion = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
+        txtaObservacion = new javax.swing.JTextArea();
         lblFechaIngreso = new javax.swing.JLabel();
         txtFechaIngreso = new javax.swing.JTextField();
         lblNumeroHabitacion = new javax.swing.JLabel();
         txtNumeroHabitacion = new javax.swing.JTextField();
-        lblReservaciones = new javax.swing.JLabel();
+        lblIngresos = new javax.swing.JLabel();
         panelTable = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
         tblIngresos = new javax.swing.JTable();
@@ -142,17 +142,17 @@ public class FrmIngresos extends javax.swing.JFrame {
         lblPlaca.setForeground(new java.awt.Color(0, 0, 0));
         lblPlaca.setText("Placa");
 
-        lblNombreEmpleado1.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
-        lblNombreEmpleado1.setForeground(new java.awt.Color(0, 0, 0));
-        lblNombreEmpleado1.setText("Observación");
+        lblObservacion.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
+        lblObservacion.setForeground(new java.awt.Color(0, 0, 0));
+        lblObservacion.setText("Observación");
 
-        jTextArea1.setBackground(new java.awt.Color(255, 255, 255));
-        jTextArea1.setColumns(20);
-        jTextArea1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jTextArea1.setForeground(new java.awt.Color(0, 0, 0));
-        jTextArea1.setLineWrap(true);
-        jTextArea1.setRows(5);
-        jScrollPane1.setViewportView(jTextArea1);
+        txtaObservacion.setBackground(new java.awt.Color(255, 255, 255));
+        txtaObservacion.setColumns(20);
+        txtaObservacion.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        txtaObservacion.setForeground(new java.awt.Color(0, 0, 0));
+        txtaObservacion.setLineWrap(true);
+        txtaObservacion.setRows(5);
+        jScrollPane1.setViewportView(txtaObservacion);
 
         lblFechaIngreso.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
         lblFechaIngreso.setForeground(new java.awt.Color(0, 0, 0));
@@ -211,7 +211,7 @@ public class FrmIngresos extends javax.swing.JFrame {
                                 .addGroup(panelFormLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(panelFormLayout.createSequentialGroup()
                                         .addGap(9, 9, 9)
-                                        .addComponent(lblNombreEmpleado1))
+                                        .addComponent(lblObservacion))
                                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(txtFechaIngreso, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGroup(panelFormLayout.createSequentialGroup()
@@ -279,15 +279,15 @@ public class FrmIngresos extends javax.swing.JFrame {
                         .addComponent(lblCorreo)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(txtCorreo, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 51, Short.MAX_VALUE))
+                        .addGap(0, 61, Short.MAX_VALUE))
                     .addGroup(panelFormLayout.createSequentialGroup()
-                        .addComponent(lblNombreEmpleado1)
+                        .addComponent(lblObservacion)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
 
-        lblReservaciones.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Ingresos_Figma.png"))); // NOI18N
+        lblIngresos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/labels/Ingresos_Figma.png"))); // NOI18N
 
         panelTable.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -306,7 +306,7 @@ public class FrmIngresos extends javax.swing.JFrame {
         tblIngresos.getTableHeader().setReorderingAllowed(false);
         jScrollPane2.setViewportView(tblIngresos);
 
-        btnRealizar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Realizar_figma.png"))); // NOI18N
+        btnRealizar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/botones/Realizar_figma.png"))); // NOI18N
         btnRealizar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         lblTotalVenta.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
@@ -342,7 +342,7 @@ public class FrmIngresos extends javax.swing.JFrame {
             panelTableLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelTableLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                .addComponent(jScrollPane2)
                 .addGap(18, 18, 18)
                 .addComponent(cmbTipoMoneda, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
@@ -370,7 +370,7 @@ public class FrmIngresos extends javax.swing.JFrame {
                         .addComponent(panelTable, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelPrincipalLayout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(lblReservaciones)
+                        .addComponent(lblIngresos)
                         .addGap(0, 0, Short.MAX_VALUE))))
         );
         panelPrincipalLayout.setVerticalGroup(
@@ -378,11 +378,11 @@ public class FrmIngresos extends javax.swing.JFrame {
             .addGroup(panelPrincipalLayout.createSequentialGroup()
                 .addGap(17, 17, 17)
                 .addComponent(lblLogo, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 40, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 50, Short.MAX_VALUE)
                 .addComponent(panelForm, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelPrincipalLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(lblReservaciones, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(lblIngresos, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(panelTable, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -441,7 +441,6 @@ public class FrmIngresos extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> cmbTipoMoneda;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTextArea jTextArea1;
     private javax.swing.JLabel lblApellido;
     private javax.swing.JLabel lblCheckIn;
     private javax.swing.JLabel lblCheckOut;
@@ -449,12 +448,12 @@ public class FrmIngresos extends javax.swing.JFrame {
     private javax.swing.JLabel lblDireccion;
     private javax.swing.JLabel lblFechaIngreso;
     private javax.swing.JLabel lblIdentificacion;
+    private javax.swing.JLabel lblIngresos;
     private javax.swing.JLabel lblLogo;
     private javax.swing.JLabel lblNombreCliente;
-    private javax.swing.JLabel lblNombreEmpleado1;
     private javax.swing.JLabel lblNumeroHabitacion;
+    private javax.swing.JLabel lblObservacion;
     private javax.swing.JLabel lblPlaca;
-    private javax.swing.JLabel lblReservaciones;
     private javax.swing.JLabel lblTelefono;
     private javax.swing.JLabel lblTotalVenta;
     private javax.swing.JPanel panelForm;
@@ -472,6 +471,7 @@ public class FrmIngresos extends javax.swing.JFrame {
     private javax.swing.JTextField txtPlaca;
     private javax.swing.JTextField txtTelefono;
     private javax.swing.JTextField txtTotalVenta;
+    private javax.swing.JTextArea txtaObservacion;
     private javax.swing.JTextField txtxNombreCliente;
     // End of variables declaration//GEN-END:variables
 }
