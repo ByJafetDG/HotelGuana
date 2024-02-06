@@ -61,6 +61,7 @@ public class FrmIngresos extends javax.swing.JFrame {
         lblTotalVenta = new javax.swing.JLabel();
         txtTotalVenta = new javax.swing.JTextField();
         cmbTipoMoneda = new javax.swing.JComboBox<>();
+        btnRegresar = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -291,8 +292,29 @@ public class FrmIngresos extends javax.swing.JFrame {
 
         panelTable.setBackground(new java.awt.Color(255, 255, 255));
 
+        tblIngresos.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         tblIngresos.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {"MATRIMONIAL - ABANICO", "₡13.000", "₡19.000", null, null, null},
+                {null, null, null, null, null, null},
+                {"MATRIMONIAL - A/C", "₡15.000", "₡25.000", null, null, null},
+                {null, null, null, null, null, null},
+                {"INDIVIDUAL - ABANICO", "₡11.000", null, null, null, null},
+                {null, null, null, null, null, null},
+                {"CAMAROTE -  ABANICO", "₡12.000", "₡21.000", null, null, null},
+                {null, null, null, null, null, null},
+                {"DOS INDUVIDUALES - A/C", "₡15.000", "₡25.000", null, null, null},
+                {null, null, null, null, null, null},
+                {"HABITACIÓN TRIPLE - A(C", "₡15.000", "₡25.000", "₡37.000", null, null},
+                {null, null, null, null, null, null},
+                {"HABITACIÓN TRIPLE - ABANICO", "₡13.000", "₡21.000", "₡31.000", null, null},
+                {null, null, null, null, null, null},
+                {"HABITACIÓN QUINTUPLE - ABANICO", "₡13.000", "₡21.000", "₡31.000", "₡41.000", "₡51.000"},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
                 {null, null, null, null, null, null},
                 {null, null, null, null, null, null},
                 {null, null, null, null, null, null},
@@ -301,12 +323,23 @@ public class FrmIngresos extends javax.swing.JFrame {
             new String [] {
                 "Tipo de habitación", "1 persona", "2 personas", "3 personas", "4 personas", "5 personas"
             }
-        ));
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
         tblIngresos.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         tblIngresos.getTableHeader().setReorderingAllowed(false);
         jScrollPane2.setViewportView(tblIngresos);
+        if (tblIngresos.getColumnModel().getColumnCount() > 0) {
+            tblIngresos.getColumnModel().getColumn(0).setPreferredWidth(250);
+        }
 
-        btnRealizar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/botones/Realizar_figma.png"))); // NOI18N
+        btnRealizar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/botones/btnRealizar.png"))); // NOI18N
         btnRealizar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         lblTotalVenta.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
@@ -319,7 +352,7 @@ public class FrmIngresos extends javax.swing.JFrame {
         cmbTipoMoneda.setBackground(new java.awt.Color(255, 255, 255));
         cmbTipoMoneda.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
         cmbTipoMoneda.setForeground(new java.awt.Color(0, 0, 0));
-        cmbTipoMoneda.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Tipo de moneda" }));
+        cmbTipoMoneda.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Tipo de moneda", "₡ : CRC", "$ : USD" }));
 
         javax.swing.GroupLayout panelTableLayout = new javax.swing.GroupLayout(panelTable);
         panelTable.setLayout(panelTableLayout);
@@ -342,8 +375,8 @@ public class FrmIngresos extends javax.swing.JFrame {
             panelTableLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelTableLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane2)
-                .addGap(18, 18, 18)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 418, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 27, Short.MAX_VALUE)
                 .addComponent(cmbTipoMoneda, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(panelTableLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -354,6 +387,14 @@ public class FrmIngresos extends javax.swing.JFrame {
                 .addGap(23, 23, 23))
         );
 
+        btnRegresar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/botones/btnRegresar.png"))); // NOI18N
+        btnRegresar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnRegresar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnRegresarMouseClicked(evt);
+            }
+        });
+
         javax.swing.GroupLayout panelPrincipalLayout = new javax.swing.GroupLayout(panelPrincipal);
         panelPrincipal.setLayout(panelPrincipalLayout);
         panelPrincipalLayout.setHorizontalGroup(
@@ -362,7 +403,9 @@ public class FrmIngresos extends javax.swing.JFrame {
                 .addGroup(panelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(panelPrincipalLayout.createSequentialGroup()
                         .addGap(31, 31, 31)
-                        .addComponent(lblLogo, javax.swing.GroupLayout.PREFERRED_SIZE, 318, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(lblLogo, javax.swing.GroupLayout.PREFERRED_SIZE, 318, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnRegresar))
                     .addComponent(panelForm, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGroup(panelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(panelPrincipalLayout.createSequentialGroup()
@@ -376,9 +419,14 @@ public class FrmIngresos extends javax.swing.JFrame {
         panelPrincipalLayout.setVerticalGroup(
             panelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelPrincipalLayout.createSequentialGroup()
-                .addGap(17, 17, 17)
-                .addComponent(lblLogo, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 50, Short.MAX_VALUE)
+                .addGroup(panelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panelPrincipalLayout.createSequentialGroup()
+                        .addGap(17, 17, 17)
+                        .addComponent(lblLogo, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(panelPrincipalLayout.createSequentialGroup()
+                        .addGap(45, 45, 45)
+                        .addComponent(btnRegresar)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(panelForm, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelPrincipalLayout.createSequentialGroup()
                 .addContainerGap()
@@ -400,6 +448,12 @@ public class FrmIngresos extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnRegresarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnRegresarMouseClicked
+        FrmPrincipal princi = new FrmPrincipal();
+        princi.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_btnRegresarMouseClicked
 
     /**
      * @param args the command line arguments
@@ -438,6 +492,7 @@ public class FrmIngresos extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel btnRealizar;
+    private javax.swing.JLabel btnRegresar;
     private javax.swing.JComboBox<String> cmbTipoMoneda;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;

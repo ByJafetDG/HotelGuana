@@ -35,6 +35,7 @@ public class FrmControlDeVentas extends javax.swing.JFrame {
         btnIngresoSemanal = new javax.swing.JLabel();
         txtIngresoSemanal = new javax.swing.JTextField();
         txtIngresoMensual = new javax.swing.JTextField();
+        btnRegresar = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -63,7 +64,7 @@ public class FrmControlDeVentas extends javax.swing.JFrame {
         btnIngresoMensual.setIcon(new javax.swing.ImageIcon(getClass().getResource("/botones/btnIngresoMensual.png"))); // NOI18N
         btnIngresoMensual.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
-        btnIngresoSemanal.setIcon(new javax.swing.ImageIcon(getClass().getResource("/botones/btnIngresoSemal.png"))); // NOI18N
+        btnIngresoSemanal.setIcon(new javax.swing.ImageIcon(getClass().getResource("/botones/btnIngresoSemanal.png"))); // NOI18N
         btnIngresoSemanal.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         txtIngresoSemanal.setBackground(new java.awt.Color(255, 255, 255));
@@ -112,6 +113,14 @@ public class FrmControlDeVentas extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
+        btnRegresar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/botones/btnRegresar.png"))); // NOI18N
+        btnRegresar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnRegresar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnRegresarMouseClicked(evt);
+            }
+        });
+
         javax.swing.GroupLayout panelPrincipalLayout = new javax.swing.GroupLayout(panelPrincipal);
         panelPrincipal.setLayout(panelPrincipalLayout);
         panelPrincipalLayout.setHorizontalGroup(
@@ -119,6 +128,8 @@ public class FrmControlDeVentas extends javax.swing.JFrame {
             .addGroup(panelPrincipalLayout.createSequentialGroup()
                 .addGap(31, 31, 31)
                 .addComponent(lblLogo, javax.swing.GroupLayout.PREFERRED_SIZE, 318, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnRegresar)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(lblControlVentas)
                 .addContainerGap())
@@ -130,10 +141,15 @@ public class FrmControlDeVentas extends javax.swing.JFrame {
         panelPrincipalLayout.setVerticalGroup(
             panelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelPrincipalLayout.createSequentialGroup()
-                .addGap(17, 17, 17)
                 .addGroup(panelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblLogo, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblControlVentas, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(panelPrincipalLayout.createSequentialGroup()
+                        .addGap(17, 17, 17)
+                        .addGroup(panelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lblLogo, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lblControlVentas, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(panelPrincipalLayout.createSequentialGroup()
+                        .addGap(48, 48, 48)
+                        .addComponent(btnRegresar)))
                 .addGap(18, 18, 18)
                 .addComponent(panelTabla, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -151,6 +167,12 @@ public class FrmControlDeVentas extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnRegresarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnRegresarMouseClicked
+        FrmAdministracion admi = new FrmAdministracion();
+        admi.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_btnRegresarMouseClicked
 
     /**
      * @param args the command line arguments
@@ -190,6 +212,7 @@ public class FrmControlDeVentas extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel btnIngresoMensual;
     private javax.swing.JLabel btnIngresoSemanal;
+    private javax.swing.JLabel btnRegresar;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel lblControlVentas;
     private javax.swing.JLabel lblLogo;

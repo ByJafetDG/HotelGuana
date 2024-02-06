@@ -48,6 +48,8 @@
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
                           <Component id="lblLogo" min="-2" pref="318" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="btnRegresar" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <Component id="panelForm" alignment="0" min="-2" max="-2" attributes="0"/>
                   </Group>
@@ -68,9 +70,17 @@
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
-                  <Component id="lblLogo" min="-2" pref="111" max="-2" attributes="0"/>
-                  <EmptySpace pref="50" max="32767" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
+                          <Component id="lblLogo" min="-2" pref="111" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
+                          <Component id="btnRegresar" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <EmptySpace max="32767" attributes="0"/>
                   <Component id="panelForm" max="32767" attributes="0"/>
               </Group>
               <Group type="102" alignment="1" attributes="0">
@@ -582,8 +592,8 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jScrollPane2" max="32767" attributes="0"/>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="jScrollPane2" min="-2" pref="418" max="-2" attributes="0"/>
+                      <EmptySpace pref="27" max="32767" attributes="0"/>
                       <Component id="cmbTipoMoneda" min="-2" pref="30" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
@@ -607,19 +617,172 @@
               <SubComponents>
                 <Component class="javax.swing.JTable" name="tblIngresos">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Segoe UI" size="14" style="1"/>
+                    </Property>
                     <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-                      <Table columnCount="6" rowCount="4">
-                        <Column editable="true" title="Tipo de habitaci&#xf3;n" type="java.lang.Object"/>
-                        <Column editable="true" title="1 persona" type="java.lang.Object"/>
-                        <Column editable="true" title="2 personas" type="java.lang.Object"/>
-                        <Column editable="true" title="3 personas" type="java.lang.Object"/>
-                        <Column editable="true" title="4 personas" type="java.lang.Object"/>
-                        <Column editable="true" title="5 personas" type="java.lang.Object"/>
+                      <Table columnCount="6" rowCount="24">
+                        <Column editable="false" title="Tipo de habitaci&#xf3;n" type="java.lang.Object">
+                          <Data value="null"/>
+                          <Data value="null"/>
+                          <Data value="MATRIMONIAL - ABANICO"/>
+                          <Data value="null"/>
+                          <Data value="MATRIMONIAL - A/C"/>
+                          <Data value="null"/>
+                          <Data value="INDIVIDUAL - ABANICO"/>
+                          <Data value="null"/>
+                          <Data value="CAMAROTE -  ABANICO"/>
+                          <Data value="null"/>
+                          <Data value="DOS INDUVIDUALES - A/C"/>
+                          <Data value="null"/>
+                          <Data value="HABITACI&#xd3;N TRIPLE - A(C"/>
+                          <Data value="null"/>
+                          <Data value="HABITACI&#xd3;N TRIPLE - ABANICO"/>
+                          <Data value="null"/>
+                          <Data value="HABITACI&#xd3;N QUINTUPLE - ABANICO"/>
+                          <Data value="null"/>
+                          <Data value="null"/>
+                          <Data value="null"/>
+                          <Data value="null"/>
+                          <Data value="null"/>
+                          <Data value="null"/>
+                          <Data value="null"/>
+                        </Column>
+                        <Column editable="false" title="1 persona" type="java.lang.Object">
+                          <Data value="null"/>
+                          <Data value="null"/>
+                          <Data value="&#x20a1;13.000"/>
+                          <Data value="null"/>
+                          <Data value="&#x20a1;15.000"/>
+                          <Data value="null"/>
+                          <Data value="&#x20a1;11.000"/>
+                          <Data value="null"/>
+                          <Data value="&#x20a1;12.000"/>
+                          <Data value="null"/>
+                          <Data value="&#x20a1;15.000"/>
+                          <Data value="null"/>
+                          <Data value="&#x20a1;15.000"/>
+                          <Data value="null"/>
+                          <Data value="&#x20a1;13.000"/>
+                          <Data value="null"/>
+                          <Data value="&#x20a1;13.000"/>
+                          <Data value="null"/>
+                          <Data value="null"/>
+                          <Data value="null"/>
+                          <Data value="null"/>
+                          <Data value="null"/>
+                          <Data value="null"/>
+                          <Data value="null"/>
+                        </Column>
+                        <Column editable="false" title="2 personas" type="java.lang.Object">
+                          <Data value="null"/>
+                          <Data value="null"/>
+                          <Data value="&#x20a1;19.000"/>
+                          <Data value="null"/>
+                          <Data value="&#x20a1;25.000"/>
+                          <Data value="null"/>
+                          <Data value="null"/>
+                          <Data value="null"/>
+                          <Data value="&#x20a1;21.000"/>
+                          <Data value="null"/>
+                          <Data value="&#x20a1;25.000"/>
+                          <Data value="null"/>
+                          <Data value="&#x20a1;25.000"/>
+                          <Data value="null"/>
+                          <Data value="&#x20a1;21.000"/>
+                          <Data value="null"/>
+                          <Data value="&#x20a1;21.000"/>
+                          <Data value="null"/>
+                          <Data value="null"/>
+                          <Data value="null"/>
+                          <Data value="null"/>
+                          <Data value="null"/>
+                          <Data value="null"/>
+                          <Data value="null"/>
+                        </Column>
+                        <Column editable="false" title="3 personas" type="java.lang.Object">
+                          <Data value="null"/>
+                          <Data value="null"/>
+                          <Data value="null"/>
+                          <Data value="null"/>
+                          <Data value="null"/>
+                          <Data value="null"/>
+                          <Data value="null"/>
+                          <Data value="null"/>
+                          <Data value="null"/>
+                          <Data value="null"/>
+                          <Data value="null"/>
+                          <Data value="null"/>
+                          <Data value="&#x20a1;37.000"/>
+                          <Data value="null"/>
+                          <Data value="&#x20a1;31.000"/>
+                          <Data value="null"/>
+                          <Data value="&#x20a1;31.000"/>
+                          <Data value="null"/>
+                          <Data value="null"/>
+                          <Data value="null"/>
+                          <Data value="null"/>
+                          <Data value="null"/>
+                          <Data value="null"/>
+                          <Data value="null"/>
+                        </Column>
+                        <Column editable="false" title="4 personas" type="java.lang.Object">
+                          <Data value="null"/>
+                          <Data value="null"/>
+                          <Data value="null"/>
+                          <Data value="null"/>
+                          <Data value="null"/>
+                          <Data value="null"/>
+                          <Data value="null"/>
+                          <Data value="null"/>
+                          <Data value="null"/>
+                          <Data value="null"/>
+                          <Data value="null"/>
+                          <Data value="null"/>
+                          <Data value="null"/>
+                          <Data value="null"/>
+                          <Data value="null"/>
+                          <Data value="null"/>
+                          <Data value="&#x20a1;41.000"/>
+                          <Data value="null"/>
+                          <Data value="null"/>
+                          <Data value="null"/>
+                          <Data value="null"/>
+                          <Data value="null"/>
+                          <Data value="null"/>
+                          <Data value="null"/>
+                        </Column>
+                        <Column editable="false" title="5 personas" type="java.lang.Object">
+                          <Data value="null"/>
+                          <Data value="null"/>
+                          <Data value="null"/>
+                          <Data value="null"/>
+                          <Data value="null"/>
+                          <Data value="null"/>
+                          <Data value="null"/>
+                          <Data value="null"/>
+                          <Data value="null"/>
+                          <Data value="null"/>
+                          <Data value="null"/>
+                          <Data value="null"/>
+                          <Data value="null"/>
+                          <Data value="null"/>
+                          <Data value="null"/>
+                          <Data value="null"/>
+                          <Data value="&#x20a1;51.000"/>
+                          <Data value="null"/>
+                          <Data value="null"/>
+                          <Data value="null"/>
+                          <Data value="null"/>
+                          <Data value="null"/>
+                          <Data value="null"/>
+                          <Data value="null"/>
+                        </Column>
                       </Table>
                     </Property>
                     <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
                       <TableColumnModel selectionModel="0">
-                        <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                        <Column maxWidth="-1" minWidth="-1" prefWidth="250" resizable="true">
                           <Title/>
                           <Editor/>
                           <Renderer/>
@@ -664,7 +827,7 @@
             <Component class="javax.swing.JLabel" name="btnRealizar">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/botones/Realizar_figma.png"/>
+                  <Image iconType="3" name="/botones/btnRealizar.png"/>
                 </Property>
                 <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
                   <Color id="Hand Cursor"/>
@@ -704,8 +867,10 @@
                   <Color blue="0" green="0" red="0" type="rgb"/>
                 </Property>
                 <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                  <StringArray count="1">
+                  <StringArray count="3">
                     <StringItem index="0" value="Tipo de moneda"/>
+                    <StringItem index="1" value="&#x20a1; : CRC"/>
+                    <StringItem index="2" value="$ : USD"/>
                   </StringArray>
                 </Property>
               </Properties>
@@ -715,6 +880,19 @@
             </Component>
           </SubComponents>
         </Container>
+        <Component class="javax.swing.JLabel" name="btnRegresar">
+          <Properties>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/botones/btnRegresar.png"/>
+            </Property>
+            <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+              <Color id="Hand Cursor"/>
+            </Property>
+          </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btnRegresarMouseClicked"/>
+          </Events>
+        </Component>
       </SubComponents>
     </Container>
   </SubComponents>

@@ -47,36 +47,36 @@
                   <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
-                          <Component id="lblLogo" min="-2" pref="318" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
-                          <Component id="lblUser" min="-2" pref="58" max="-2" attributes="0"/>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="lblAdminEmpleado" min="-2" pref="347" max="-2" attributes="0"/>
-                          <EmptySpace max="32767" attributes="0"/>
-                          <Component id="lblBienvenidos" min="-2" pref="280" max="-2" attributes="0"/>
-                          <EmptySpace max="32767" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="btnCerrarSesion" min="-2" pref="188" max="-2" attributes="0"/>
+                              <Component id="btnAdministracion" min="-2" max="-2" attributes="0"/>
+                              <Component id="btnSalir" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace pref="290" max="32767" attributes="0"/>
+                          <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                              <Component id="btnRealizarIngreso" max="32767" attributes="0"/>
+                              <Component id="btnHuespedes" alignment="0" max="32767" attributes="0"/>
+                              <Component id="btnReservaciones" alignment="0" max="32767" attributes="0"/>
+                              <Component id="btnHabitaciones" alignment="0" min="-2" max="-2" attributes="0"/>
+                          </Group>
                       </Group>
                       <Group type="102" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="btnMenu" min="-2" pref="59" max="-2" attributes="0"/>
                               <Group type="102" alignment="0" attributes="0">
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="btnCerrarSesion" min="-2" pref="188" max="-2" attributes="0"/>
-                                      <Component id="btnAdministracion" min="-2" max="-2" attributes="0"/>
-                                      <Component id="btnSalir" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace max="32767" attributes="0"/>
-                                  <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                      <Component id="btnRealizarIngreso" max="32767" attributes="0"/>
-                                      <Component id="btnHuespedes" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="btnReservaciones" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="btnHabitaciones" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  </Group>
+                                  <Component id="lblLogo" min="-2" pref="318" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="lblUser" min="-2" pref="58" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="lblAdminEmpleado" min="-2" pref="347" max="-2" attributes="0"/>
                               </Group>
+                              <Component id="btnMenu" min="-2" pref="59" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace max="32767" attributes="0"/>
+                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                       </Group>
                   </Group>
+                  <EmptySpace pref="15" max="32767" attributes="0"/>
+                  <Component id="lblBienvenidos" min="-2" pref="280" max="-2" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -94,11 +94,8 @@
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="lblBienvenidos" min="-2" pref="86" max="-2" attributes="0"/>
                               <Component id="lblLogo" min="-2" pref="111" max="-2" attributes="0"/>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
-                                  <Component id="lblBienvenidos" min="-2" pref="86" max="-2" attributes="0"/>
-                              </Group>
                           </Group>
                       </Group>
                   </Group>
@@ -166,6 +163,9 @@
               <Color id="Hand Cursor"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btnRealizarIngresoMouseClicked"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="btnHabitaciones">
           <Properties>
@@ -202,6 +202,9 @@
               <Color id="Hand Cursor"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btnHuespedesMouseClicked"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="btnMenu">
           <Properties>
@@ -225,6 +228,9 @@
               <Color id="Hand Cursor"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btnCerrarSesionMouseClicked"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="btnAdministracion">
           <Properties>
@@ -235,6 +241,9 @@
               <Color id="Hand Cursor"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btnAdministracionMouseClicked"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="btnSalir">
           <Properties>
