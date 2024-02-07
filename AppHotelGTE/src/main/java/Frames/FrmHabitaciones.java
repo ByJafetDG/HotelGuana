@@ -10,16 +10,15 @@ import javax.swing.JOptionPane;
  *
  * @author JafetDG
  */
-public class FrmHabitaciones extends javax.swing.JFrame {
+public class FrmHabitaciones extends javax.swing.JFrame{
 
-    
+   
     public FrmHabitaciones() {
         initComponents();
         setLocationRelativeTo(null);
         /*Al ejecutar el programa se abrirá en pantalla completa*/
         setExtendedState(MAXIMIZED_BOTH);
         
-
         // Agrega un MouseListener al JLabel
         lblN1.addMouseListener(new MouseAdapter() {
             @Override
@@ -40,7 +39,7 @@ public class FrmHabitaciones extends javax.swing.JFrame {
                     actualizarImagen(lblN1, opcionSeleccionada);
                 }
             }
-        });        
+        });
         lblN2.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
@@ -120,7 +119,7 @@ public class FrmHabitaciones extends javax.swing.JFrame {
                     actualizarImagen5(lblN5, opcionSeleccionada);
                 }
             }
-        });       
+        });
         lblN7.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
@@ -257,7 +256,7 @@ public class FrmHabitaciones extends javax.swing.JFrame {
 
                 // Actualiza la imagen según la opción seleccionada
                 if (opcionSeleccionada != null) {
-                    actualizarImagen2(lblN13, opcionSeleccionada);
+                    actualizarImagen13(lblN13, opcionSeleccionada);
                 }
             }
         });
@@ -277,7 +276,7 @@ public class FrmHabitaciones extends javax.swing.JFrame {
 
                 // Actualiza la imagen según la opción seleccionada
                 if (opcionSeleccionada != null) {
-                    actualizarImagen2(lblN14, opcionSeleccionada);
+                    actualizarImagen14(lblN14, opcionSeleccionada);
                 }
             }
         });
@@ -297,7 +296,7 @@ public class FrmHabitaciones extends javax.swing.JFrame {
 
                 // Actualiza la imagen según la opción seleccionada
                 if (opcionSeleccionada != null) {
-                    actualizarImagen2(lblN15, opcionSeleccionada);
+                    actualizarImagen15(lblN15, opcionSeleccionada);
                 }
             }
         });
@@ -317,7 +316,7 @@ public class FrmHabitaciones extends javax.swing.JFrame {
 
                 // Actualiza la imagen según la opción seleccionada
                 if (opcionSeleccionada != null) {
-                    actualizarImagen2(lblN16, opcionSeleccionada);
+                    actualizarImagen16(lblN16, opcionSeleccionada);
                 }
             }
         });
@@ -337,7 +336,7 @@ public class FrmHabitaciones extends javax.swing.JFrame {
 
                 // Actualiza la imagen según la opción seleccionada
                 if (opcionSeleccionada != null) {
-                    actualizarImagen2(lblN17, opcionSeleccionada);
+                    actualizarImagen17(lblN17, opcionSeleccionada);
                 }
             }
         });
@@ -357,7 +356,7 @@ public class FrmHabitaciones extends javax.swing.JFrame {
 
                 // Actualiza la imagen según la opción seleccionada
                 if (opcionSeleccionada != null) {
-                    actualizarImagen2(lblN18, opcionSeleccionada);
+                    actualizarImagen18(lblN18, opcionSeleccionada);
                 }
             }
         });
@@ -377,7 +376,7 @@ public class FrmHabitaciones extends javax.swing.JFrame {
 
                 // Actualiza la imagen según la opción seleccionada
                 if (opcionSeleccionada != null) {
-                    actualizarImagen2(lblN19, opcionSeleccionada);
+                    actualizarImagen19(lblN19, opcionSeleccionada);
                 }
             }
         });
@@ -397,7 +396,7 @@ public class FrmHabitaciones extends javax.swing.JFrame {
 
                 // Actualiza la imagen según la opción seleccionada
                 if (opcionSeleccionada != null) {
-                    actualizarImagen2(lblN20, opcionSeleccionada);
+                    actualizarImagen20(lblN20, opcionSeleccionada);
                 }
             }
         });
@@ -417,7 +416,7 @@ public class FrmHabitaciones extends javax.swing.JFrame {
 
                 // Actualiza la imagen según la opción seleccionada
                 if (opcionSeleccionada != null) {
-                    actualizarImagen2(lblN21, opcionSeleccionada);
+                    actualizarImagen21(lblN21, opcionSeleccionada);
                 }
             }
         });
@@ -437,7 +436,7 @@ public class FrmHabitaciones extends javax.swing.JFrame {
 
                 // Actualiza la imagen según la opción seleccionada
                 if (opcionSeleccionada != null) {
-                    actualizarImagen2(lblN22, opcionSeleccionada);
+                    actualizarImagen22(lblN22, opcionSeleccionada);
                 }
             }
         });
@@ -457,7 +456,7 @@ public class FrmHabitaciones extends javax.swing.JFrame {
 
                 // Actualiza la imagen según la opción seleccionada
                 if (opcionSeleccionada != null) {
-                    actualizarImagen2(lblN23, opcionSeleccionada);
+                    actualizarImagen23(lblN23, opcionSeleccionada);
                 }
             }
         });
@@ -477,7 +476,7 @@ public class FrmHabitaciones extends javax.swing.JFrame {
 
                 // Actualiza la imagen según la opción seleccionada
                 if (opcionSeleccionada != null) {
-                    actualizarImagen2(lblN24, opcionSeleccionada);
+                    actualizarImagen24(lblN24, opcionSeleccionada);
                 }
             }
         });
@@ -497,7 +496,7 @@ public class FrmHabitaciones extends javax.swing.JFrame {
 
                 // Actualiza la imagen según la opción seleccionada
                 if (opcionSeleccionada != null) {
-                    actualizarImagen2(lblN25, opcionSeleccionada);
+                    actualizarImagen25(lblN25, opcionSeleccionada);
                 }
             }
         });
@@ -517,7 +516,7 @@ public class FrmHabitaciones extends javax.swing.JFrame {
 
                 // Actualiza la imagen según la opción seleccionada
                 if (opcionSeleccionada != null) {
-                    actualizarImagen2(lblN26, opcionSeleccionada);
+                    actualizarImagen26(lblN26, opcionSeleccionada);
                 }
             }
         });
@@ -537,7 +536,7 @@ public class FrmHabitaciones extends javax.swing.JFrame {
 
                 // Actualiza la imagen según la opción seleccionada
                 if (opcionSeleccionada != null) {
-                    actualizarImagen2(lblN27, opcionSeleccionada);
+                    actualizarImagen27(lblN27, opcionSeleccionada);
                 }
             }
         });
@@ -557,7 +556,7 @@ public class FrmHabitaciones extends javax.swing.JFrame {
 
                 // Actualiza la imagen según la opción seleccionada
                 if (opcionSeleccionada != null) {
-                    actualizarImagen2(lblN28, opcionSeleccionada);
+                    actualizarImagen28(lblN28, opcionSeleccionada);
                 }
             }
         });
@@ -577,11 +576,11 @@ public class FrmHabitaciones extends javax.swing.JFrame {
 
                 // Actualiza la imagen según la opción seleccionada
                 if (opcionSeleccionada != null) {
-                    actualizarImagen2(lblN29, opcionSeleccionada);
+                    actualizarImagen29(lblN29, opcionSeleccionada);
                 }
             }
         });
-        
+
     }
 
     /**
@@ -1078,8 +1077,9 @@ public class FrmHabitaciones extends javax.swing.JFrame {
         princi.setVisible(true);
         dispose();
     }//GEN-LAST:event_btnRegresarMouseClicked
-
     
+    
+
     // Método para actualizar la imagen del JLabel según la opción seleccionada
     private void actualizarImagen(JLabel label, String opcion) {
         // Define las rutas de las imágenes según las opciones
@@ -1089,16 +1089,16 @@ public class FrmHabitaciones extends javax.swing.JFrame {
                 rutaImagen = "/habitaciones_rojo/n1Rojo.png";
                 break;
             case "Ocupada":
-                rutaImagen = "ruta_ocupada.png";
+                rutaImagen = "/habitaciones_verde/n1Verde.png";
                 break;
             case "Limpieza":
-                rutaImagen = "ruta_limpieza.png";
+                rutaImagen = "/habitaciones_morado/n1Morado.png";
                 break;
             case "Varios días":
-                rutaImagen = "ruta_varios_dias.png";
+                rutaImagen = "/habitaciones_amarillo/n1Amarillo.png";
                 break;
             case "Reservada":
-                rutaImagen = "ruta_reservada.png";
+                rutaImagen = "/habitaciones_celeste/n1Celeste.png";
                 break;
             case "Disponible":
                 rutaImagen = "/habitaciones/n1_figma.png";
@@ -1111,29 +1111,29 @@ public class FrmHabitaciones extends javax.swing.JFrame {
         // Actualiza la imagen del JLabel
         label.setIcon(new ImageIcon(getClass().getResource(rutaImagen)));
     }
-    
+
     // Método para actualizar la imagen del JLabel según la opción seleccionada
     private void actualizarImagen2(JLabel label, String opcion) {
         // Define las rutas de las imágenes según las opciones
         String rutaImagen = "";
         switch (opcion) {
             case "Mantenimiento":
-                rutaImagen = "/habitaciones/n2_figma.png";
+                rutaImagen = "/habitaciones_rojo/n2Rojo.png";
                 break;
             case "Ocupada":
-                rutaImagen = "ruta_ocupada.png";
+                rutaImagen = "/habitaciones_verde/n2Verde.png";
                 break;
             case "Limpieza":
-                rutaImagen = "ruta_limpieza.png";
+                rutaImagen = "/habitaciones_morado/n2Morado.png";
                 break;
             case "Varios días":
-                rutaImagen = "ruta_varios_dias.png";
+                rutaImagen = "/habitaciones_amarillo/n2Amarillo.png";
                 break;
             case "Reservada":
-                rutaImagen = "ruta_reservada.png";
+                rutaImagen = "/habitaciones_celeste/n2Celeste.png";
                 break;
             case "Disponible":
-                rutaImagen = "/habitaciones/n1_figma.png";
+                rutaImagen = "/habitaciones/n2_figma.png";
                 break;
             default:
                 // En caso de una opción no reconocida, no hace nada
@@ -1143,28 +1143,29 @@ public class FrmHabitaciones extends javax.swing.JFrame {
         // Actualiza la imagen del JLabel
         label.setIcon(new ImageIcon(getClass().getResource(rutaImagen)));
     }
+
     // Método para actualizar la imagen del JLabel según la opción seleccionada
     private void actualizarImagen3(JLabel label, String opcion) {
         // Define las rutas de las imágenes según las opciones
         String rutaImagen = "";
         switch (opcion) {
             case "Mantenimiento":
-                rutaImagen = "/habitaciones/n2_figma.png";
+                rutaImagen = "/habitaciones_rojo/n3Rojo.png";
                 break;
             case "Ocupada":
-                rutaImagen = "ruta_ocupada.png";
+                rutaImagen = "/habitaciones_verde/n3Verde.png";
                 break;
             case "Limpieza":
-                rutaImagen = "ruta_limpieza.png";
+                rutaImagen = "/habitaciones_morado/n3Morado.png";
                 break;
             case "Varios días":
-                rutaImagen = "ruta_varios_dias.png";
+                rutaImagen = "/habitaciones_amarillo/n3Amarillo.png";
                 break;
             case "Reservada":
-                rutaImagen = "ruta_reservada.png";
+                rutaImagen = "/habitaciones_celeste/n3Celeste.png";
                 break;
             case "Disponible":
-                rutaImagen = "/habitaciones/n1_figma.png";
+                rutaImagen = "/habitaciones/n3_figma.png";
                 break;
             default:
                 // En caso de una opción no reconocida, no hace nada
@@ -1174,28 +1175,29 @@ public class FrmHabitaciones extends javax.swing.JFrame {
         // Actualiza la imagen del JLabel
         label.setIcon(new ImageIcon(getClass().getResource(rutaImagen)));
     }
+
     // Método para actualizar la imagen del JLabel según la opción seleccionada
     private void actualizarImagen4(JLabel label, String opcion) {
         // Define las rutas de las imágenes según las opciones
         String rutaImagen = "";
         switch (opcion) {
             case "Mantenimiento":
-                rutaImagen = "/habitaciones/n2_figma.png";
+                rutaImagen = "/habitaciones_rojo/n4Rojo.png";
                 break;
             case "Ocupada":
-                rutaImagen = "ruta_ocupada.png";
+                rutaImagen = "/habitaciones_verde/n4Verde.png";
                 break;
             case "Limpieza":
-                rutaImagen = "ruta_limpieza.png";
+                rutaImagen = "/habitaciones_morado/n4Morado.png";
                 break;
             case "Varios días":
-                rutaImagen = "ruta_varios_dias.png";
+                rutaImagen = "/habitaciones_amarillo/n4Amarillo.png";
                 break;
             case "Reservada":
-                rutaImagen = "ruta_reservada.png";
+                rutaImagen = "/habitaciones_celeste/n4Celeste.png";
                 break;
             case "Disponible":
-                rutaImagen = "/habitaciones/n1_figma.png";
+                rutaImagen = "/habitaciones/n4_figma.png";
                 break;
             default:
                 // En caso de una opción no reconocida, no hace nada
@@ -1205,28 +1207,29 @@ public class FrmHabitaciones extends javax.swing.JFrame {
         // Actualiza la imagen del JLabel
         label.setIcon(new ImageIcon(getClass().getResource(rutaImagen)));
     }
+
     // Método para actualizar la imagen del JLabel según la opción seleccionada
     private void actualizarImagen5(JLabel label, String opcion) {
         // Define las rutas de las imágenes según las opciones
         String rutaImagen = "";
         switch (opcion) {
             case "Mantenimiento":
-                rutaImagen = "/habitaciones/n2_figma.png";
+                rutaImagen = "/habitaciones_rojo/n5Rojo.png";
                 break;
             case "Ocupada":
-                rutaImagen = "ruta_ocupada.png";
+                rutaImagen = "/habitaciones_verde/n5Verde.png";
                 break;
             case "Limpieza":
-                rutaImagen = "ruta_limpieza.png";
+                rutaImagen = "/habitaciones_morado/n5Morado.png";
                 break;
             case "Varios días":
-                rutaImagen = "ruta_varios_dias.png";
+                rutaImagen = "/habitaciones_amarillo/n5Amarillo.png";
                 break;
             case "Reservada":
-                rutaImagen = "ruta_reservada.png";
+                rutaImagen = "/habitaciones_celeste/n5Celeste.png";
                 break;
             case "Disponible":
-                rutaImagen = "/habitaciones/n1_figma.png";
+                rutaImagen = "/habitaciones/n5_figma.png";
                 break;
             default:
                 // En caso de una opción no reconocida, no hace nada
@@ -1236,29 +1239,29 @@ public class FrmHabitaciones extends javax.swing.JFrame {
         // Actualiza la imagen del JLabel
         label.setIcon(new ImageIcon(getClass().getResource(rutaImagen)));
     }
-    
+
     // Método para actualizar la imagen del JLabel según la opción seleccionada
     private void actualizarImagen7(JLabel label, String opcion) {
         // Define las rutas de las imágenes según las opciones
         String rutaImagen = "";
         switch (opcion) {
             case "Mantenimiento":
-                rutaImagen = "/habitaciones/n2_figma.png";
+                rutaImagen = "/habitaciones_rojo/n7Rojo.png";
                 break;
             case "Ocupada":
-                rutaImagen = "ruta_ocupada.png";
+                rutaImagen = "/habitaciones_verde/n7Verde.png";
                 break;
             case "Limpieza":
-                rutaImagen = "ruta_limpieza.png";
+                rutaImagen = "/habitaciones_morado/n7Morado.png";
                 break;
             case "Varios días":
-                rutaImagen = "ruta_varios_dias.png";
+                rutaImagen = "/habitaciones_amarillo/n7Amarillo.png";
                 break;
             case "Reservada":
-                rutaImagen = "ruta_reservada.png";
+                rutaImagen = "/habitaciones_celeste/n7Celeste.png";
                 break;
             case "Disponible":
-                rutaImagen = "/habitaciones/n1_figma.png";
+                rutaImagen = "/habitaciones/n7_figma.png";
                 break;
             default:
                 // En caso de una opción no reconocida, no hace nada
@@ -1268,28 +1271,29 @@ public class FrmHabitaciones extends javax.swing.JFrame {
         // Actualiza la imagen del JLabel
         label.setIcon(new ImageIcon(getClass().getResource(rutaImagen)));
     }
+
     // Método para actualizar la imagen del JLabel según la opción seleccionada
     private void actualizarImagen8(JLabel label, String opcion) {
         // Define las rutas de las imágenes según las opciones
         String rutaImagen = "";
         switch (opcion) {
             case "Mantenimiento":
-                rutaImagen = "/habitaciones/n2_figma.png";
+                rutaImagen = "/habitaciones_rojo/n8Rojo.png";
                 break;
             case "Ocupada":
-                rutaImagen = "ruta_ocupada.png";
+                rutaImagen = "/habitaciones_verde/n8Verde.png";
                 break;
             case "Limpieza":
-                rutaImagen = "ruta_limpieza.png";
+                rutaImagen = "/habitaciones_morado/n8Morado.png";
                 break;
             case "Varios días":
-                rutaImagen = "ruta_varios_dias.png";
+                rutaImagen = "/habitaciones_amarillo/n8Amarillo.png";
                 break;
             case "Reservada":
-                rutaImagen = "ruta_reservada.png";
+                rutaImagen = "/habitaciones_celeste/n8Celeste.png";
                 break;
             case "Disponible":
-                rutaImagen = "/habitaciones/n1_figma.png";
+                rutaImagen = "/habitaciones/n8_figma.png";
                 break;
             default:
                 // En caso de una opción no reconocida, no hace nada
@@ -1299,28 +1303,29 @@ public class FrmHabitaciones extends javax.swing.JFrame {
         // Actualiza la imagen del JLabel
         label.setIcon(new ImageIcon(getClass().getResource(rutaImagen)));
     }
+
     // Método para actualizar la imagen del JLabel según la opción seleccionada
     private void actualizarImagen9(JLabel label, String opcion) {
         // Define las rutas de las imágenes según las opciones
         String rutaImagen = "";
         switch (opcion) {
             case "Mantenimiento":
-                rutaImagen = "/habitaciones/n2_figma.png";
+                rutaImagen = "/habitaciones_rojo/n9Rojo.png";
                 break;
             case "Ocupada":
-                rutaImagen = "ruta_ocupada.png";
+                rutaImagen = "/habitaciones_verde/n9Verde.png";
                 break;
             case "Limpieza":
-                rutaImagen = "ruta_limpieza.png";
+                rutaImagen = "/habitaciones_morado/n9Morado.png";
                 break;
             case "Varios días":
-                rutaImagen = "ruta_varios_dias.png";
+                rutaImagen = "/habitaciones_amarillo/n9Amarillo.png";
                 break;
             case "Reservada":
-                rutaImagen = "ruta_reservada.png";
+                rutaImagen = "/habitaciones_celeste/n9Celeste.png";
                 break;
             case "Disponible":
-                rutaImagen = "/habitaciones/n1_figma.png";
+                rutaImagen = "/habitaciones/n9_figma.png";
                 break;
             default:
                 // En caso de una opción no reconocida, no hace nada
@@ -1330,28 +1335,29 @@ public class FrmHabitaciones extends javax.swing.JFrame {
         // Actualiza la imagen del JLabel
         label.setIcon(new ImageIcon(getClass().getResource(rutaImagen)));
     }
+
     // Método para actualizar la imagen del JLabel según la opción seleccionada
     private void actualizarImagen10(JLabel label, String opcion) {
         // Define las rutas de las imágenes según las opciones
         String rutaImagen = "";
         switch (opcion) {
             case "Mantenimiento":
-                rutaImagen = "/habitaciones/n2_figma.png";
+                rutaImagen = "/habitaciones_rojo/n10Rojo.png";
                 break;
             case "Ocupada":
-                rutaImagen = "ruta_ocupada.png";
+                rutaImagen = "/habitaciones_verde/n10Verde.png";
                 break;
             case "Limpieza":
-                rutaImagen = "ruta_limpieza.png";
+                rutaImagen = "/habitaciones_morado/n10Morado.png";
                 break;
             case "Varios días":
-                rutaImagen = "ruta_varios_dias.png";
+                rutaImagen = "/habitaciones_amarillo/n10Amarillo.png";
                 break;
             case "Reservada":
-                rutaImagen = "ruta_reservada.png";
+                rutaImagen = "/habitaciones_celeste/n10Celeste.png";
                 break;
             case "Disponible":
-                rutaImagen = "/habitaciones/n1_figma.png";
+                rutaImagen = "/habitaciones/n10_figma.png";
                 break;
             default:
                 // En caso de una opción no reconocida, no hace nada
@@ -1360,28 +1366,29 @@ public class FrmHabitaciones extends javax.swing.JFrame {
         // Actualiza la imagen del JLabel
         label.setIcon(new ImageIcon(getClass().getResource(rutaImagen)));
     }
+
     // Método para actualizar la imagen del JLabel según la opción seleccionada
     private void actualizarImagen11(JLabel label, String opcion) {
         // Define las rutas de las imágenes según las opciones
         String rutaImagen = "";
         switch (opcion) {
             case "Mantenimiento":
-                rutaImagen = "/habitaciones/n2_figma.png";
+                rutaImagen = "/habitaciones_rojo/n11Rojo.png";
                 break;
             case "Ocupada":
-                rutaImagen = "ruta_ocupada.png";
+                rutaImagen = "/habitaciones_verde/n11Verde.png";
                 break;
             case "Limpieza":
-                rutaImagen = "ruta_limpieza.png";
+                rutaImagen = "/habitaciones_morado/n11Morado.png";
                 break;
             case "Varios días":
-                rutaImagen = "ruta_varios_dias.png";
+                rutaImagen = "/habitaciones_amarillo/n11Amarillo.png";
                 break;
             case "Reservada":
-                rutaImagen = "ruta_reservada.png";
+                rutaImagen = "/habitaciones_celeste/n11Celeste.png";
                 break;
             case "Disponible":
-                rutaImagen = "/habitaciones/n1_figma.png";
+                rutaImagen = "/habitaciones/n11_figma.png";
                 break;
             default:
                 // En caso de una opción no reconocida, no hace nada
@@ -1390,28 +1397,29 @@ public class FrmHabitaciones extends javax.swing.JFrame {
         // Actualiza la imagen del JLabel
         label.setIcon(new ImageIcon(getClass().getResource(rutaImagen)));
     }
+
     // Método para actualizar la imagen del JLabel según la opción seleccionada
     private void actualizarImagen12(JLabel label, String opcion) {
         // Define las rutas de las imágenes según las opciones
         String rutaImagen = "";
         switch (opcion) {
             case "Mantenimiento":
-                rutaImagen = "/habitaciones/n2_figma.png";
+                rutaImagen = "/habitaciones_rojo/n12Rojo.png";
                 break;
             case "Ocupada":
-                rutaImagen = "ruta_ocupada.png";
+                rutaImagen = "/habitaciones_verde/n12Verde.png";
                 break;
             case "Limpieza":
-                rutaImagen = "ruta_limpieza.png";
+                rutaImagen = "/habitaciones_morado/n12Morado.png";
                 break;
             case "Varios días":
-                rutaImagen = "ruta_varios_dias.png";
+                rutaImagen = "/habitaciones_amarillo/n12Amarillo.png";
                 break;
             case "Reservada":
-                rutaImagen = "ruta_reservada.png";
+                rutaImagen = "/habitaciones_celeste/n12Celeste.png";
                 break;
             case "Disponible":
-                rutaImagen = "/habitaciones/n1_figma.png";
+                rutaImagen = "/habitaciones/n12_figma.png";
                 break;
             default:
                 // En caso de una opción no reconocida, no hace nada
@@ -1420,6 +1428,534 @@ public class FrmHabitaciones extends javax.swing.JFrame {
         // Actualiza la imagen del JLabel
         label.setIcon(new ImageIcon(getClass().getResource(rutaImagen)));
     }
+
+    // Método para actualizar la imagen del JLabel según la opción seleccionada
+    private void actualizarImagen13(JLabel label, String opcion) {
+        // Define las rutas de las imágenes según las opciones
+        String rutaImagen = "";
+        switch (opcion) {
+            case "Mantenimiento":
+                rutaImagen = "/habitaciones_rojo/n13Rojo.png";
+                break;
+            case "Ocupada":
+                rutaImagen = "/habitaciones_verde/n13Verde.png";
+                break;
+            case "Limpieza":
+                rutaImagen = "/habitaciones_morado/n13Morado.png";
+                break;
+            case "Varios días":
+                rutaImagen = "/habitaciones_amarillo/n13Amarillo.png";
+                break;
+            case "Reservada":
+                rutaImagen = "/habitaciones_celeste/n13Celeste.png";
+                break;
+            case "Disponible":
+                rutaImagen = "/habitaciones/n13_figma.png";
+                break;
+            default:
+                // En caso de una opción no reconocida, no hace nada
+                return;
+        }
+        // Actualiza la imagen del JLabel
+        label.setIcon(new ImageIcon(getClass().getResource(rutaImagen)));
+    }
+
+    // Método para actualizar la imagen del JLabel según la opción seleccionada
+    private void actualizarImagen14(JLabel label, String opcion) {
+        // Define las rutas de las imágenes según las opciones
+        String rutaImagen = "";
+        switch (opcion) {
+            case "Mantenimiento":
+                rutaImagen = "/habitaciones_rojo/n14Rojo.png";
+                break;
+            case "Ocupada":
+                rutaImagen = "/habitaciones_verde/n14Verde.png";
+                break;
+            case "Limpieza":
+                rutaImagen = "/habitaciones_morado/n14Morado.png";
+                break;
+            case "Varios días":
+                rutaImagen = "/habitaciones_amarillo/n14Amarillo.png";
+                break;
+            case "Reservada":
+                rutaImagen = "/habitaciones_celeste/n14Celeste.png";
+                break;
+            case "Disponible":
+                rutaImagen = "/habitaciones/n14_figma.png";
+                break;
+            default:
+                // En caso de una opción no reconocida, no hace nada
+                return;
+        }
+        // Actualiza la imagen del JLabel
+        label.setIcon(new ImageIcon(getClass().getResource(rutaImagen)));
+    }
+
+    // Método para actualizar la imagen del JLabel según la opción seleccionada
+    private void actualizarImagen15(JLabel label, String opcion) {
+        // Define las rutas de las imágenes según las opciones
+        String rutaImagen = "";
+        switch (opcion) {
+            case "Mantenimiento":
+                rutaImagen = "/habitaciones_rojo/n15Rojo.png";
+                break;
+            case "Ocupada":
+                rutaImagen = "/habitaciones_verde/n15Verde.png";
+                break;
+            case "Limpieza":
+                rutaImagen = "/habitaciones_morado/n15Morado.png";
+                break;
+            case "Varios días":
+                rutaImagen = "/habitaciones_amarillo/n15Amarillo.png";
+                break;
+            case "Reservada":
+                rutaImagen = "/habitaciones_celeste/n15Celeste.png";
+                break;
+            case "Disponible":
+                rutaImagen = "/habitaciones/n15_figma.png";
+                break;
+            default:
+                // En caso de una opción no reconocida, no hace nada
+                return;
+        }
+        // Actualiza la imagen del JLabel
+        label.setIcon(new ImageIcon(getClass().getResource(rutaImagen)));
+    }
+
+    // Método para actualizar la imagen del JLabel según la opción seleccionada
+    private void actualizarImagen16(JLabel label, String opcion) {
+        // Define las rutas de las imágenes según las opciones
+        String rutaImagen = "";
+        switch (opcion) {
+            case "Mantenimiento":
+                rutaImagen = "/habitaciones_rojo/n16Rojo.png";
+                break;
+            case "Ocupada":
+                rutaImagen = "/habitaciones_verde/n16Verde.png";
+                break;
+            case "Limpieza":
+                rutaImagen = "/habitaciones_morado/n16Morado.png";
+                break;
+            case "Varios días":
+                rutaImagen = "/habitaciones_amarillo/n16Amarillo.png";
+                break;
+            case "Reservada":
+                rutaImagen = "/habitaciones_celeste/n16Celeste.png";
+                break;
+            case "Disponible":
+                rutaImagen = "/habitaciones/n16.png";
+                break;
+            default:
+                // En caso de una opción no reconocida, no hace nada
+                return;
+        }
+        // Actualiza la imagen del JLabel
+        label.setIcon(new ImageIcon(getClass().getResource(rutaImagen)));
+    }
+
+    // Método para actualizar la imagen del JLabel según la opción seleccionada
+    private void actualizarImagen17(JLabel label, String opcion) {
+        // Define las rutas de las imágenes según las opciones
+        String rutaImagen = "";
+        switch (opcion) {
+            case "Mantenimiento":
+                rutaImagen = "/habitaciones_rojo/n17Rojo.png";
+                break;
+            case "Ocupada":
+                rutaImagen = "/habitaciones_verde/n17Verde.png";
+                break;
+            case "Limpieza":
+                rutaImagen = "/habitaciones_morado/n17Morado.png";
+                break;
+            case "Varios días":
+                rutaImagen = "/habitaciones_amarillo/n17Amarillo.png";
+                break;
+            case "Reservada":
+                rutaImagen = "/habitaciones_celeste/n17Celeste.png";
+                break;
+            case "Disponible":
+                rutaImagen = "/habitaciones/n17.png";
+                break;
+            default:
+                // En caso de una opción no reconocida, no hace nada
+                return;
+        }
+        // Actualiza la imagen del JLabel
+        label.setIcon(new ImageIcon(getClass().getResource(rutaImagen)));
+    }
+
+    // Método para actualizar la imagen del JLabel según la opción seleccionada
+    private void actualizarImagen18(JLabel label, String opcion) {
+        // Define las rutas de las imágenes según las opciones
+        String rutaImagen = "";
+        switch (opcion) {
+            case "Mantenimiento":
+                rutaImagen = "/habitaciones_rojo/n18Rojo.png";
+                break;
+            case "Ocupada":
+                rutaImagen = "/habitaciones_verde/n18Verde.png";
+                break;
+            case "Limpieza":
+                rutaImagen = "/habitaciones_morado/n18Morado.png";
+                break;
+            case "Varios días":
+                rutaImagen = "/habitaciones_amarillo/n18Amarillo.png";
+                break;
+            case "Reservada":
+                rutaImagen = "/habitaciones_celeste/n18Celeste.png";
+                break;
+            case "Disponible":
+                rutaImagen = "/habitaciones/n18.png";
+                break;
+            default:
+                // En caso de una opción no reconocida, no hace nada
+                return;
+        }
+        // Actualiza la imagen del JLabel
+        label.setIcon(new ImageIcon(getClass().getResource(rutaImagen)));
+    }
+
+    // Método para actualizar la imagen del JLabel según la opción seleccionada
+    private void actualizarImagen19(JLabel label, String opcion) {
+        // Define las rutas de las imágenes según las opciones
+        String rutaImagen = "";
+        switch (opcion) {
+            case "Mantenimiento":
+                rutaImagen = "/habitaciones_rojo/n19Rojo.png";
+                break;
+            case "Ocupada":
+                rutaImagen = "/habitaciones_verde/n19Verde.png";
+                break;
+            case "Limpieza":
+                rutaImagen = "/habitaciones_morado/n19Morado.png";
+                break;
+            case "Varios días":
+                rutaImagen = "/habitaciones_amarillo/n19Amarillo.png";
+                break;
+            case "Reservada":
+                rutaImagen = "/habitaciones_celeste/n19Celeste.png";
+                break;
+            case "Disponible":
+                rutaImagen = "/habitaciones/n19.png";
+                break;
+            default:
+                // En caso de una opción no reconocida, no hace nada
+                return;
+        }
+        // Actualiza la imagen del JLabel
+        label.setIcon(new ImageIcon(getClass().getResource(rutaImagen)));
+    }
+
+    // Método para actualizar la imagen del JLabel según la opción seleccionada
+    private void actualizarImagen20(JLabel label, String opcion) {
+        // Define las rutas de las imágenes según las opciones
+        String rutaImagen = "";
+        switch (opcion) {
+            case "Mantenimiento":
+                rutaImagen = "/habitaciones_rojo/n20Rojo.png";
+                break;
+            case "Ocupada":
+                rutaImagen = "/habitaciones_verde/n20Verde.png";
+                break;
+            case "Limpieza":
+                rutaImagen = "/habitaciones_morado/n20Morado.png";
+                break;
+            case "Varios días":
+                rutaImagen = "/habitaciones_amarillo/n20Amarillo.png";
+                break;
+            case "Reservada":
+                rutaImagen = "/habitaciones_celeste/n20Celeste.png";
+                break;
+            case "Disponible":
+                rutaImagen = "/habitaciones/n20.png";
+                break;
+            default:
+                // En caso de una opción no reconocida, no hace nada
+                return;
+        }
+        // Actualiza la imagen del JLabel
+        label.setIcon(new ImageIcon(getClass().getResource(rutaImagen)));
+    }
+
+    // Método para actualizar la imagen del JLabel según la opción seleccionada
+    private void actualizarImagen21(JLabel label, String opcion) {
+        // Define las rutas de las imágenes según las opciones
+        String rutaImagen = "";
+        switch (opcion) {
+            case "Mantenimiento":
+                rutaImagen = "/habitaciones_rojo/n21Rojo.png";
+                break;
+            case "Ocupada":
+                rutaImagen = "/habitaciones_verde/n21Verde.png";
+                break;
+            case "Limpieza":
+                rutaImagen = "/habitaciones_morado/n21Morado.png";
+                break;
+            case "Varios días":
+                rutaImagen = "/habitaciones_amarillo/n21Amarillo.png";
+                break;
+            case "Reservada":
+                rutaImagen = "/habitaciones_celeste/n21Celeste.png";
+                break;
+            case "Disponible":
+                rutaImagen = "/habitaciones/n21.png";
+                break;
+            default:
+                // En caso de una opción no reconocida, no hace nada
+                return;
+        }
+        // Actualiza la imagen del JLabel
+        label.setIcon(new ImageIcon(getClass().getResource(rutaImagen)));
+    }
+
+    // Método para actualizar la imagen del JLabel según la opción seleccionada
+    private void actualizarImagen22(JLabel label, String opcion) {
+        // Define las rutas de las imágenes según las opciones
+        String rutaImagen = "";
+        switch (opcion) {
+            case "Mantenimiento":
+                rutaImagen = "/habitaciones_rojo/n22Rojo.png";
+                break;
+            case "Ocupada":
+                rutaImagen = "/habitaciones_verde/n22Verde.png";
+                break;
+            case "Limpieza":
+                rutaImagen = "/habitaciones_morado/n22Morado.png";
+                break;
+            case "Varios días":
+                rutaImagen = "/habitaciones_amarillo/n22Amarillo.png";
+                break;
+            case "Reservada":
+                rutaImagen = "/habitaciones_celeste/n22Celeste.png";
+                break;
+            case "Disponible":
+                rutaImagen = "/habitaciones/n22.png";
+                break;
+            default:
+                // En caso de una opción no reconocida, no hace nada
+                return;
+        }
+        // Actualiza la imagen del JLabel
+        label.setIcon(new ImageIcon(getClass().getResource(rutaImagen)));
+    }
+
+    // Método para actualizar la imagen del JLabel según la opción seleccionada
+    private void actualizarImagen23(JLabel label, String opcion) {
+        // Define las rutas de las imágenes según las opciones
+        String rutaImagen = "";
+        switch (opcion) {
+            case "Mantenimiento":
+                rutaImagen = "/habitaciones_rojo/n23Rojo.png";
+                break;
+            case "Ocupada":
+                rutaImagen = "/habitaciones_verde/n23Verde.png";
+                break;
+            case "Limpieza":
+                rutaImagen = "/habitaciones_morado/n23Morado.png";
+                break;
+            case "Varios días":
+                rutaImagen = "/habitaciones_amarillo/n23Amarillo.png";
+                break;
+            case "Reservada":
+                rutaImagen = "/habitaciones_celeste/n23Celeste.png";
+                break;
+            case "Disponible":
+                rutaImagen = "/habitaciones/n23.png";
+                break;
+            default:
+                // En caso de una opción no reconocida, no hace nada
+                return;
+        }
+        // Actualiza la imagen del JLabel
+        label.setIcon(new ImageIcon(getClass().getResource(rutaImagen)));
+    }
+
+    // Método para actualizar la imagen del JLabel según la opción seleccionada
+    private void actualizarImagen24(JLabel label, String opcion) {
+        // Define las rutas de las imágenes según las opciones
+        String rutaImagen = "";
+        switch (opcion) {
+            case "Mantenimiento":
+                rutaImagen = "/habitaciones_rojo/n24Rojo.png";
+                break;
+            case "Ocupada":
+                rutaImagen = "/habitaciones_verde/n24Verde.png";
+                break;
+            case "Limpieza":
+                rutaImagen = "/habitaciones_morado/n24Morado.png";
+                break;
+            case "Varios días":
+                rutaImagen = "/habitaciones_amarillo/n24Amarillo.png";
+                break;
+            case "Reservada":
+                rutaImagen = "/habitaciones_celeste/n24Celeste.png";
+                break;
+            case "Disponible":
+                rutaImagen = "/habitaciones/n24.png";
+                break;
+            default:
+                // En caso de una opción no reconocida, no hace nada
+                return;
+        }
+        // Actualiza la imagen del JLabel
+        label.setIcon(new ImageIcon(getClass().getResource(rutaImagen)));
+    }
+
+    // Método para actualizar la imagen del JLabel según la opción seleccionada
+    private void actualizarImagen25(JLabel label, String opcion) {
+        // Define las rutas de las imágenes según las opciones
+        String rutaImagen = "";
+        switch (opcion) {
+            case "Mantenimiento":
+                rutaImagen = "/habitaciones_rojo/n25Rojo.png";
+                break;
+            case "Ocupada":
+                rutaImagen = "/habitaciones_verde/n25Verde.png";
+                break;
+            case "Limpieza":
+                rutaImagen = "/habitaciones_morado/n25Morado.png";
+                break;
+            case "Varios días":
+                rutaImagen = "/habitaciones_amarillo/n25Amarillo.png";
+                break;
+            case "Reservada":
+                rutaImagen = "/habitaciones_celeste/n25Celeste.png";
+                break;
+            case "Disponible":
+                rutaImagen = "/habitaciones/n25.png";
+                break;
+            default:
+                // En caso de una opción no reconocida, no hace nada
+                return;
+        }
+        // Actualiza la imagen del JLabel
+        label.setIcon(new ImageIcon(getClass().getResource(rutaImagen)));
+    }
+
+    // Método para actualizar la imagen del JLabel según la opción seleccionada
+    private void actualizarImagen26(JLabel label, String opcion) {
+        // Define las rutas de las imágenes según las opciones
+        String rutaImagen = "";
+        switch (opcion) {
+            case "Mantenimiento":
+                rutaImagen = "/habitaciones_rojo/n26Rojo.png";
+                break;
+            case "Ocupada":
+                rutaImagen = "/habitaciones_verde/n26Verde.png";
+                break;
+            case "Limpieza":
+                rutaImagen = "/habitaciones_morado/n26Morado.png";
+                break;
+            case "Varios días":
+                rutaImagen = "/habitaciones_amarillo/n26Amarillo.png";
+                break;
+            case "Reservada":
+                rutaImagen = "/habitaciones_celeste/n26Celeste.png";
+                break;
+            case "Disponible":
+                rutaImagen = "/habitaciones/n26.png";
+                break;
+            default:
+                // En caso de una opción no reconocida, no hace nada
+                return;
+        }
+        // Actualiza la imagen del JLabel
+        label.setIcon(new ImageIcon(getClass().getResource(rutaImagen)));
+    }
+
+    // Método para actualizar la imagen del JLabel según la opción seleccionada
+    private void actualizarImagen27(JLabel label, String opcion) {
+        // Define las rutas de las imágenes según las opciones
+        String rutaImagen = "";
+        switch (opcion) {
+            case "Mantenimiento":
+                rutaImagen = "/habitaciones_rojo/n27Rojo.png";
+                break;
+            case "Ocupada":
+                rutaImagen = "/habitaciones_verde/n27Verde.png";
+                break;
+            case "Limpieza":
+                rutaImagen = "/habitaciones_morado/n27Morado.png";
+                break;
+            case "Varios días":
+                rutaImagen = "/habitaciones_amarillo/n27Amarillo.png";
+                break;
+            case "Reservada":
+                rutaImagen = "/habitaciones_celeste/n27Celeste.png";
+                break;
+            case "Disponible":
+                rutaImagen = "/habitaciones/n27.png";
+                break;
+            default:
+                // En caso de una opción no reconocida, no hace nada
+                return;
+        }
+        // Actualiza la imagen del JLabel
+        label.setIcon(new ImageIcon(getClass().getResource(rutaImagen)));
+    }
+
+    // Método para actualizar la imagen del JLabel según la opción seleccionada
+    private void actualizarImagen28(JLabel label, String opcion) {
+        // Define las rutas de las imágenes según las opciones
+        String rutaImagen = "";
+        switch (opcion) {
+            case "Mantenimiento":
+                rutaImagen = "/habitaciones_rojo/n28Rojo.png";
+                break;
+            case "Ocupada":
+                rutaImagen = "/habitaciones_verde/n28Verde.png";
+                break;
+            case "Limpieza":
+                rutaImagen = "/habitaciones_morado/n28Morado.png";
+                break;
+            case "Varios días":
+                rutaImagen = "/habitaciones_amarillo/n28Amarillo.png";
+                break;
+            case "Reservada":
+                rutaImagen = "/habitaciones_celeste/n28Celeste.png";
+                break;
+            case "Disponible":
+                rutaImagen = "/habitaciones/n28.png";
+                break;
+            default:
+                // En caso de una opción no reconocida, no hace nada
+                return;
+        }
+        // Actualiza la imagen del JLabel
+        label.setIcon(new ImageIcon(getClass().getResource(rutaImagen)));
+    }
+
+    // Método para actualizar la imagen del JLabel según la opción seleccionada
+    private void actualizarImagen29(JLabel label, String opcion) {
+        // Define las rutas de las imágenes según las opciones
+        String rutaImagen = "";
+        switch (opcion) {
+            case "Mantenimiento":
+                rutaImagen = "/habitaciones_rojo/n29Rojo.png";
+                break;
+            case "Ocupada":
+                rutaImagen = "/habitaciones_verde/n29Verde.png";
+                break;
+            case "Limpieza":
+                rutaImagen = "/habitaciones_morado/n29Morado.png";
+                break;
+            case "Varios días":
+                rutaImagen = "/habitaciones_amarillo/n29Amarillo.png";
+                break;
+            case "Reservada":
+                rutaImagen = "/habitaciones_celeste/n29Celeste.png";
+                break;
+            case "Disponible":
+                rutaImagen = "/habitaciones/n29.png";
+                break;
+            default:
+                // En caso de una opción no reconocida, no hace nada
+                return;
+        }
+        // Actualiza la imagen del JLabel
+        label.setIcon(new ImageIcon(getClass().getResource(rutaImagen)));
+    }
+
     /**
      * @param args the command line arguments
      */
