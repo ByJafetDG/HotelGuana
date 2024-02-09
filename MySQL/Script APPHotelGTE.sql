@@ -5,6 +5,7 @@ use apphotelgte;
 
 create table Sucursal(
 id_Sucursal int primary key,
+cedula_Juridica varchar(30),
 nombre varchar(100),
 direccion varchar(100),
 telefono varchar(12),
@@ -14,9 +15,10 @@ correo varchar(100)
 create table Usuario(
 id_Usuario int primary key, 
 nombre varchar(100),
-apellido varchar(100),
+apellidos varchar(100),
 correo varchar(100),
 contrasena varbinary(100),
+rol enum('Admin','Empleado')not null,
 sucursal_id_Sucursal int not null,
 CONSTRAINT `fk_usuario_sucursal1`
 FOREIGN KEY (`sucursal_id_Sucursal`)REFERENCES `apphotelgte`.`sucursal` (`id_Sucursal`)
@@ -24,45 +26,34 @@ FOREIGN KEY (`sucursal_id_Sucursal`)REFERENCES `apphotelgte`.`sucursal` (`id_Suc
 
 
 create table Empleado(
-id_Empleado int primary key,
+id_Empleado int primary key auto_increment,
 nombre varchar(100),
-apellido varchar(100),
+apellidos varchar(100),
 correo varchar(100),
 telefono varchar(12),
 direccion varchar(100),
 cargo varchar(50),
-id_Usuario int null,
-FOREIGN KEY (id_Usuario) REFERENCES Usuario(id_Usuario));
+empleado_id_Sucursal int not null,
+FOREIGN KEY (empleado_id_Sucursal) REFERENCES Sucursal(id_Sucursal));
 
 
 create table Cliente(
 id_Cliente int primary key AUTO_INCREMENT,
 id_Habitacion int,
 nombre varchar(100),
-apellido varchar(100),
+apellidos varchar(100),
 identificacion varchar(50) unique,
 correo varchar(100),
 check_in date,
 check_out date,
+historial enum('Bueno','Regular','Vetado') not null,
 telefono varchar(20),
 direccion varchar(100),
 placa varchar(30),
-observacion varchar(100),
+observacion varchar(100) not null,
 sucursal_id_Sucursal int null,
 CONSTRAINT `fk_cliente_sucursal1`
 FOREIGN KEY (`sucursal_id_Sucursal`) REFERENCES `apphotelgte`.`sucursal` (`id_Sucursal`)
-);
-
-create table Reservaciones(
-id_Reserva int primary key,
-nombre_Cliente varchar(100),
-telefono_Cliente varchar(12), 
-check_in date,
-check_out date,
-estado varchar(50),
-cliente_id_Cliente int null,
-CONSTRAINT `fk_reservaciones_cliente1`
-FOREIGN KEY (`cliente_id_Cliente`) REFERENCES `apphotelgte`.`cliente` (`id_Cliente`)
 );
 
 
@@ -77,18 +68,31 @@ precio_4P decimal (10,4),
 precio_5P decimal (10,4),
 precio_6P decimal (10,4),
 descripcion varchar(50),
-observacion varchar(50),
-reservaciones_id_Reserva int null,
-CONSTRAINT `fk_habitaciones_reservaciones1`
-FOREIGN KEY (`reservaciones_id_Reserva`) REFERENCES `apphotelgte`.`reservaciones` (`id_Reserva`)
+observacion varchar(100) not null,
+habitacion_id_cliente int null,
+CONSTRAINT `fk_habitaciones_cliente1`
+FOREIGN KEY (`habitacion_id_cliente`) REFERENCES `apphotelgte`.`cliente` (`id_cliente`)
 );
+
+CREATE TABLE Reservaciones (
+id_Reserva INT PRIMARY KEY AUTO_INCREMENT,
+nombre_Cliente VARCHAR(100),
+telefono_Cliente VARCHAR(12), 
+check_in DATE,
+check_out DATE,
+estado ENUM('Cancelada','Confirmada','Pendiente') NOT NULL,
+reserva_id_habitacion INT NULL,
+CONSTRAINT fk_reservaciones_habitaciones1 FOREIGN KEY (reserva_id_habitacion) REFERENCES Habitaciones (id_Habitacion)
+);
+
+
 
 CREATE TABLE Ventas_Habitaciones (
     id_Venta INT PRIMARY KEY AUTO_INCREMENT,
     id_Habitacion INT,
     id_Cliente int,
     nombre VARCHAR(100),
-    apellido VARCHAR(100),
+    apellidos VARCHAR(100),
     identificacion VARCHAR(50) UNIQUE,
     correo VARCHAR(100),
     check_in DATE,
@@ -223,16 +227,29 @@ INSERT INTO apphotelgte.habitaciones(id_Habitacion,tipo_Habitacion,estado,precio
 values('29','quíntuple','Disponible','13.000','21.000','31.000','41.000','51.000','Cama Individual con dos camarotes y abanico','baño privado');
 
 
+
+
+-- ---------Insert a la tabla Surcursal -----------------------------------
+
+
+Insert into Sucursal(id_Sucursal,cedula_Juridica, nombre, direccion, telefono, correo)
+values(1, 3101848980, 'Hotel Guanacaste', 'Liberia centro continuo al rest. Bagatzi', '2666-0085', 'guanacaste.hotel@gmail.com');
+
+
+
+
+
+
 -- -------------------------------Procedimientos almacenados -----------------------------------
 
--- esta procedimiento se encarga de replicar los datos de la tabla venta_habitacion a la tabla cliente
+-- este procedimiento se encarga de replicar los datos de la tabla venta_habitacion a la tabla cliente
 
 DELIMITER //
 
 CREATE PROCEDURE insert_venta_habitacion(
     IN id_Habitacion_param INT,
     IN nombre_param VARCHAR(100),
-    IN apellido_param VARCHAR(100),
+    IN apellidos_param VARCHAR(100),
     IN identificacion_param VARCHAR(50),
     IN correo_param VARCHAR(100),
     IN check_in_param DATE,
@@ -249,8 +266,8 @@ BEGIN
     DECLARE cliente_id INT;
     
     -- Insertar un nuevo cliente si aún no existe
-    INSERT IGNORE INTO Cliente (id_habitacion,nombre, apellido, identificacion, correo,check_in,check_out,observacion,telefono, direccion, placa)
-    VALUES (id_Habitacion_param,nombre_param, apellido_param, identificacion_param, correo_param,check_in_param,check_out_param,observacion_param,telefono_param, direccion_param, placa_param);
+    INSERT IGNORE INTO Cliente (id_habitacion,nombre, apellidos, identificacion, correo,check_in,check_out,observacion,telefono, direccion, placa)
+    VALUES (id_Habitacion_param,nombre_param, apellidos_param, identificacion_param, correo_param,check_in_param,check_out_param,observacion_param,telefono_param, direccion_param, placa_param);
 
     -- Obtener el ID del cliente (ya sea existente o recién insertado)
     SELECT id_Cliente INTO cliente_id 
@@ -259,8 +276,8 @@ BEGIN
     LIMIT 1;
 
     -- Insertar en la tabla Ventas_Habitaciones
-    INSERT INTO Ventas_Habitaciones (id_Habitacion, id_Cliente, nombre, apellido, identificacion, correo, check_in, check_out, telefono, direccion, placa, observacion, fecha_Venta,moneda, total_Venta)
-    VALUES (id_Habitacion_param, cliente_id, nombre_param, apellido_param, identificacion_param, correo_param, check_in_param, check_out_param, telefono_param, direccion_param, placa_param, observacion_param, fecha_Venta_param,moneda_param, total_Venta_param);
+    INSERT INTO Ventas_Habitaciones (id_Habitacion, id_Cliente, nombre, apellidos, identificacion, correo, check_in, check_out, telefono, direccion, placa, observacion, fecha_Venta,moneda, total_Venta)
+    VALUES (id_Habitacion_param, cliente_id, nombre_param, apellidos_param, identificacion_param, correo_param, check_in_param, check_out_param, telefono_param, direccion_param, placa_param, observacion_param, fecha_Venta_param,moneda_param, total_Venta_param);
 END //
 
 DELIMITER ;
@@ -285,8 +302,130 @@ CALL insert_venta_habitacion(
 
 
 
+-- Este procedimiento se encarga de hacer inserts a la tabla de Reservaciones
+DELIMITER //
+
+CREATE PROCEDURE InsertarReservacion (
+    IN p_nombre_cliente VARCHAR(100),
+    IN p_telefono_cliente VARCHAR(12),
+    IN p_check_in DATE,
+    IN p_check_out DATE,
+    IN p_estado ENUM('Cancelada','Confirmada','Pendiente'),
+    IN p_reserva_id_habitacion INT
+)
+BEGIN
+    DECLARE habitacion_existente INT;
+
+    -- Verificar si la habitación existe
+    SELECT COUNT(*) INTO habitacion_existente FROM Habitaciones WHERE id_Habitacion = p_reserva_id_habitacion;
+
+    -- Si la habitación existe, insertar la reserva
+    IF habitacion_existente > 0 THEN
+        INSERT INTO Reservaciones (
+            nombre_Cliente,
+            telefono_Cliente,
+            check_in,
+            check_out,
+            estado,
+            reserva_id_habitacion
+        ) VALUES (
+            p_nombre_cliente,
+            p_telefono_cliente,
+            p_check_in,
+            p_check_out,
+            p_estado,
+            p_reserva_id_habitacion
+        );
+    ELSE
+        SIGNAL SQLSTATE '45000'
+        SET MESSAGE_TEXT = 'La habitación especificada no existe';
+    END IF;
+END //
+
+DELIMITER ;
 
 
+-- Llamado 1
+CALL InsertarReservacion('Juan Perez', '1234567890', '2024-03-01', '2024-03-05', 'Confirmada', 1);
+
+-- Llamado 2
+CALL InsertarReservacion('Maria Garcia', '9876543210', '2024-04-15', '2024-04-20', 'Pendiente', 2);
+
+-- Llamado 3
+CALL InsertarReservacion('Pedro Lopez', '5556667777', '2024-05-10', '2024-05-15', 'Cancelada', 3);
+
+-- Llamado 4
+CALL InsertarReservacion('Ana Martinez', '3332221111', '2024-06-20', '2024-06-25', 'Confirmada', 4);
+
+-- Llamado 5
+CALL InsertarReservacion('Laura Sanchez', '4443332222', '2024-07-05', '2024-07-10', 'Pendiente', 5);
+
+-- Llamado 5
+CALL InsertarReservacion('Laura Sanchez', '4443332222', '2024-07-05', '2024-07-10', 'Pendiente', 17);
+
+
+-- Este procedimiento se encarga de hacer inserts a la tabla de Reservaciones
+
+DELIMITER //
+
+CREATE PROCEDURE InsertarEmpleado(
+    IN p_id_Empleado INT,
+    IN p_nombre VARCHAR(100),
+    IN p_apellidos VARCHAR(100),
+    IN p_correo VARCHAR(100),
+    IN p_telefono VARCHAR(12),
+    IN p_direccion VARCHAR(100),
+    IN p_cargo VARCHAR(50),
+    IN p_empleado_id_Sucursal INT
+)
+BEGIN
+    INSERT INTO Empleado (id_Empleado, nombre, apellidos, correo, telefono, direccion, cargo, empleado_id_Sucursal)
+    VALUES (p_id_Empleado, p_nombre, p_apellidos, p_correo, p_telefono, p_direccion, p_cargo, p_empleado_id_Sucursal);
+END //
+
+DELIMITER ;
+
+
+-- Call 1
+CALL InsertarEmpleado(1,'Christian', 'Perez', 'juan@example.com', '1234567890', 'Calle Principal 123', 'Recepcionista', 1);
+
+-- Call 2
+CALL InsertarEmpleado(2,'Raquel ', 'Wellls', 'maria@example.com', '0987654321', 'Avenida Central 456', 'Recepcionista', 1);
+
+-- Call 3
+CALL InsertarEmpleado(3,'Raquel', 'Rueda', 'Raquel@example.com', '9876543210', 'Calle Secundaria 789', 'Recepcionista', 1);
+
+
+
+-- Este procedimiento se encarga de hacer inserts a la tabla de Usuarios
+
+DELIMITER //
+
+CREATE PROCEDURE InsertarUsuario(
+    IN p_id_Usuario INT,
+    IN p_nombre VARCHAR(100),
+    IN p_apellidos VARCHAR(100),
+    IN p_correo VARCHAR(100),
+    IN p_contrasena VARBINARY(100),
+    IN p_rol ENUM('Admin', 'Empleado'),
+    IN p_sucursal_id_Sucursal INT
+)
+BEGIN
+    INSERT INTO Usuario (id_Usuario, nombre, apellidos, correo, contrasena, rol, sucursal_id_Sucursal)
+    VALUES (p_id_Usuario, p_nombre, p_apellidos, p_correo, p_contrasena, p_rol, p_sucursal_id_Sucursal);
+END //
+
+DELIMITER ;
+
+
+-- Call 1
+CALL InsertarUsuario(1, 'John', 'Doe', 'john@example.com', UNHEX(SHA2('password123', 256)), 'Admin', 1);
+
+-- Call 2
+CALL InsertarUsuario(2, 'Jane', 'Smith', 'jane@example.com', UNHEX(SHA2('securepassword', 256)), 'Empleado', 1);
+
+-- Call 3
+CALL InsertarUsuario(3, 'Alice', 'Johnson', 'alice@example.com', UNHEX(SHA2('strongpassword', 256)), 'Empleado', 1);
 
 
 -- -------------------------------FUNCIONES-----------------------------------
