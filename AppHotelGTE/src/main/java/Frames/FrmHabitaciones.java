@@ -1,6 +1,5 @@
 package Frames;
 
-import static Conexion.ConnectionDB.obtenerConexion;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.sql.Connection;
@@ -690,7 +689,7 @@ public class FrmHabitaciones extends javax.swing.JFrame {
         // Aquí deberías tener la lógica para actualizar el estado en la base de datos
         // Utiliza un PreparedStatement para evitar problemas de SQL injection
         try {
-            Connection connection = obtenerConexion(); // Obtén la conexión a la base de datos
+            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/apphotelgte", "root", "bagaces12345");
             String sql = "UPDATE Habitaciones SET estado = ? WHERE id_Habitacion = ?";
             try (PreparedStatement statement = connection.prepareStatement(sql)) {
                 statement.setString(1, nuevoEstado);
