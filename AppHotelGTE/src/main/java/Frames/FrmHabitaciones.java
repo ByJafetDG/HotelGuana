@@ -10,7 +10,6 @@ import java.sql.SQLException;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
-
 /**
  *
  * @author JafetDG
@@ -20,16 +19,66 @@ public class FrmHabitaciones extends javax.swing.JFrame {
     String numeroHabitacion = "1";
     String numeroHabitacion2 = "2";
     String numeroHabitacion3 = "3";
+    String numeroHabitacion4 = "4";
+    String numeroHabitacion5 = "5";
+    String numeroHabitacion7 = "7";
+    String numeroHabitacion8 = "8";
+    String numeroHabitacion9 = "9";
+    String numeroHabitacion10 = "10";
+    String numeroHabitacion11 = "11";
+    String numeroHabitacion12 = "12";
+    String numeroHabitacion13 = "13";
+    String numeroHabitacion14 = "14";
+    String numeroHabitacion15 = "15";
+    String numeroHabitacion16 = "16";
+    String numeroHabitacion17 = "17";
+    String numeroHabitacion18 = "18";
+    String numeroHabitacion19 = "19";
+    String numeroHabitacion20 = "20";
+    String numeroHabitacion21 = "21";
+    String numeroHabitacion22 = "22";
+    String numeroHabitacion23 = "23";
+    String numeroHabitacion24 = "24";
+    String numeroHabitacion25 = "25";
+    String numeroHabitacion26 = "26";
+    String numeroHabitacion27 = "27";
+    String numeroHabitacion28 = "28";
+    String numeroHabitacion29 = "29";
 
     public FrmHabitaciones() {
         initComponents();
         setLocationRelativeTo(null);
         /*Al ejecutar el programa se abrirá en pantalla completa*/
         setExtendedState(MAXIMIZED_BOTH);
-
+        
         cargarImagenSegunEstado(lblN1, numeroHabitacion);
         cargarImagenSegunEstado(lblN2, numeroHabitacion2);
         cargarImagenSegunEstado(lblN3, numeroHabitacion3);
+        cargarImagenSegunEstado(lblN4, numeroHabitacion4);
+        cargarImagenSegunEstado(lblN5, numeroHabitacion5);
+        cargarImagenSegunEstado(lblN7, numeroHabitacion7);
+        cargarImagenSegunEstado(lblN8, numeroHabitacion8);
+        cargarImagenSegunEstado(lblN9, numeroHabitacion9);
+        cargarImagenSegunEstado(lblN10, numeroHabitacion10);
+        cargarImagenSegunEstado(lblN11, numeroHabitacion11);
+        cargarImagenSegunEstado(lblN12, numeroHabitacion12);
+        cargarImagenSegunEstado(lblN13, numeroHabitacion13);
+        cargarImagenSegunEstado(lblN14, numeroHabitacion14);
+        cargarImagenSegunEstado(lblN15, numeroHabitacion15);
+        cargarImagenSegunEstado(lblN16, numeroHabitacion16);
+        cargarImagenSegunEstado(lblN17, numeroHabitacion17);
+        cargarImagenSegunEstado(lblN18, numeroHabitacion18);
+        cargarImagenSegunEstado(lblN19, numeroHabitacion19);
+        cargarImagenSegunEstado(lblN20, numeroHabitacion20);
+        cargarImagenSegunEstado(lblN21, numeroHabitacion21);
+        cargarImagenSegunEstado(lblN22, numeroHabitacion22);
+        cargarImagenSegunEstado(lblN23, numeroHabitacion23);
+        cargarImagenSegunEstado(lblN24, numeroHabitacion24);
+        cargarImagenSegunEstado(lblN25, numeroHabitacion25);
+        cargarImagenSegunEstado(lblN26, numeroHabitacion26);
+        cargarImagenSegunEstado(lblN27, numeroHabitacion27);
+        cargarImagenSegunEstado(lblN28, numeroHabitacion28);
+        cargarImagenSegunEstado(lblN29, numeroHabitacion29);
         
         // Agrega un MouseListener al JLabel
         lblN1.addMouseListener(new MouseAdapter() {
@@ -115,6 +164,706 @@ public class FrmHabitaciones extends javax.swing.JFrame {
                 }
             }
         });
+        // Agrega un MouseListener al JLabel
+        lblN4.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                // Obtén el número de habitación del JLabel
+                String numeroHabitacion = "4"; // Cambia esto por la lógica que uses para obtener el número de habitación
+
+                // Muestra el JOptionPane con las opciones
+                String[] opciones = {"Mantenimiento", "Ocupada", "Limpieza", "Varios días", "Reservada", "Disponible"};
+                String opcionSeleccionada = (String) JOptionPane.showInputDialog(
+                        FrmHabitaciones.this,
+                        "Selecciona el estado de la habitación:",
+                        "Estado de la Habitación",
+                        JOptionPane.QUESTION_MESSAGE,
+                        null,
+                        opciones,
+                        opciones[0]);
+
+                // Si se selecciona una opción, actualiza la imagen
+                if (opcionSeleccionada != null) {
+                    // Consulta a la base de datos para obtener el estado de la habitación
+                    String estadoHabitacion = obtenerEstadoHabitacionDesdeBaseDeDatos(numeroHabitacion);
+
+                    // Actualiza la imagen según la opción seleccionada
+                    actualizarImagen(lblN4, opcionSeleccionada, numeroHabitacion);
+                }
+            }
+        });
+        // Agrega un MouseListener al JLabel
+        lblN5.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                // Obtén el número de habitación del JLabel
+                String numeroHabitacion = "5"; // Cambia esto por la lógica que uses para obtener el número de habitación
+
+                // Muestra el JOptionPane con las opciones
+                String[] opciones = {"Mantenimiento", "Ocupada", "Limpieza", "Varios días", "Reservada", "Disponible"};
+                String opcionSeleccionada = (String) JOptionPane.showInputDialog(
+                        FrmHabitaciones.this,
+                        "Selecciona el estado de la habitación:",
+                        "Estado de la Habitación",
+                        JOptionPane.QUESTION_MESSAGE,
+                        null,
+                        opciones,
+                        opciones[0]);
+
+                // Si se selecciona una opción, actualiza la imagen
+                if (opcionSeleccionada != null) {
+                    // Consulta a la base de datos para obtener el estado de la habitación
+                    String estadoHabitacion = obtenerEstadoHabitacionDesdeBaseDeDatos(numeroHabitacion);
+
+                    // Actualiza la imagen según la opción seleccionada
+                    actualizarImagen(lblN5, opcionSeleccionada, numeroHabitacion);
+                }
+            }
+        });
+        // Agrega un MouseListener al JLabel
+        lblN7.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                // Obtén el número de habitación del JLabel
+                String numeroHabitacion = "7"; // Cambia esto por la lógica que uses para obtener el número de habitación
+
+                // Muestra el JOptionPane con las opciones
+                String[] opciones = {"Mantenimiento", "Ocupada", "Limpieza", "Varios días", "Reservada", "Disponible"};
+                String opcionSeleccionada = (String) JOptionPane.showInputDialog(
+                        FrmHabitaciones.this,
+                        "Selecciona el estado de la habitación:",
+                        "Estado de la Habitación",
+                        JOptionPane.QUESTION_MESSAGE,
+                        null,
+                        opciones,
+                        opciones[0]);
+
+                // Si se selecciona una opción, actualiza la imagen
+                if (opcionSeleccionada != null) {
+                    // Consulta a la base de datos para obtener el estado de la habitación
+                    String estadoHabitacion = obtenerEstadoHabitacionDesdeBaseDeDatos(numeroHabitacion);
+
+                    // Actualiza la imagen según la opción seleccionada
+                    actualizarImagen(lblN7, opcionSeleccionada, numeroHabitacion);
+                }
+            }
+        });
+        // Agrega un MouseListener al JLabel
+        lblN8.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                // Obtén el número de habitación del JLabel
+                String numeroHabitacion = "8"; // Cambia esto por la lógica que uses para obtener el número de habitación
+
+                // Muestra el JOptionPane con las opciones
+                String[] opciones = {"Mantenimiento", "Ocupada", "Limpieza", "Varios días", "Reservada", "Disponible"};
+                String opcionSeleccionada = (String) JOptionPane.showInputDialog(
+                        FrmHabitaciones.this,
+                        "Selecciona el estado de la habitación:",
+                        "Estado de la Habitación",
+                        JOptionPane.QUESTION_MESSAGE,
+                        null,
+                        opciones,
+                        opciones[0]);
+
+                // Si se selecciona una opción, actualiza la imagen
+                if (opcionSeleccionada != null) {
+                    // Consulta a la base de datos para obtener el estado de la habitación
+                    String estadoHabitacion = obtenerEstadoHabitacionDesdeBaseDeDatos(numeroHabitacion);
+
+                    // Actualiza la imagen según la opción seleccionada
+                    actualizarImagen(lblN8, opcionSeleccionada, numeroHabitacion);
+                }
+            }
+        });
+        // Agrega un MouseListener al JLabel
+        lblN9.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                // Obtén el número de habitación del JLabel
+                String numeroHabitacion = "9"; // Cambia esto por la lógica que uses para obtener el número de habitación
+
+                // Muestra el JOptionPane con las opciones
+                String[] opciones = {"Mantenimiento", "Ocupada", "Limpieza", "Varios días", "Reservada", "Disponible"};
+                String opcionSeleccionada = (String) JOptionPane.showInputDialog(
+                        FrmHabitaciones.this,
+                        "Selecciona el estado de la habitación:",
+                        "Estado de la Habitación",
+                        JOptionPane.QUESTION_MESSAGE,
+                        null,
+                        opciones,
+                        opciones[0]);
+
+                // Si se selecciona una opción, actualiza la imagen
+                if (opcionSeleccionada != null) {
+                    // Consulta a la base de datos para obtener el estado de la habitación
+                    String estadoHabitacion = obtenerEstadoHabitacionDesdeBaseDeDatos(numeroHabitacion);
+
+                    // Actualiza la imagen según la opción seleccionada
+                    actualizarImagen(lblN9, opcionSeleccionada, numeroHabitacion);
+                }
+            }
+        });
+        // Agrega un MouseListener al JLabel
+        lblN10.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                // Obtén el número de habitación del JLabel
+                String numeroHabitacion = "10"; // Cambia esto por la lógica que uses para obtener el número de habitación
+
+                // Muestra el JOptionPane con las opciones
+                String[] opciones = {"Mantenimiento", "Ocupada", "Limpieza", "Varios días", "Reservada", "Disponible"};
+                String opcionSeleccionada = (String) JOptionPane.showInputDialog(
+                        FrmHabitaciones.this,
+                        "Selecciona el estado de la habitación:",
+                        "Estado de la Habitación",
+                        JOptionPane.QUESTION_MESSAGE,
+                        null,
+                        opciones,
+                        opciones[0]);
+
+                // Si se selecciona una opción, actualiza la imagen
+                if (opcionSeleccionada != null) {
+                    // Consulta a la base de datos para obtener el estado de la habitación
+                    String estadoHabitacion = obtenerEstadoHabitacionDesdeBaseDeDatos(numeroHabitacion);
+
+                    // Actualiza la imagen según la opción seleccionada
+                    actualizarImagen(lblN10, opcionSeleccionada, numeroHabitacion);
+                }
+            }
+        });
+        // Agrega un MouseListener al JLabel
+        lblN11.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                // Obtén el número de habitación del JLabel
+                String numeroHabitacion = "11"; // Cambia esto por la lógica que uses para obtener el número de habitación
+
+                // Muestra el JOptionPane con las opciones
+                String[] opciones = {"Mantenimiento", "Ocupada", "Limpieza", "Varios días", "Reservada", "Disponible"};
+                String opcionSeleccionada = (String) JOptionPane.showInputDialog(
+                        FrmHabitaciones.this,
+                        "Selecciona el estado de la habitación:",
+                        "Estado de la Habitación",
+                        JOptionPane.QUESTION_MESSAGE,
+                        null,
+                        opciones,
+                        opciones[0]);
+
+                // Si se selecciona una opción, actualiza la imagen
+                if (opcionSeleccionada != null) {
+                    // Consulta a la base de datos para obtener el estado de la habitación
+                    String estadoHabitacion = obtenerEstadoHabitacionDesdeBaseDeDatos(numeroHabitacion);
+
+                    // Actualiza la imagen según la opción seleccionada
+                    actualizarImagen(lblN11, opcionSeleccionada, numeroHabitacion);
+                }
+            }
+        });
+        // Agrega un MouseListener al JLabel
+        lblN12.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                // Obtén el número de habitación del JLabel
+                String numeroHabitacion = "12"; // Cambia esto por la lógica que uses para obtener el número de habitación
+
+                // Muestra el JOptionPane con las opciones
+                String[] opciones = {"Mantenimiento", "Ocupada", "Limpieza", "Varios días", "Reservada", "Disponible"};
+                String opcionSeleccionada = (String) JOptionPane.showInputDialog(
+                        FrmHabitaciones.this,
+                        "Selecciona el estado de la habitación:",
+                        "Estado de la Habitación",
+                        JOptionPane.QUESTION_MESSAGE,
+                        null,
+                        opciones,
+                        opciones[0]);
+
+                // Si se selecciona una opción, actualiza la imagen
+                if (opcionSeleccionada != null) {
+                    // Consulta a la base de datos para obtener el estado de la habitación
+                    String estadoHabitacion = obtenerEstadoHabitacionDesdeBaseDeDatos(numeroHabitacion);
+
+                    // Actualiza la imagen según la opción seleccionada
+                    actualizarImagen(lblN12, opcionSeleccionada, numeroHabitacion);
+                }
+            }
+        });
+        // Agrega un MouseListener al JLabel
+        lblN13.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                // Obtén el número de habitación del JLabel
+                String numeroHabitacion = "13"; // Cambia esto por la lógica que uses para obtener el número de habitación
+
+                // Muestra el JOptionPane con las opciones
+                String[] opciones = {"Mantenimiento", "Ocupada", "Limpieza", "Varios días", "Reservada", "Disponible"};
+                String opcionSeleccionada = (String) JOptionPane.showInputDialog(
+                        FrmHabitaciones.this,
+                        "Selecciona el estado de la habitación:",
+                        "Estado de la Habitación",
+                        JOptionPane.QUESTION_MESSAGE,
+                        null,
+                        opciones,
+                        opciones[0]);
+
+                // Si se selecciona una opción, actualiza la imagen
+                if (opcionSeleccionada != null) {
+                    // Consulta a la base de datos para obtener el estado de la habitación
+                    String estadoHabitacion = obtenerEstadoHabitacionDesdeBaseDeDatos(numeroHabitacion);
+
+                    // Actualiza la imagen según la opción seleccionada
+                    actualizarImagen(lblN13, opcionSeleccionada, numeroHabitacion);
+                }
+            }
+        });
+        // Agrega un MouseListener al JLabel
+        lblN14.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                // Obtén el número de habitación del JLabel
+                String numeroHabitacion = "14"; // Cambia esto por la lógica que uses para obtener el número de habitación
+
+                // Muestra el JOptionPane con las opciones
+                String[] opciones = {"Mantenimiento", "Ocupada", "Limpieza", "Varios días", "Reservada", "Disponible"};
+                String opcionSeleccionada = (String) JOptionPane.showInputDialog(
+                        FrmHabitaciones.this,
+                        "Selecciona el estado de la habitación:",
+                        "Estado de la Habitación",
+                        JOptionPane.QUESTION_MESSAGE,
+                        null,
+                        opciones,
+                        opciones[0]);
+
+                // Si se selecciona una opción, actualiza la imagen
+                if (opcionSeleccionada != null) {
+                    // Consulta a la base de datos para obtener el estado de la habitación
+                    String estadoHabitacion = obtenerEstadoHabitacionDesdeBaseDeDatos(numeroHabitacion);
+
+                    // Actualiza la imagen según la opción seleccionada
+                    actualizarImagen(lblN14, opcionSeleccionada, numeroHabitacion);
+                }
+            }
+        });
+        // Agrega un MouseListener al JLabel
+        lblN15.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                // Obtén el número de habitación del JLabel
+                String numeroHabitacion = "15"; // Cambia esto por la lógica que uses para obtener el número de habitación
+
+                // Muestra el JOptionPane con las opciones
+                String[] opciones = {"Mantenimiento", "Ocupada", "Limpieza", "Varios días", "Reservada", "Disponible"};
+                String opcionSeleccionada = (String) JOptionPane.showInputDialog(
+                        FrmHabitaciones.this,
+                        "Selecciona el estado de la habitación:",
+                        "Estado de la Habitación",
+                        JOptionPane.QUESTION_MESSAGE,
+                        null,
+                        opciones,
+                        opciones[0]);
+
+                // Si se selecciona una opción, actualiza la imagen
+                if (opcionSeleccionada != null) {
+                    // Consulta a la base de datos para obtener el estado de la habitación
+                    String estadoHabitacion = obtenerEstadoHabitacionDesdeBaseDeDatos(numeroHabitacion);
+
+                    // Actualiza la imagen según la opción seleccionada
+                    actualizarImagen(lblN15, opcionSeleccionada, numeroHabitacion);
+                }
+            }
+        });
+        // Agrega un MouseListener al JLabel
+        lblN16.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                // Obtén el número de habitación del JLabel
+                String numeroHabitacion = "16"; // Cambia esto por la lógica que uses para obtener el número de habitación
+
+                // Muestra el JOptionPane con las opciones
+                String[] opciones = {"Mantenimiento", "Ocupada", "Limpieza", "Varios días", "Reservada", "Disponible"};
+                String opcionSeleccionada = (String) JOptionPane.showInputDialog(
+                        FrmHabitaciones.this,
+                        "Selecciona el estado de la habitación:",
+                        "Estado de la Habitación",
+                        JOptionPane.QUESTION_MESSAGE,
+                        null,
+                        opciones,
+                        opciones[0]);
+
+                // Si se selecciona una opción, actualiza la imagen
+                if (opcionSeleccionada != null) {
+                    // Consulta a la base de datos para obtener el estado de la habitación
+                    String estadoHabitacion = obtenerEstadoHabitacionDesdeBaseDeDatos(numeroHabitacion);
+
+                    // Actualiza la imagen según la opción seleccionada
+                    actualizarImagen(lblN16, opcionSeleccionada, numeroHabitacion);
+                }
+            }
+        });
+        // Agrega un MouseListener al JLabel
+        lblN17.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                // Obtén el número de habitación del JLabel
+                String numeroHabitacion = "17"; // Cambia esto por la lógica que uses para obtener el número de habitación
+
+                // Muestra el JOptionPane con las opciones
+                String[] opciones = {"Mantenimiento", "Ocupada", "Limpieza", "Varios días", "Reservada", "Disponible"};
+                String opcionSeleccionada = (String) JOptionPane.showInputDialog(
+                        FrmHabitaciones.this,
+                        "Selecciona el estado de la habitación:",
+                        "Estado de la Habitación",
+                        JOptionPane.QUESTION_MESSAGE,
+                        null,
+                        opciones,
+                        opciones[0]);
+
+                // Si se selecciona una opción, actualiza la imagen
+                if (opcionSeleccionada != null) {
+                    // Consulta a la base de datos para obtener el estado de la habitación
+                    String estadoHabitacion = obtenerEstadoHabitacionDesdeBaseDeDatos(numeroHabitacion);
+
+                    // Actualiza la imagen según la opción seleccionada
+                    actualizarImagen(lblN17, opcionSeleccionada, numeroHabitacion);
+                }
+            }
+        });
+        // Agrega un MouseListener al JLabel
+        lblN18.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                // Obtén el número de habitación del JLabel
+                String numeroHabitacion = "18"; // Cambia esto por la lógica que uses para obtener el número de habitación
+
+                // Muestra el JOptionPane con las opciones
+                String[] opciones = {"Mantenimiento", "Ocupada", "Limpieza", "Varios días", "Reservada", "Disponible"};
+                String opcionSeleccionada = (String) JOptionPane.showInputDialog(
+                        FrmHabitaciones.this,
+                        "Selecciona el estado de la habitación:",
+                        "Estado de la Habitación",
+                        JOptionPane.QUESTION_MESSAGE,
+                        null,
+                        opciones,
+                        opciones[0]);
+
+                // Si se selecciona una opción, actualiza la imagen
+                if (opcionSeleccionada != null) {
+                    // Consulta a la base de datos para obtener el estado de la habitación
+                    String estadoHabitacion = obtenerEstadoHabitacionDesdeBaseDeDatos(numeroHabitacion);
+
+                    // Actualiza la imagen según la opción seleccionada
+                    actualizarImagen(lblN18, opcionSeleccionada, numeroHabitacion);
+                }
+            }
+        });
+        // Agrega un MouseListener al JLabel
+        lblN19.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                // Obtén el número de habitación del JLabel
+                String numeroHabitacion = "19"; // Cambia esto por la lógica que uses para obtener el número de habitación
+
+                // Muestra el JOptionPane con las opciones
+                String[] opciones = {"Mantenimiento", "Ocupada", "Limpieza", "Varios días", "Reservada", "Disponible"};
+                String opcionSeleccionada = (String) JOptionPane.showInputDialog(
+                        FrmHabitaciones.this,
+                        "Selecciona el estado de la habitación:",
+                        "Estado de la Habitación",
+                        JOptionPane.QUESTION_MESSAGE,
+                        null,
+                        opciones,
+                        opciones[0]);
+
+                // Si se selecciona una opción, actualiza la imagen
+                if (opcionSeleccionada != null) {
+                    // Consulta a la base de datos para obtener el estado de la habitación
+                    String estadoHabitacion = obtenerEstadoHabitacionDesdeBaseDeDatos(numeroHabitacion);
+
+                    // Actualiza la imagen según la opción seleccionada
+                    actualizarImagen(lblN19, opcionSeleccionada, numeroHabitacion);
+                }
+            }
+        });
+        // Agrega un MouseListener al JLabel
+        lblN20.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                // Obtén el número de habitación del JLabel
+                String numeroHabitacion = "20"; // Cambia esto por la lógica que uses para obtener el número de habitación
+
+                // Muestra el JOptionPane con las opciones
+                String[] opciones = {"Mantenimiento", "Ocupada", "Limpieza", "Varios días", "Reservada", "Disponible"};
+                String opcionSeleccionada = (String) JOptionPane.showInputDialog(
+                        FrmHabitaciones.this,
+                        "Selecciona el estado de la habitación:",
+                        "Estado de la Habitación",
+                        JOptionPane.QUESTION_MESSAGE,
+                        null,
+                        opciones,
+                        opciones[0]);
+
+                // Si se selecciona una opción, actualiza la imagen
+                if (opcionSeleccionada != null) {
+                    // Consulta a la base de datos para obtener el estado de la habitación
+                    String estadoHabitacion = obtenerEstadoHabitacionDesdeBaseDeDatos(numeroHabitacion);
+
+                    // Actualiza la imagen según la opción seleccionada
+                    actualizarImagen(lblN20, opcionSeleccionada, numeroHabitacion);
+                }
+            }
+        });
+        // Agrega un MouseListener al JLabel
+        lblN21.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                // Obtén el número de habitación del JLabel
+                String numeroHabitacion = "21"; // Cambia esto por la lógica que uses para obtener el número de habitación
+
+                // Muestra el JOptionPane con las opciones
+                String[] opciones = {"Mantenimiento", "Ocupada", "Limpieza", "Varios días", "Reservada", "Disponible"};
+                String opcionSeleccionada = (String) JOptionPane.showInputDialog(
+                        FrmHabitaciones.this,
+                        "Selecciona el estado de la habitación:",
+                        "Estado de la Habitación",
+                        JOptionPane.QUESTION_MESSAGE,
+                        null,
+                        opciones,
+                        opciones[0]);
+
+                // Si se selecciona una opción, actualiza la imagen
+                if (opcionSeleccionada != null) {
+                    // Consulta a la base de datos para obtener el estado de la habitación
+                    String estadoHabitacion = obtenerEstadoHabitacionDesdeBaseDeDatos(numeroHabitacion);
+
+                    // Actualiza la imagen según la opción seleccionada
+                    actualizarImagen(lblN21, opcionSeleccionada, numeroHabitacion);
+                }
+            }
+        });
+        // Agrega un MouseListener al JLabel
+        lblN22.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                // Obtén el número de habitación del JLabel
+                String numeroHabitacion = "22"; // Cambia esto por la lógica que uses para obtener el número de habitación
+
+                // Muestra el JOptionPane con las opciones
+                String[] opciones = {"Mantenimiento", "Ocupada", "Limpieza", "Varios días", "Reservada", "Disponible"};
+                String opcionSeleccionada = (String) JOptionPane.showInputDialog(
+                        FrmHabitaciones.this,
+                        "Selecciona el estado de la habitación:",
+                        "Estado de la Habitación",
+                        JOptionPane.QUESTION_MESSAGE,
+                        null,
+                        opciones,
+                        opciones[0]);
+
+                // Si se selecciona una opción, actualiza la imagen
+                if (opcionSeleccionada != null) {
+                    // Consulta a la base de datos para obtener el estado de la habitación
+                    String estadoHabitacion = obtenerEstadoHabitacionDesdeBaseDeDatos(numeroHabitacion);
+
+                    // Actualiza la imagen según la opción seleccionada
+                    actualizarImagen(lblN22, opcionSeleccionada, numeroHabitacion);
+                }
+            }
+        });
+        // Agrega un MouseListener al JLabel
+        lblN23.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                // Obtén el número de habitación del JLabel
+                String numeroHabitacion = "23"; // Cambia esto por la lógica que uses para obtener el número de habitación
+
+                // Muestra el JOptionPane con las opciones
+                String[] opciones = {"Mantenimiento", "Ocupada", "Limpieza", "Varios días", "Reservada", "Disponible"};
+                String opcionSeleccionada = (String) JOptionPane.showInputDialog(
+                        FrmHabitaciones.this,
+                        "Selecciona el estado de la habitación:",
+                        "Estado de la Habitación",
+                        JOptionPane.QUESTION_MESSAGE,
+                        null,
+                        opciones,
+                        opciones[0]);
+
+                // Si se selecciona una opción, actualiza la imagen
+                if (opcionSeleccionada != null) {
+                    // Consulta a la base de datos para obtener el estado de la habitación
+                    String estadoHabitacion = obtenerEstadoHabitacionDesdeBaseDeDatos(numeroHabitacion);
+
+                    // Actualiza la imagen según la opción seleccionada
+                    actualizarImagen(lblN23, opcionSeleccionada, numeroHabitacion);
+                }
+            }
+        });
+        // Agrega un MouseListener al JLabel
+        lblN24.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                // Obtén el número de habitación del JLabel
+                String numeroHabitacion = "24"; // Cambia esto por la lógica que uses para obtener el número de habitación
+
+                // Muestra el JOptionPane con las opciones
+                String[] opciones = {"Mantenimiento", "Ocupada", "Limpieza", "Varios días", "Reservada", "Disponible"};
+                String opcionSeleccionada = (String) JOptionPane.showInputDialog(
+                        FrmHabitaciones.this,
+                        "Selecciona el estado de la habitación:",
+                        "Estado de la Habitación",
+                        JOptionPane.QUESTION_MESSAGE,
+                        null,
+                        opciones,
+                        opciones[0]);
+
+                // Si se selecciona una opción, actualiza la imagen
+                if (opcionSeleccionada != null) {
+                    // Consulta a la base de datos para obtener el estado de la habitación
+                    String estadoHabitacion = obtenerEstadoHabitacionDesdeBaseDeDatos(numeroHabitacion);
+
+                    // Actualiza la imagen según la opción seleccionada
+                    actualizarImagen(lblN24, opcionSeleccionada, numeroHabitacion);
+                }
+            }
+        });
+        // Agrega un MouseListener al JLabel
+        lblN25.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                // Obtén el número de habitación del JLabel
+                String numeroHabitacion = "25"; // Cambia esto por la lógica que uses para obtener el número de habitación
+
+                // Muestra el JOptionPane con las opciones
+                String[] opciones = {"Mantenimiento", "Ocupada", "Limpieza", "Varios días", "Reservada", "Disponible"};
+                String opcionSeleccionada = (String) JOptionPane.showInputDialog(
+                        FrmHabitaciones.this,
+                        "Selecciona el estado de la habitación:",
+                        "Estado de la Habitación",
+                        JOptionPane.QUESTION_MESSAGE,
+                        null,
+                        opciones,
+                        opciones[0]);
+
+                // Si se selecciona una opción, actualiza la imagen
+                if (opcionSeleccionada != null) {
+                    // Consulta a la base de datos para obtener el estado de la habitación
+                    String estadoHabitacion = obtenerEstadoHabitacionDesdeBaseDeDatos(numeroHabitacion);
+
+                    // Actualiza la imagen según la opción seleccionada
+                    actualizarImagen(lblN25, opcionSeleccionada, numeroHabitacion);
+                }
+            }
+        });
+        // Agrega un MouseListener al JLabel
+        lblN26.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                // Obtén el número de habitación del JLabel
+                String numeroHabitacion = "26"; // Cambia esto por la lógica que uses para obtener el número de habitación
+
+                // Muestra el JOptionPane con las opciones
+                String[] opciones = {"Mantenimiento", "Ocupada", "Limpieza", "Varios días", "Reservada", "Disponible"};
+                String opcionSeleccionada = (String) JOptionPane.showInputDialog(
+                        FrmHabitaciones.this,
+                        "Selecciona el estado de la habitación:",
+                        "Estado de la Habitación",
+                        JOptionPane.QUESTION_MESSAGE,
+                        null,
+                        opciones,
+                        opciones[0]);
+
+                // Si se selecciona una opción, actualiza la imagen
+                if (opcionSeleccionada != null) {
+                    // Consulta a la base de datos para obtener el estado de la habitación
+                    String estadoHabitacion = obtenerEstadoHabitacionDesdeBaseDeDatos(numeroHabitacion);
+
+                    // Actualiza la imagen según la opción seleccionada
+                    actualizarImagen(lblN26, opcionSeleccionada, numeroHabitacion);
+                }
+            }
+        });
+        // Agrega un MouseListener al JLabel
+        lblN27.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                // Obtén el número de habitación del JLabel
+                String numeroHabitacion = "27"; // Cambia esto por la lógica que uses para obtener el número de habitación
+
+                // Muestra el JOptionPane con las opciones
+                String[] opciones = {"Mantenimiento", "Ocupada", "Limpieza", "Varios días", "Reservada", "Disponible"};
+                String opcionSeleccionada = (String) JOptionPane.showInputDialog(
+                        FrmHabitaciones.this,
+                        "Selecciona el estado de la habitación:",
+                        "Estado de la Habitación",
+                        JOptionPane.QUESTION_MESSAGE,
+                        null,
+                        opciones,
+                        opciones[0]);
+
+                // Si se selecciona una opción, actualiza la imagen
+                if (opcionSeleccionada != null) {
+                    // Consulta a la base de datos para obtener el estado de la habitación
+                    String estadoHabitacion = obtenerEstadoHabitacionDesdeBaseDeDatos(numeroHabitacion);
+
+                    // Actualiza la imagen según la opción seleccionada
+                    actualizarImagen(lblN27, opcionSeleccionada, numeroHabitacion);
+                }
+            }
+        });
+        // Agrega un MouseListener al JLabel
+        lblN28.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                // Obtén el número de habitación del JLabel
+                String numeroHabitacion = "28"; // Cambia esto por la lógica que uses para obtener el número de habitación
+
+                // Muestra el JOptionPane con las opciones
+                String[] opciones = {"Mantenimiento", "Ocupada", "Limpieza", "Varios días", "Reservada", "Disponible"};
+                String opcionSeleccionada = (String) JOptionPane.showInputDialog(
+                        FrmHabitaciones.this,
+                        "Selecciona el estado de la habitación:",
+                        "Estado de la Habitación",
+                        JOptionPane.QUESTION_MESSAGE,
+                        null,
+                        opciones,
+                        opciones[0]);
+
+                // Si se selecciona una opción, actualiza la imagen
+                if (opcionSeleccionada != null) {
+                    // Consulta a la base de datos para obtener el estado de la habitación
+                    String estadoHabitacion = obtenerEstadoHabitacionDesdeBaseDeDatos(numeroHabitacion);
+
+                    // Actualiza la imagen según la opción seleccionada
+                    actualizarImagen(lblN28, opcionSeleccionada, numeroHabitacion);
+                }
+            }
+        });
+        // Agrega un MouseListener al JLabel
+        lblN29.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                // Obtén el número de habitación del JLabel
+                String numeroHabitacion = "29"; // Cambia esto por la lógica que uses para obtener el número de habitación
+
+                // Muestra el JOptionPane con las opciones
+                String[] opciones = {"Mantenimiento", "Ocupada", "Limpieza", "Varios días", "Reservada", "Disponible"};
+                String opcionSeleccionada = (String) JOptionPane.showInputDialog(
+                        FrmHabitaciones.this,
+                        "Selecciona el estado de la habitación:",
+                        "Estado de la Habitación",
+                        JOptionPane.QUESTION_MESSAGE,
+                        null,
+                        opciones,
+                        opciones[0]);
+
+                // Si se selecciona una opción, actualiza la imagen
+                if (opcionSeleccionada != null) {
+                    // Consulta a la base de datos para obtener el estado de la habitación
+                    String estadoHabitacion = obtenerEstadoHabitacionDesdeBaseDeDatos(numeroHabitacion);
+
+                    // Actualiza la imagen según la opción seleccionada
+                    actualizarImagen(lblN29, opcionSeleccionada, numeroHabitacion);
+                }
+            }
+        });
 
     }
 
@@ -149,7 +898,6 @@ public class FrmHabitaciones extends javax.swing.JFrame {
         lblN9 = new javax.swing.JLabel();
         lblN8 = new javax.swing.JLabel();
         lblN7 = new javax.swing.JLabel();
-        lblN6 = new javax.swing.JLabel();
         panelTerceraFila = new javax.swing.JPanel();
         lblN15 = new javax.swing.JLabel();
         lblN14 = new javax.swing.JLabel();
@@ -203,10 +951,10 @@ public class FrmHabitaciones extends javax.swing.JFrame {
 
         panelPrimeraFila.setBackground(new java.awt.Color(255, 255, 255));
 
-        lblN5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/habitaciones/n5_figma.png"))); // NOI18N
+        lblN5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/habitaciones/n5Disponible.png"))); // NOI18N
         lblN5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
-        lblN4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/habitaciones/n4_figma.png"))); // NOI18N
+        lblN4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/habitaciones/n4Disponible.png"))); // NOI18N
         lblN4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         lblN3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/habitaciones/n3Disponible.png"))); // NOI18N
@@ -225,13 +973,13 @@ public class FrmHabitaciones extends javax.swing.JFrame {
             .addGroup(panelPrimeraFilaLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(lblN1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED, 23, Short.MAX_VALUE)
-                .addComponent(lblN2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 17, Short.MAX_VALUE)
-                .addComponent(lblN3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED, 23, Short.MAX_VALUE)
-                .addComponent(lblN4)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 19, Short.MAX_VALUE)
+                .addComponent(lblN2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 13, Short.MAX_VALUE)
+                .addComponent(lblN3)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 19, Short.MAX_VALUE)
+                .addComponent(lblN4)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 16, Short.MAX_VALUE)
                 .addComponent(lblN5)
                 .addGap(25, 25, 25))
         );
@@ -251,20 +999,17 @@ public class FrmHabitaciones extends javax.swing.JFrame {
 
         panelSegundaFila.setBackground(new java.awt.Color(255, 255, 255));
 
-        lblN10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/habitaciones/n10_figma.png"))); // NOI18N
+        lblN10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/habitaciones/n10Disponible.png"))); // NOI18N
         lblN10.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
-        lblN9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/habitaciones/n9_figma.png"))); // NOI18N
+        lblN9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/habitaciones/n9Disponible.png"))); // NOI18N
         lblN9.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
-        lblN8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/habitaciones/n8_figma.png"))); // NOI18N
+        lblN8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/habitaciones/n8Disponible.png"))); // NOI18N
         lblN8.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
-        lblN7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/habitaciones/n7_figma.png"))); // NOI18N
+        lblN7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/habitaciones/n7Disponible.png"))); // NOI18N
         lblN7.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-
-        lblN6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/habitaciones/n6_figma.png"))); // NOI18N
-        lblN6.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         javax.swing.GroupLayout panelSegundaFilaLayout = new javax.swing.GroupLayout(panelSegundaFila);
         panelSegundaFila.setLayout(panelSegundaFilaLayout);
@@ -272,14 +1017,12 @@ public class FrmHabitaciones extends javax.swing.JFrame {
             panelSegundaFilaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelSegundaFilaLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(lblN6)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED, 20, Short.MAX_VALUE)
                 .addComponent(lblN7)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 14, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(lblN8)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED, 20, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(lblN9)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 16, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(lblN10)
                 .addGap(25, 25, 25))
         );
@@ -292,26 +1035,25 @@ public class FrmHabitaciones extends javax.swing.JFrame {
                     .addGroup(panelSegundaFilaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                         .addComponent(lblN9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(lblN8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(lblN7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(lblN6)))
-                .addContainerGap(15, Short.MAX_VALUE))
+                        .addComponent(lblN7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         panelTerceraFila.setBackground(new java.awt.Color(255, 255, 255));
 
-        lblN15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/habitaciones/n15_figma.png"))); // NOI18N
+        lblN15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/habitaciones/n15Disponible.png"))); // NOI18N
         lblN15.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
-        lblN14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/habitaciones/n14_figma.png"))); // NOI18N
+        lblN14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/habitaciones/n14Disponible.png"))); // NOI18N
         lblN14.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
-        lblN13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/habitaciones/n13_figma.png"))); // NOI18N
+        lblN13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/habitaciones/n13Disponible.png"))); // NOI18N
         lblN13.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
-        lblN12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/habitaciones/n12_figma.png"))); // NOI18N
+        lblN12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/habitaciones/n12Disponible.png"))); // NOI18N
         lblN12.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
-        lblN11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/habitaciones/n11_figma.png"))); // NOI18N
+        lblN11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/habitaciones/n11Disponible.png"))); // NOI18N
         lblN11.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         javax.swing.GroupLayout panelTerceraFilaLayout = new javax.swing.GroupLayout(panelTerceraFila);
@@ -321,13 +1063,13 @@ public class FrmHabitaciones extends javax.swing.JFrame {
             .addGroup(panelTerceraFilaLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(lblN11)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED, 20, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(lblN12)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 14, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(lblN13)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED, 20, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(lblN14)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 16, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(lblN15)
                 .addGap(25, 25, 25))
         );
@@ -342,24 +1084,24 @@ public class FrmHabitaciones extends javax.swing.JFrame {
                         .addComponent(lblN13, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(lblN12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(lblN11)))
-                .addContainerGap(16, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         panelCuartaFila.setBackground(new java.awt.Color(255, 255, 255));
 
-        lblN20.setIcon(new javax.swing.ImageIcon(getClass().getResource("/habitaciones/n20.png"))); // NOI18N
+        lblN20.setIcon(new javax.swing.ImageIcon(getClass().getResource("/habitaciones/n20Disponible.png"))); // NOI18N
         lblN20.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
-        lblN19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/habitaciones/n19.png"))); // NOI18N
+        lblN19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/habitaciones/n19Disponible.png"))); // NOI18N
         lblN19.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
-        lblN18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/habitaciones/n18.png"))); // NOI18N
+        lblN18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/habitaciones/n18Disponible.png"))); // NOI18N
         lblN18.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
-        lblN17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/habitaciones/n17.png"))); // NOI18N
+        lblN17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/habitaciones/n17Disponible.png"))); // NOI18N
         lblN17.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
-        lblN16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/habitaciones/n16.png"))); // NOI18N
+        lblN16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/habitaciones/n16Disponible.png"))); // NOI18N
         lblN16.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         javax.swing.GroupLayout panelCuartaFilaLayout = new javax.swing.GroupLayout(panelCuartaFila);
@@ -369,13 +1111,13 @@ public class FrmHabitaciones extends javax.swing.JFrame {
             .addGroup(panelCuartaFilaLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(lblN16)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED, 20, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(lblN17)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 14, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(lblN18)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED, 20, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(lblN19)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 16, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(lblN20)
                 .addGap(25, 25, 25))
         );
@@ -390,24 +1132,24 @@ public class FrmHabitaciones extends javax.swing.JFrame {
                         .addComponent(lblN18, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(lblN17, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(lblN16)))
-                .addContainerGap(19, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         panelCuartaFila1.setBackground(new java.awt.Color(255, 255, 255));
 
-        lblN25.setIcon(new javax.swing.ImageIcon(getClass().getResource("/habitaciones/n25.png"))); // NOI18N
+        lblN25.setIcon(new javax.swing.ImageIcon(getClass().getResource("/habitaciones/n25Disponible.png"))); // NOI18N
         lblN25.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
-        lblN24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/habitaciones/n24.png"))); // NOI18N
+        lblN24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/habitaciones/n24Disponible.png"))); // NOI18N
         lblN24.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
-        lblN23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/habitaciones/n23.png"))); // NOI18N
+        lblN23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/habitaciones/n23Disponible.png"))); // NOI18N
         lblN23.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
-        lblN22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/habitaciones/n22.png"))); // NOI18N
+        lblN22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/habitaciones/n22Disponible.png"))); // NOI18N
         lblN22.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
-        lblN21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/habitaciones/n21.png"))); // NOI18N
+        lblN21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/habitaciones/n21Disponible.png"))); // NOI18N
         lblN21.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         javax.swing.GroupLayout panelCuartaFila1Layout = new javax.swing.GroupLayout(panelCuartaFila1);
@@ -417,13 +1159,13 @@ public class FrmHabitaciones extends javax.swing.JFrame {
             .addGroup(panelCuartaFila1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(lblN21)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED, 20, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(lblN22)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 14, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(lblN23)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED, 20, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(lblN24)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 16, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(lblN25)
                 .addGap(25, 25, 25))
         );
@@ -438,21 +1180,21 @@ public class FrmHabitaciones extends javax.swing.JFrame {
                         .addComponent(lblN23, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(lblN22, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(lblN21)))
-                .addContainerGap(18, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         panelCuartaFila2.setBackground(new java.awt.Color(255, 255, 255));
 
-        lblN29.setIcon(new javax.swing.ImageIcon(getClass().getResource("/habitaciones/n29.png"))); // NOI18N
+        lblN29.setIcon(new javax.swing.ImageIcon(getClass().getResource("/habitaciones/n29Disponible.png"))); // NOI18N
         lblN29.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
-        lblN28.setIcon(new javax.swing.ImageIcon(getClass().getResource("/habitaciones/n28.png"))); // NOI18N
+        lblN28.setIcon(new javax.swing.ImageIcon(getClass().getResource("/habitaciones/n28Disponible.png"))); // NOI18N
         lblN28.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
-        lblN27.setIcon(new javax.swing.ImageIcon(getClass().getResource("/habitaciones/n27.png"))); // NOI18N
+        lblN27.setIcon(new javax.swing.ImageIcon(getClass().getResource("/habitaciones/n27Disponible.png"))); // NOI18N
         lblN27.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
-        lblN26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/habitaciones/n26.png"))); // NOI18N
+        lblN26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/habitaciones/n26Disponible.png"))); // NOI18N
         lblN26.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         javax.swing.GroupLayout panelCuartaFila2Layout = new javax.swing.GroupLayout(panelCuartaFila2);
@@ -804,7 +1546,6 @@ public class FrmHabitaciones extends javax.swing.JFrame {
     private javax.swing.JLabel lblN3;
     private javax.swing.JLabel lblN4;
     private javax.swing.JLabel lblN5;
-    private javax.swing.JLabel lblN6;
     private javax.swing.JLabel lblN7;
     private javax.swing.JLabel lblN8;
     private javax.swing.JLabel lblN9;

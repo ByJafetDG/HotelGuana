@@ -1,19 +1,27 @@
 package Frames;
 
+import Logic.RolUsuario;
+import Logic.SesionUsuario;
+import Logic.ValidadorUsuario;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author JafetDG
  */
 public class FrmLogin extends javax.swing.JFrame {
 
-    /**
-     * Creates new form FrmLogin
-     */
     public FrmLogin() {
         initComponents();
         setLocationRelativeTo(null);
         /*Al ejecutar el programa se abrirá en pantalla completa*/
         setExtendedState(MAXIMIZED_BOTH);
+
     }
 
     /**
@@ -27,11 +35,12 @@ public class FrmLogin extends javax.swing.JFrame {
 
         panelPrincipal = new javax.swing.JPanel();
         lblLogoLogin = new javax.swing.JLabel();
-        txtNombreUsuario = new javax.swing.JTextField();
-        lblUsuario = new javax.swing.JLabel();
-        lblContrasenna = new javax.swing.JLabel();
+        panelForm = new javax.swing.JPanel();
         btnIngresar = new javax.swing.JLabel();
         txtContrassena = new javax.swing.JPasswordField();
+        lblContrasenna = new javax.swing.JLabel();
+        txtNombreUsuario = new javax.swing.JTextField();
+        lblUsuario = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -39,70 +48,88 @@ public class FrmLogin extends javax.swing.JFrame {
 
         lblLogoLogin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/labels/4 - copia.png"))); // NOI18N
 
-        txtNombreUsuario.setBackground(new java.awt.Color(255, 255, 255));
-        txtNombreUsuario.setForeground(new java.awt.Color(0, 0, 0));
-        txtNombreUsuario.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtNombreUsuarioActionPerformed(evt);
+        panelForm.setBackground(new java.awt.Color(255, 255, 255));
+
+        btnIngresar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/botones/btnIngresar.png"))); // NOI18N
+        btnIngresar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnIngresar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnIngresarMouseClicked(evt);
             }
         });
 
-        lblUsuario.setBackground(new java.awt.Color(255, 255, 255));
-        lblUsuario.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
-        lblUsuario.setForeground(new java.awt.Color(0, 0, 0));
-        lblUsuario.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblUsuario.setText("Usuario");
+        txtContrassena.setBackground(new java.awt.Color(255, 255, 255));
+        txtContrassena.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
+        txtContrassena.setForeground(new java.awt.Color(0, 0, 0));
 
         lblContrasenna.setBackground(new java.awt.Color(255, 255, 255));
-        lblContrasenna.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
+        lblContrasenna.setFont(new java.awt.Font("Segoe UI", 3, 36)); // NOI18N
         lblContrasenna.setForeground(new java.awt.Color(0, 0, 0));
         lblContrasenna.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblContrasenna.setText("Contraseña");
 
-        btnIngresar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/botones/btnIngresar.png"))); // NOI18N
+        txtNombreUsuario.setBackground(new java.awt.Color(255, 255, 255));
+        txtNombreUsuario.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
+        txtNombreUsuario.setForeground(new java.awt.Color(0, 0, 0));
 
-        txtContrassena.setBackground(new java.awt.Color(255, 255, 255));
-        txtContrassena.setForeground(new java.awt.Color(0, 0, 0));
-        txtContrassena.setText("jPasswordField1");
+        lblUsuario.setBackground(new java.awt.Color(255, 255, 255));
+        lblUsuario.setFont(new java.awt.Font("Segoe UI", 3, 36)); // NOI18N
+        lblUsuario.setForeground(new java.awt.Color(0, 0, 0));
+        lblUsuario.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblUsuario.setText("Usuario");
+
+        javax.swing.GroupLayout panelFormLayout = new javax.swing.GroupLayout(panelForm);
+        panelForm.setLayout(panelFormLayout);
+        panelFormLayout.setHorizontalGroup(
+            panelFormLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelFormLayout.createSequentialGroup()
+                .addContainerGap(540, Short.MAX_VALUE)
+                .addGroup(panelFormLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelFormLayout.createSequentialGroup()
+                        .addComponent(lblUsuario)
+                        .addGap(95, 95, 95))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelFormLayout.createSequentialGroup()
+                        .addComponent(lblContrasenna)
+                        .addGap(72, 72, 72))
+                    .addComponent(txtContrassena, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 310, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtNombreUsuario, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 310, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelFormLayout.createSequentialGroup()
+                        .addComponent(btnIngresar)
+                        .addGap(51, 51, 51)))
+                .addContainerGap(480, Short.MAX_VALUE))
+        );
+        panelFormLayout.setVerticalGroup(
+            panelFormLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelFormLayout.createSequentialGroup()
+                .addComponent(lblUsuario)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(txtNombreUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(lblContrasenna)
+                .addGap(18, 18, 18)
+                .addComponent(txtContrassena, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(24, 24, 24)
+                .addComponent(btnIngresar)
+                .addContainerGap(32, Short.MAX_VALUE))
+        );
 
         javax.swing.GroupLayout panelPrincipalLayout = new javax.swing.GroupLayout(panelPrincipal);
         panelPrincipal.setLayout(panelPrincipalLayout);
         panelPrincipalLayout.setHorizontalGroup(
             panelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelPrincipalLayout.createSequentialGroup()
-                .addContainerGap(473, Short.MAX_VALUE)
-                .addGroup(panelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblLogoLogin, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelPrincipalLayout.createSequentialGroup()
-                        .addGroup(panelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(panelPrincipalLayout.createSequentialGroup()
-                                .addGap(46, 46, 46)
-                                .addComponent(lblContrasenna))
-                            .addGroup(panelPrincipalLayout.createSequentialGroup()
-                                .addGap(52, 52, 52)
-                                .addComponent(lblUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(btnIngresar)
-                            .addComponent(txtNombreUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 199, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtContrassena, javax.swing.GroupLayout.PREFERRED_SIZE, 199, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(110, 110, 110)))
-                .addContainerGap(408, Short.MAX_VALUE))
+                .addContainerGap(482, Short.MAX_VALUE)
+                .addComponent(lblLogoLogin)
+                .addContainerGap(418, Short.MAX_VALUE))
+            .addComponent(panelForm, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         panelPrincipalLayout.setVerticalGroup(
             panelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelPrincipalLayout.createSequentialGroup()
-                .addContainerGap(14, Short.MAX_VALUE)
-                .addComponent(lblLogoLogin)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(lblUsuario)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(lblLogoLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 320, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(txtNombreUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(lblContrasenna)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(txtContrassena, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(27, 27, 27)
-                .addComponent(btnIngresar)
-                .addContainerGap(31, Short.MAX_VALUE))
+                .addComponent(panelForm, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -119,9 +146,75 @@ public class FrmLogin extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void txtNombreUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNombreUsuarioActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtNombreUsuarioActionPerformed
+    private void btnIngresarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnIngresarMouseClicked
+
+        // Mueve la lógica de autenticación aquí
+    if (txtContrassena != null) {
+        String nombreUsuario = txtNombreUsuario.getText();
+        String contrasenna = new String(txtContrassena.getPassword());
+
+        // Validar las credenciales
+        boolean credencialesValidas = ValidadorUsuario.validarCredenciales(nombreUsuario, contrasenna);
+
+        if (credencialesValidas) {
+            // Actualizar la sesión del usuario con el nombre de usuario
+            SesionUsuario sesionUsuario = SesionUsuario.obtenerInstancia();
+            sesionUsuario.setNombreUsuario(nombreUsuario);
+
+            // Obtener la instancia única de FrmPrincipal
+            FrmPrincipal frmPrincipal = new FrmPrincipal();
+
+            // Obtener el rol del usuario
+            RolUsuario rol = obtenerRolUsuario(nombreUsuario);
+
+            // Desactivar o activar el botón según el rol
+            if (RolUsuario.Admin.equals(rol)) {
+                frmPrincipal.getBtnAdministracion().setEnabled(true);
+            } else {
+                frmPrincipal.getBtnAdministracion().setEnabled(false);
+            }
+
+            // Hacer visible el FrmPrincipal
+            frmPrincipal.setVisible(true);
+
+            // Cerrar el FrmLogin
+            dispose();
+        } else {
+            JOptionPane.showMessageDialog(FrmLogin.this, "Credenciales inválidas. Intenta de nuevo.");
+        }
+    } else {
+        System.err.println("txtContrassena es nulo");
+    }
+
+
+    }//GEN-LAST:event_btnIngresarMouseClicked
+
+    private RolUsuario obtenerRolUsuario(String nombreUsuario) {
+        RolUsuario rol = null;
+
+        // Lógica para obtener el rol desde la base de datos
+        try (Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/apphotelgte", "root", "bagaces12345")) {
+            String sql = "SELECT rol FROM Usuario WHERE nombre = ?";
+            try (PreparedStatement statement = connection.prepareStatement(sql)) {
+                statement.setString(1, nombreUsuario);
+
+                try (ResultSet resultSet = statement.executeQuery()) {
+                    if (resultSet.next()) {
+                        // Obtener el rol como String desde la base de datos
+                        String rolString = resultSet.getString("rol");
+
+                        // Convertir el String al valor del enum
+                        rol = RolUsuario.valueOf(rolString);
+                    }
+                }
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+            // Manejar la excepción según tu necesidad
+        }
+
+        return rol;
+    }
 
     /**
      * @param args the command line arguments
@@ -163,6 +256,7 @@ public class FrmLogin extends javax.swing.JFrame {
     private javax.swing.JLabel lblContrasenna;
     private javax.swing.JLabel lblLogoLogin;
     private javax.swing.JLabel lblUsuario;
+    private javax.swing.JPanel panelForm;
     private javax.swing.JPanel panelPrincipal;
     private javax.swing.JPasswordField txtContrassena;
     private javax.swing.JTextField txtNombreUsuario;

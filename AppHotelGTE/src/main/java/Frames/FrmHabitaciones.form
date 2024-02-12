@@ -256,13 +256,13 @@
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="lblN1" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace type="unrelated" pref="23" max="32767" attributes="0"/>
-                                  <Component id="lblN2" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace pref="17" max="32767" attributes="0"/>
-                                  <Component id="lblN3" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace type="unrelated" pref="23" max="32767" attributes="0"/>
-                                  <Component id="lblN4" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace pref="19" max="32767" attributes="0"/>
+                                  <Component id="lblN2" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace pref="13" max="32767" attributes="0"/>
+                                  <Component id="lblN3" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace pref="19" max="32767" attributes="0"/>
+                                  <Component id="lblN4" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace pref="16" max="32767" attributes="0"/>
                                   <Component id="lblN5" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
                               </Group>
@@ -290,7 +290,7 @@
                         <Component class="javax.swing.JLabel" name="lblN5">
                           <Properties>
                             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                              <Image iconType="3" name="/habitaciones/n5_figma.png"/>
+                              <Image iconType="3" name="/habitaciones/n5Disponible.png"/>
                             </Property>
                             <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
                               <Color id="Hand Cursor"/>
@@ -300,7 +300,7 @@
                         <Component class="javax.swing.JLabel" name="lblN4">
                           <Properties>
                             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                              <Image iconType="3" name="/habitaciones/n4_figma.png"/>
+                              <Image iconType="3" name="/habitaciones/n4Disponible.png"/>
                             </Property>
                             <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
                               <Color id="Hand Cursor"/>
@@ -351,14 +351,12 @@
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="lblN6" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace type="unrelated" pref="20" max="32767" attributes="0"/>
                                   <Component id="lblN7" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace pref="14" max="32767" attributes="0"/>
+                                  <EmptySpace max="32767" attributes="0"/>
                                   <Component id="lblN8" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace type="unrelated" pref="20" max="32767" attributes="0"/>
+                                  <EmptySpace type="unrelated" max="32767" attributes="0"/>
                                   <Component id="lblN9" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace pref="16" max="32767" attributes="0"/>
+                                  <EmptySpace max="32767" attributes="0"/>
                                   <Component id="lblN10" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
                               </Group>
@@ -374,10 +372,9 @@
                                           <Component id="lblN9" alignment="0" max="32767" attributes="0"/>
                                           <Component id="lblN8" alignment="0" max="32767" attributes="0"/>
                                           <Component id="lblN7" alignment="0" max="32767" attributes="0"/>
-                                          <Component id="lblN6" alignment="0" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
-                                  <EmptySpace pref="15" max="32767" attributes="0"/>
+                                  <EmptySpace max="32767" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
@@ -386,7 +383,7 @@
                         <Component class="javax.swing.JLabel" name="lblN10">
                           <Properties>
                             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                              <Image iconType="3" name="/habitaciones/n10_figma.png"/>
+                              <Image iconType="3" name="/habitaciones/n10Disponible.png"/>
                             </Property>
                             <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
                               <Color id="Hand Cursor"/>
@@ -396,7 +393,7 @@
                         <Component class="javax.swing.JLabel" name="lblN9">
                           <Properties>
                             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                              <Image iconType="3" name="/habitaciones/n9_figma.png"/>
+                              <Image iconType="3" name="/habitaciones/n9Disponible.png"/>
                             </Property>
                             <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
                               <Color id="Hand Cursor"/>
@@ -406,7 +403,7 @@
                         <Component class="javax.swing.JLabel" name="lblN8">
                           <Properties>
                             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                              <Image iconType="3" name="/habitaciones/n8_figma.png"/>
+                              <Image iconType="3" name="/habitaciones/n8Disponible.png"/>
                             </Property>
                             <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
                               <Color id="Hand Cursor"/>
@@ -416,17 +413,7 @@
                         <Component class="javax.swing.JLabel" name="lblN7">
                           <Properties>
                             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                              <Image iconType="3" name="/habitaciones/n7_figma.png"/>
-                            </Property>
-                            <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-                              <Color id="Hand Cursor"/>
-                            </Property>
-                          </Properties>
-                        </Component>
-                        <Component class="javax.swing.JLabel" name="lblN6">
-                          <Properties>
-                            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                              <Image iconType="3" name="/habitaciones/n6_figma.png"/>
+                              <Image iconType="3" name="/habitaciones/n7Disponible.png"/>
                             </Property>
                             <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
                               <Color id="Hand Cursor"/>
@@ -448,13 +435,13 @@
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="lblN11" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace type="unrelated" pref="20" max="32767" attributes="0"/>
+                                  <EmptySpace type="unrelated" max="32767" attributes="0"/>
                                   <Component id="lblN12" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace pref="14" max="32767" attributes="0"/>
+                                  <EmptySpace max="32767" attributes="0"/>
                                   <Component id="lblN13" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace type="unrelated" pref="20" max="32767" attributes="0"/>
+                                  <EmptySpace type="unrelated" max="32767" attributes="0"/>
                                   <Component id="lblN14" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace pref="16" max="32767" attributes="0"/>
+                                  <EmptySpace max="32767" attributes="0"/>
                                   <Component id="lblN15" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
                               </Group>
@@ -473,7 +460,7 @@
                                           <Component id="lblN11" alignment="0" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
-                                  <EmptySpace pref="16" max="32767" attributes="0"/>
+                                  <EmptySpace max="32767" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
@@ -482,7 +469,7 @@
                         <Component class="javax.swing.JLabel" name="lblN15">
                           <Properties>
                             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                              <Image iconType="3" name="/habitaciones/n15_figma.png"/>
+                              <Image iconType="3" name="/habitaciones/n15Disponible.png"/>
                             </Property>
                             <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
                               <Color id="Hand Cursor"/>
@@ -492,7 +479,7 @@
                         <Component class="javax.swing.JLabel" name="lblN14">
                           <Properties>
                             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                              <Image iconType="3" name="/habitaciones/n14_figma.png"/>
+                              <Image iconType="3" name="/habitaciones/n14Disponible.png"/>
                             </Property>
                             <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
                               <Color id="Hand Cursor"/>
@@ -502,7 +489,7 @@
                         <Component class="javax.swing.JLabel" name="lblN13">
                           <Properties>
                             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                              <Image iconType="3" name="/habitaciones/n13_figma.png"/>
+                              <Image iconType="3" name="/habitaciones/n13Disponible.png"/>
                             </Property>
                             <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
                               <Color id="Hand Cursor"/>
@@ -512,7 +499,7 @@
                         <Component class="javax.swing.JLabel" name="lblN12">
                           <Properties>
                             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                              <Image iconType="3" name="/habitaciones/n12_figma.png"/>
+                              <Image iconType="3" name="/habitaciones/n12Disponible.png"/>
                             </Property>
                             <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
                               <Color id="Hand Cursor"/>
@@ -522,7 +509,7 @@
                         <Component class="javax.swing.JLabel" name="lblN11">
                           <Properties>
                             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                              <Image iconType="3" name="/habitaciones/n11_figma.png"/>
+                              <Image iconType="3" name="/habitaciones/n11Disponible.png"/>
                             </Property>
                             <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
                               <Color id="Hand Cursor"/>
@@ -544,13 +531,13 @@
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="lblN16" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace type="unrelated" pref="20" max="32767" attributes="0"/>
+                                  <EmptySpace type="unrelated" max="32767" attributes="0"/>
                                   <Component id="lblN17" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace pref="14" max="32767" attributes="0"/>
+                                  <EmptySpace max="32767" attributes="0"/>
                                   <Component id="lblN18" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace type="unrelated" pref="20" max="32767" attributes="0"/>
+                                  <EmptySpace type="unrelated" max="32767" attributes="0"/>
                                   <Component id="lblN19" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace pref="16" max="32767" attributes="0"/>
+                                  <EmptySpace max="32767" attributes="0"/>
                                   <Component id="lblN20" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
                               </Group>
@@ -569,7 +556,7 @@
                                           <Component id="lblN16" alignment="0" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
-                                  <EmptySpace pref="19" max="32767" attributes="0"/>
+                                  <EmptySpace max="32767" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
@@ -578,7 +565,7 @@
                         <Component class="javax.swing.JLabel" name="lblN20">
                           <Properties>
                             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                              <Image iconType="3" name="/habitaciones/n20.png"/>
+                              <Image iconType="3" name="/habitaciones/n20Disponible.png"/>
                             </Property>
                             <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
                               <Color id="Hand Cursor"/>
@@ -588,7 +575,7 @@
                         <Component class="javax.swing.JLabel" name="lblN19">
                           <Properties>
                             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                              <Image iconType="3" name="/habitaciones/n19.png"/>
+                              <Image iconType="3" name="/habitaciones/n19Disponible.png"/>
                             </Property>
                             <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
                               <Color id="Hand Cursor"/>
@@ -598,7 +585,7 @@
                         <Component class="javax.swing.JLabel" name="lblN18">
                           <Properties>
                             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                              <Image iconType="3" name="/habitaciones/n18.png"/>
+                              <Image iconType="3" name="/habitaciones/n18Disponible.png"/>
                             </Property>
                             <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
                               <Color id="Hand Cursor"/>
@@ -608,7 +595,7 @@
                         <Component class="javax.swing.JLabel" name="lblN17">
                           <Properties>
                             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                              <Image iconType="3" name="/habitaciones/n17.png"/>
+                              <Image iconType="3" name="/habitaciones/n17Disponible.png"/>
                             </Property>
                             <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
                               <Color id="Hand Cursor"/>
@@ -618,7 +605,7 @@
                         <Component class="javax.swing.JLabel" name="lblN16">
                           <Properties>
                             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                              <Image iconType="3" name="/habitaciones/n16.png"/>
+                              <Image iconType="3" name="/habitaciones/n16Disponible.png"/>
                             </Property>
                             <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
                               <Color id="Hand Cursor"/>
@@ -640,13 +627,13 @@
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="lblN21" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace type="unrelated" pref="20" max="32767" attributes="0"/>
+                                  <EmptySpace type="unrelated" max="32767" attributes="0"/>
                                   <Component id="lblN22" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace pref="14" max="32767" attributes="0"/>
+                                  <EmptySpace max="32767" attributes="0"/>
                                   <Component id="lblN23" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace type="unrelated" pref="20" max="32767" attributes="0"/>
+                                  <EmptySpace type="unrelated" max="32767" attributes="0"/>
                                   <Component id="lblN24" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace pref="16" max="32767" attributes="0"/>
+                                  <EmptySpace max="32767" attributes="0"/>
                                   <Component id="lblN25" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
                               </Group>
@@ -665,7 +652,7 @@
                                           <Component id="lblN21" alignment="0" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
-                                  <EmptySpace pref="18" max="32767" attributes="0"/>
+                                  <EmptySpace max="32767" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
@@ -674,7 +661,7 @@
                         <Component class="javax.swing.JLabel" name="lblN25">
                           <Properties>
                             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                              <Image iconType="3" name="/habitaciones/n25.png"/>
+                              <Image iconType="3" name="/habitaciones/n25Disponible.png"/>
                             </Property>
                             <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
                               <Color id="Hand Cursor"/>
@@ -684,7 +671,7 @@
                         <Component class="javax.swing.JLabel" name="lblN24">
                           <Properties>
                             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                              <Image iconType="3" name="/habitaciones/n24.png"/>
+                              <Image iconType="3" name="/habitaciones/n24Disponible.png"/>
                             </Property>
                             <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
                               <Color id="Hand Cursor"/>
@@ -694,7 +681,7 @@
                         <Component class="javax.swing.JLabel" name="lblN23">
                           <Properties>
                             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                              <Image iconType="3" name="/habitaciones/n23.png"/>
+                              <Image iconType="3" name="/habitaciones/n23Disponible.png"/>
                             </Property>
                             <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
                               <Color id="Hand Cursor"/>
@@ -704,7 +691,7 @@
                         <Component class="javax.swing.JLabel" name="lblN22">
                           <Properties>
                             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                              <Image iconType="3" name="/habitaciones/n22.png"/>
+                              <Image iconType="3" name="/habitaciones/n22Disponible.png"/>
                             </Property>
                             <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
                               <Color id="Hand Cursor"/>
@@ -714,7 +701,7 @@
                         <Component class="javax.swing.JLabel" name="lblN21">
                           <Properties>
                             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                              <Image iconType="3" name="/habitaciones/n21.png"/>
+                              <Image iconType="3" name="/habitaciones/n21Disponible.png"/>
                             </Property>
                             <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
                               <Color id="Hand Cursor"/>
@@ -765,7 +752,7 @@
                         <Component class="javax.swing.JLabel" name="lblN29">
                           <Properties>
                             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                              <Image iconType="3" name="/habitaciones/n29.png"/>
+                              <Image iconType="3" name="/habitaciones/n29Disponible.png"/>
                             </Property>
                             <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
                               <Color id="Hand Cursor"/>
@@ -775,7 +762,7 @@
                         <Component class="javax.swing.JLabel" name="lblN28">
                           <Properties>
                             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                              <Image iconType="3" name="/habitaciones/n28.png"/>
+                              <Image iconType="3" name="/habitaciones/n28Disponible.png"/>
                             </Property>
                             <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
                               <Color id="Hand Cursor"/>
@@ -785,7 +772,7 @@
                         <Component class="javax.swing.JLabel" name="lblN27">
                           <Properties>
                             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                              <Image iconType="3" name="/habitaciones/n27.png"/>
+                              <Image iconType="3" name="/habitaciones/n27Disponible.png"/>
                             </Property>
                             <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
                               <Color id="Hand Cursor"/>
@@ -795,7 +782,7 @@
                         <Component class="javax.swing.JLabel" name="lblN26">
                           <Properties>
                             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                              <Image iconType="3" name="/habitaciones/n26.png"/>
+                              <Image iconType="3" name="/habitaciones/n26Disponible.png"/>
                             </Property>
                             <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
                               <Color id="Hand Cursor"/>

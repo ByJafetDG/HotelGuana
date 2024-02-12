@@ -1,5 +1,7 @@
 package Frames;
 
+import Logic.SesionUsuario;
+import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 
 /**
@@ -8,14 +10,19 @@ import javax.swing.JOptionPane;
  */
 public class FrmPrincipal extends javax.swing.JFrame {
 
-    /**
-     * Creates new form FrmPrincipal
-     */
+    private static FrmPrincipal instanciaUnica; // Campo para la instancia única
+    private String nombreUsuario; // Campo para almacenar el nombre de usuario
+
+    SesionUsuario userSession = SesionUsuario.obtenerInstancia();
+    String username = userSession.getNombreUsuario();
+    
     public FrmPrincipal() {
         initComponents();
         setLocationRelativeTo(null);
         /*Al ejecutar el programa se abrirá en pantalla completa*/
         setExtendedState(MAXIMIZED_BOTH);
+
+        mostrarNombreDeUsuario();
         
         
         /*Desactivar los botones del menú */
@@ -23,7 +30,7 @@ public class FrmPrincipal extends javax.swing.JFrame {
         btnAdministracion.setVisible(false);
         btnSalir.setVisible(false);
         /*--------------------------------*/
-        
+
     }
 
     /**
@@ -57,7 +64,9 @@ public class FrmPrincipal extends javax.swing.JFrame {
 
         lblUser.setIcon(new javax.swing.ImageIcon(getClass().getResource("/labels/user_figma.png"))); // NOI18N
 
-        lblAdminEmpleado.setIcon(new javax.swing.ImageIcon(getClass().getResource("/labels/adminEmpleado_figma.png"))); // NOI18N
+        lblAdminEmpleado.setFont(new java.awt.Font("Segoe UI", 3, 24)); // NOI18N
+        lblAdminEmpleado.setForeground(new java.awt.Color(0, 0, 0));
+        lblAdminEmpleado.setText("Usuario Logeado");
 
         lblBienvenidos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/labels/Bienvenido_figma.png"))); // NOI18N
 
@@ -206,20 +215,39 @@ public class FrmPrincipal extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    public void setNombreUsuario(String nombreUsuario) {
+        this.lblAdminEmpleado.setText(nombreUsuario);
+    }
+
+    // Método para mostrar el nombre de usuario en el JLabel
+    private void mostrarNombreDeUsuario() {
+        SesionUsuario userSession = SesionUsuario.obtenerInstancia();
+        String username = userSession.getNombreUsuario();
+        lblAdminEmpleado.setText(username);
+    }
+    
+   
     private void btnMenuMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnMenuMouseClicked
-        if (btnCerrarSesion.isVisible() == false)
-        {
+        if (btnCerrarSesion.isVisible() == false) {
             btnCerrarSesion.setVisible(true);
             btnAdministracion.setVisible(true);
             btnSalir.setVisible(true);
-        }
-        else {
+        } else {
             btnCerrarSesion.setVisible(false);
             btnAdministracion.setVisible(false);
             btnSalir.setVisible(false);
         }
     }//GEN-LAST:event_btnMenuMouseClicked
 
+    public void actualizarTextoLblAdminEmpleado(String nombreUsuario) {
+        lblAdminEmpleado.setText("Bienvenido, " + nombreUsuario);
+    }
+    
+    // Método para obtener el botón de administración
+    public JLabel getBtnAdministracion() {
+        return btnAdministracion;
+    }
+    
     private void btnHabitacionesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnHabitacionesMouseClicked
         FrmHabitaciones hab = new FrmHabitaciones();
         hab.setVisible(true);
@@ -234,11 +262,10 @@ public class FrmPrincipal extends javax.swing.JFrame {
 
     private void btnSalirMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnSalirMouseClicked
         int dialog = JOptionPane.YES_NO_OPTION;
-        
-        int result = JOptionPane.showConfirmDialog(null, "¿Desea salir del sistema?","Exit",dialog);
-        
-        if (result == 0)
-        {
+
+        int result = JOptionPane.showConfirmDialog(null, "¿Desea salir del sistema?", "Exit", dialog);
+
+        if (result == 0) {
             System.exit(0);
         }
     }//GEN-LAST:event_btnSalirMouseClicked
@@ -262,11 +289,14 @@ public class FrmPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_btnCerrarSesionMouseClicked
 
     private void btnAdministracionMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAdministracionMouseClicked
-        FrmAdministracion admin = new FrmAdministracion();
-        admin.setVisible(true);
-        dispose();
+        if (btnAdministracion.isEnabled()) {
+            FrmAdministracion admin = new FrmAdministracion();
+            admin.setVisible(true);
+            dispose();
+        }
     }//GEN-LAST:event_btnAdministracionMouseClicked
 
+    
     /**
      * @param args the command line arguments
      */
@@ -311,10 +341,11 @@ public class FrmPrincipal extends javax.swing.JFrame {
     private javax.swing.JLabel btnRealizarIngreso;
     private javax.swing.JLabel btnReservaciones;
     private javax.swing.JLabel btnSalir;
-    private javax.swing.JLabel lblAdminEmpleado;
+    public javax.swing.JLabel lblAdminEmpleado;
     private javax.swing.JLabel lblBienvenidos;
     private javax.swing.JLabel lblLogo;
     private javax.swing.JLabel lblUser;
     private javax.swing.JPanel panelPrincipal;
     // End of variables declaration//GEN-END:variables
+
 }
