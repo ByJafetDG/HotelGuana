@@ -1,6 +1,12 @@
 package Frames;
 
+import Logic.RolUsuario;
 import Logic.SesionUsuario;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 
@@ -9,9 +15,6 @@ import javax.swing.JOptionPane;
  * @author JafetDG
  */
 public class FrmPrincipal extends javax.swing.JFrame {
-
-    private static FrmPrincipal instanciaUnica; // Campo para la instancia única
-    private String nombreUsuario; // Campo para almacenar el nombre de usuario
 
     SesionUsuario userSession = SesionUsuario.obtenerInstancia();
     String username = userSession.getNombreUsuario();
@@ -30,6 +33,19 @@ public class FrmPrincipal extends javax.swing.JFrame {
         btnAdministracion.setVisible(false);
         btnSalir.setVisible(false);
         /*--------------------------------*/
+        
+        String nombreUsuario = lblAdminEmpleado.getText();
+        // Actualizar la sesión del usuario con el nombre de usuario
+            SesionUsuario sesionUsuario = SesionUsuario.obtenerInstancia();
+            sesionUsuario.setNombreUsuario(nombreUsuario);
+        // Obtener el rol del usuario
+            RolUsuario rol = obtenerRolUsuario(nombreUsuario);
+        // Desactivar o activar el botón según el rol
+            if (RolUsuario.Admin.equals(rol)) {
+                btnAdministracion.setEnabled(true);
+            } else {
+                btnAdministracion.setEnabled(false);
+            }
 
     }
 
@@ -215,6 +231,33 @@ public class FrmPrincipal extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private RolUsuario obtenerRolUsuario(String nombreUsuario) {
+        RolUsuario rol = null;
+
+        // Lógica para obtener el rol desde la base de datos
+        try (Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/apphotelgte", "root", "bagaces12345")) {
+            String sql = "SELECT rol FROM Usuario WHERE nombre = ?";
+            try (PreparedStatement statement = connection.prepareStatement(sql)) {
+                statement.setString(1, nombreUsuario);
+
+                try (ResultSet resultSet = statement.executeQuery()) {
+                    if (resultSet.next()) {
+                        // Obtener el rol como String desde la base de datos
+                        String rolString = resultSet.getString("rol");
+
+                        // Convertir el String al valor del enum
+                        rol = RolUsuario.valueOf(rolString);
+                    }
+                }
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+            // Manejar la excepción según tu necesidad
+        }
+
+        return rol;
+    }
+    
     public void setNombreUsuario(String nombreUsuario) {
         this.lblAdminEmpleado.setText(nombreUsuario);
     }
@@ -238,10 +281,6 @@ public class FrmPrincipal extends javax.swing.JFrame {
             btnSalir.setVisible(false);
         }
     }//GEN-LAST:event_btnMenuMouseClicked
-
-    public void actualizarTextoLblAdminEmpleado(String nombreUsuario) {
-        lblAdminEmpleado.setText("Bienvenido, " + nombreUsuario);
-    }
     
     // Método para obtener el botón de administración
     public JLabel getBtnAdministracion() {
