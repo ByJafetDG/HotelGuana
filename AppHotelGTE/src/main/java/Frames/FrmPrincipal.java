@@ -235,7 +235,7 @@ public class FrmPrincipal extends javax.swing.JFrame {
         RolUsuario rol = null;
 
         // Lógica para obtener el rol desde la base de datos
-        try (Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/apphotelgte", "root", "bagaces12345")) {
+        try (Connection connection = DriverManager.getConnection("jdbc:mysql://apphotelgte.c7200s4s22kf.us-east-2.rds.amazonaws.com/apphotelgte", "admin", "bagaces12345")) {
             String sql = "SELECT rol FROM Usuario WHERE nombre = ?";
             try (PreparedStatement statement = connection.prepareStatement(sql)) {
                 statement.setString(1, nombreUsuario);
